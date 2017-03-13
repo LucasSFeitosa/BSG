@@ -1,0 +1,31 @@
+|BSG
+saida[0] <= saida[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[1] <= saida[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[2] <= saida[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[3] <= saida[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[4] <= saida[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[5] <= saida[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[6] <= saida[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+saida[7] <= saida[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+clk => flag.CLK
+clk => saida[0]~reg0.CLK
+clk => saida[1]~reg0.CLK
+clk => saida[2]~reg0.CLK
+clk => saida[3]~reg0.CLK
+clk => saida[4]~reg0.CLK
+clk => saida[5]~reg0.CLK
+clk => saida[6]~reg0.CLK
+clk => saida[7]~reg0.CLK
+clk => dado.CLK
+clk => entrada[0].CLK
+clk => entrada[1].CLK
+clk => entrada[2].CLK
+clk => entrada[3].CLK
+clk => entrada[4].CLK
+reset => entrada[0].ACLR
+reset => entrada[1].ACLR
+reset => entrada[2].ACLR
+reset => entrada[3].ACLR
+reset => entrada[4].ACLR
+
+

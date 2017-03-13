@@ -1,0 +1,29 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/lucasf/Desktop/BSG/simulation/modelsim
+vBSG
+DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+!i10b 1
+!s100 fIOW@HU<O=YXV3bCLT]]^0
+I=Go[2[hRzOe886;XghJ8n0
+V96U]cD>D^Ii0H9oD6Y`]93
+!s105 BSG_sv_unit
+S1
+Z1 d/home/lucasf/Desktop/BSG/simulation/modelsim
+w1489093186
+8/home/lucasf/Desktop/BSG/BSG.sv
+F/home/lucasf/Desktop/BSG/BSG.sv
+L0 1
+Z2 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1489093209.989810
+!s107 /home/lucasf/Desktop/BSG/BSG.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/lucasf/Desktop/BSG|/home/lucasf/Desktop/BSG/BSG.sv|
+!s101 -O0
+o-sv -work work -O0
+!s92 -sv -work work +incdir+/home/lucasf/Desktop/BSG -O0
+n@b@s@g

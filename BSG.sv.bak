@@ -1,0 +1,87 @@
+module seno(
+
+	output logic [7:0]saida,
+	input clk, reset
+
+);
+
+logic [5:0]entrada;
+
+always_ff @(posedge clk or negedge reset)begin
+
+	if (reset == 0)
+		entrada = 5'b0;
+	else
+		entrada = entrada + 5'b1;
+end
+
+always begin
+	case(entrada)
+		//dado = 0,sem bit anterior ou bit anterior com onda = -seno: onda = seno
+		0 : saida = 128;
+		1 : saida = 153;
+		2 : saida = 177;
+		3 : saida = 199;
+		4 : saida = 218;
+		5 : saida = 234;
+		6 : saida = 246;
+		7 : saida = 253;
+		8 : saida = 255;
+		9 : saida = 253;
+		10 : saida = 246;
+		11 : saida = 234;
+		12 : saida = 218;
+		13 : saida = 199;
+		14 : saida = 177;
+		15 : saida = 153;
+		16 : saida = 128;
+		17 : saida = 103;
+		18 : saida = 79;
+		19 : saida = 57;
+		20 : saida = 38;
+		21 : saida = 22;
+		22 : saida = 10;
+		23 : saida = 3;
+		24 : saida = 0;
+		25 : saida = 3;
+		26 : saida = 10;
+		27 : saida = 22;
+		28 : saida = 38;
+		29 : saida = 57;
+		30 : saida = 79;
+		31 : saida = 103;
+		32 : saida = 128;
+		33 : saida = 165;
+		34 : saida = 199;
+		35 : saida = 227;
+		36 : saida = 246;
+		37 : saida = 255;
+		38 : saida = 253;
+		39 : saida = 240;
+		40 : saida = 218;
+		41 : saida = 188;
+		42 : saida = 153;
+		43 : saida = 116;
+		44 : saida = 79;
+		45 : saida = 47;
+		46 : saida = 22;
+		47 : saida = 6;
+		48 : saida = 0;
+		49 : saida = 6;
+		50 : saida = 22;
+		51 : saida = 47;
+		52 : saida = 79;
+		53 : saida = 116;
+		54 : saida = 153;
+		55 : saida = 188;
+		56 : saida = 218;
+		57 : saida = 240;
+		58 : saida = 253;
+		59 : saida = 255;
+		60 : saida = 246;
+		61 : saida = 227;
+		62 : saida = 199;
+		63 : saida = 165;
+	endcase
+end
+endmodule
