@@ -2,10 +2,9 @@
 
 module modulador(
 	output logic [7:0]saida,
-	//input logic dado,
+	input logic dado,
 	input clk, reset
 );
-logic dado;
 logic [4:0]entrada;
 logic flag; 
 
@@ -22,8 +21,6 @@ always_ff @(posedge clk or negedge reset)begin
 	else	
 		entrada = entrada + 5'b1;
 		
-
-
 end
 
 always_ff @(posedge clk) begin
