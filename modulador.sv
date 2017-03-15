@@ -13,14 +13,10 @@ begin
 	flag=0;
 end
 
-always_ff @(posedge clk or negedge reset)begin
-
-	if (reset == 0)
-		entrada = 5'b0;
-	else	
-		entrada = entrada + 5'b1;
+always_ff @(posedge clk or negedge reset)
+	entrada = entrada + 5'b1;
 		
-end
+
 
 always_ff @(posedge clk) begin
 
@@ -110,37 +106,37 @@ always_ff @(posedge clk) begin
 		begin
 			case(entrada)
 				0 : saida = 128;
-				1 : saida = 165;
-				2 : saida = 199;
-				3 : saida = 227;
-				4 : saida = 246;
-				5 : saida = 255;
-				6 : saida = 253;
-				7 : saida = 240;
+				1 : saida = 140;
+				2 : saida = 153;
+				3 : saida = 165;
+				4 : saida = 177;
+				5 : saida = 188;
+				6 : saida = 199;
+				7 : saida = 209;
 				8 : saida = 218;
-				9 : saida = 188;
-				10 : saida = 153;
-				11 : saida = 116;
-				12 : saida = 79;
-				13 : saida = 47;
-				14 : saida = 22;
-				15 : saida = 6;
-				16 : saida = 0;
-				17 : saida = 6;
-				18 : saida = 22;
-				19 : saida = 47;
-				20 : saida = 79;
-				21 : saida = 116;
-				22 : saida = 153;
-				23 : saida = 188;
+				9 : saida = 227;
+				10 : saida = 234;
+				11 : saida = 240;
+				12 : saida = 246;
+				13 : saida = 250;
+				14 : saida = 253;
+				15 : saida = 255;
+				16 : saida = 255;
+				17 : saida = 255;
+				18 : saida = 253;
+				19 : saida = 250;
+				20 : saida = 246;
+				21 : saida = 240;
+				22 : saida = 234;
+				23 : saida = 227;
 				24 : saida = 218;
-				25 : saida = 240;
-				26 : saida = 253;
-				27 : saida = 255;
-				28 : saida = 246;
-				29 : saida = 227;
-				30 : saida = 199;
-				31 : saida = 165;
+				25 : saida = 209;
+				26 : saida = 199;
+				27 : saida = 188;
+				28 : saida = 177;
+				29 : saida = 165;
+				30 : saida = 153;
+				31 : saida = 140;
 			endcase
 			if (entrada==31)
 				flag=!flag;
@@ -149,37 +145,37 @@ always_ff @(posedge clk) begin
 		begin	
 			case(entrada)
 				0 : saida = 128;
-				1 : saida = 91;
-				2 : saida = 57;
-				3 : saida = 29;
-				4 : saida = 10;
-				5 : saida = 1;
-				6 : saida = 3;
-				7 : saida = 16;
+				1 : saida = 116;
+				2 : saida = 103;
+				3 : saida = 91;
+				4 : saida = 79;
+				5 : saida = 68;
+				6 : saida = 57;
+				7 : saida = 47;
 				8 : saida = 38;
-				9 : saida = 68;
-				10 : saida = 103;
-				11 : saida = 140;
-				12 : saida = 177;
-				13 : saida = 209;
-				14 : saida = 234;
-				15 : saida = 250;
-				16 : saida = 255;
-				17 : saida = 250;
-				18 : saida = 234;
-				19 : saida = 209;
-				20 : saida = 177;
-				21 : saida = 140;
-				22 : saida = 103;
-				23 : saida = 68;
+				9 : saida = 29;
+				10 : saida = 22;
+				11 : saida = 16;
+				12 : saida = 10;
+				13 : saida = 6;
+				14 : saida = 3;
+				15 : saida = 1;
+				16 : saida = 0;
+				17 : saida = 1;
+				18 : saida = 3;
+				19 : saida = 6;
+				20 : saida = 10;
+				21 : saida = 16;
+				22 : saida = 22;
+				23 : saida = 29;
 				24 : saida = 38;
-				25 : saida = 16;
-				26 : saida = 3;
-				27 : saida = 1;
-				28 : saida = 10;
-				29 : saida = 29;
-				30 : saida = 57;
-				31 : saida = 91;
+				25 : saida = 47;
+				26 : saida = 57;
+				27 : saida = 68;
+				28 : saida = 79;
+				29 : saida = 91;
+				30 : saida = 103;
+				31 : saida = 116;
 			endcase
 			if (entrada==31)
 				flag=!flag;
