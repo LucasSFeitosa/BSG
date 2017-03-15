@@ -10,7 +10,6 @@ logic flag;
 
 initial
 begin
-	dado=0;
 	flag=0;
 end
 
