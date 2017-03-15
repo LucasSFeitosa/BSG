@@ -1,8 +1,13 @@
 //AMBA comunicaç~ao
 // ajeitar
 module AMBA(
-input clk, valid, ready, 
-input [7:0]data_out
+input clk, 
+
+output logic [7:0] controle, data1, data2,
+
+input logic [7:0] data_in, data_out, endereço,
+input logic valid, ready
+
 );
 
 always@(posedge CLOCK_27)

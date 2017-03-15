@@ -9,7 +9,12 @@ logic [7:0]BSG_DATA_2;
 
 BSG_CONTROL[0] = (G_CLK_TX==1);
 //modulador modulador_h(.saida(OUT), .dado(), .clk(G_CLK_TX), .reset(reset))
-//AMBA AMBA_H(.clk(SYS_CLK), .controle(BSG_CONTROL), .data1(BSG_DATA_1), .data2(BSG_DATA_2), .valid(), .ready(), .data_out(), .endereco())
+//AMBA AMBA_H(.clk(SYS_CLK), .controle(BSG_CONTROL), .data1(BSG_DATA_1), .data2(BSG_DATA_2), .data_in(), .data_out(), .endereco(), .valid(), .ready())
+
+always_ff @(posedge G_CLK_TX)begin
+	
+	
+end
 
 
 
