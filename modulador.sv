@@ -16,24 +16,23 @@ initial	begin
 	
 end
 
-always_comb	begin
+always_comb	
 	dado=DADO[aux];
 		
-end
+
 
 always_ff @(posedge clk)	begin
 	entrada = entrada + 5'b1;
-	if (entrada== 5'd31)	begin
+	if (entrada== 5'd31)	begin	//terminou de enviar um bit
 		aux=aux+3'b1;
-		
-		if (aux==3'd7)	begin
-			flag_byte=!flag_byte;
-			if (negedge flag_byte)
+		if (aux==3'd7)	begin		//enviou o ultimo bit de dado(8bits)
+			flag_byte = !flag_byte;
+			if (flag_byte==1'b1)
 				status=1'b0;		//terminou a transmiss~ao
-			else
-				status=1'b1;
 		end
 	end	
+	else
+			status=1'b1;		//transmissao em andamento
 end
 		
 

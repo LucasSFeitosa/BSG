@@ -17,7 +17,7 @@ logic [7:0]BSG_DATA_0;
 logic [7:0]BSG_DATA_1;
 
 logic data_flag; // Especifica o BSG_DATA a ser lido;
-logic [7:0] BSG_DATA, DATA_GRAY;	//DATA_GRAY ´e apenas um fio para conectar a saida do encoder ao modulador
+wire [7:0] BSG_DATA, DATA_GRAY;	//DATA_GRAY ´e apenas um fio para conectar a saida do encoder ao modulador
 
 
 initial
