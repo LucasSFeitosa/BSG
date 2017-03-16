@@ -2,7 +2,7 @@ module modulador(
 	input clk,
 	output logic [7:0]saida,
 	input logic [7:0]DADO,
-	output flag_byte // fim da transmissão do byte
+	output flag_byte, status // fim da transmissão do byte
 );
 logic [4:0]entrada;
 logic flag; 
@@ -26,8 +26,13 @@ always_ff @(posedge clk)	begin
 	if (entrada== 5'd31)	begin
 		aux=aux+3'b1;
 		
-		if (aux==3'd7)
+		if (aux==3'd7)	begin
 			flag_byte=!flag_byte;
+			if (negedge flag_byte)
+				status=1'b0;		//terminou a transmiss~ao
+			else
+				status=1'b1;
+		end
 	end	
 end
 		
