@@ -1,27 +1,38 @@
-//modulador 1000Hz - 1500Hz
-
 module modulador(
+	input clk,
 	output logic [7:0]saida,
-	input logic dado,
-	input clk, reset
+	input logic [7:0]DADO,
+	output flag_byte // fim da transmissão do byte
 );
 logic [4:0]entrada;
 logic flag; 
+logic dado;
+logic [2:0]aux;	//contador para passar os 8 bits.
 
-initial
-begin
+initial	begin
 	flag=0;
+	flag_byte=0;
+	aux=0;
+	
 end
 
-always_ff @(posedge clk or negedge reset)
+always_comb	begin
+	dado=DADO[aux];
+		
+end
+
+always_ff @(posedge clk)	begin
 	entrada = entrada + 5'b1;
+	if (entrada== 5'd31)	begin
+		aux=aux+3'b1;
+		
+		if (aux==3'd7)
+			flag_byte=!flag_byte;
+	end	
+end
 		
 
-
 always_ff @(posedge clk) begin
-
-	if (entrada==0)
-		dado=!dado;
 		
 	if (dado==0)
 	begin

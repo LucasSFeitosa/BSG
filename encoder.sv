@@ -1,10 +1,10 @@
 //encoder
-module encoder( binario, gray );
+module encoder( 
+input logic [7:0] binario,
+output logic [7:0] gray
+);
  
-input      [7:0] binario;
-output reg [7:0] gray;
- 
-always@(*)
+always_comb
 begin
  
    gray[7] = binario[7];

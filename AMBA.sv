@@ -10,30 +10,30 @@ input logic valid, ready
 
 );
 
-always@(posedge CLOCK_27)
+always@(posedge clk)
 begin
       
-	if(valid_out)begin //se o dado for válido.
+	if(valid)begin //se o dado for válido.
 		case(endereco)
-			8'h20: begin
-				ready_out = 1;
-				tpu_control[3:0] = data_out[3:0];
+			8'h10: begin
+				ready = 1;
+				controle[3:0] = data_in[3:0];
 			end
-         8'h21:begin
-				ready_out = 1;
-				tx_slot = data_out;
+			8'h21:begin
+				ready = 1;
+				tx_slot = data_in;
 			end
 			8'h22:begin
-				ready_out = 1;
-				rx_slot = data_out;
+				ready = 1;
+				rx_slot = data_in;
 			end
 			8'h23: begin
-				ready_out = 1;
-				tpuint_byte0 = data_out;
+				ready = 1;
+				tpuint_byte0 = data_in;
 			end
 			8'h24: begin
-				ready_out = 1;
-				tpuint_byte1 = data_out;
+				ready = 1;
+				tpuint_byte1 = data_in;
 			end
 		endcase
 	end
