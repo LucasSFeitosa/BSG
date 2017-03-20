@@ -1,1 +1,1 @@
-Warning (10268): Verilog HDL information at BSG.sv(28): always construct contains both blocking and non-blocking assignments
+Info (10281): Verilog HDL Declaration information at modulador.sv(4): object "DADO" differs only in case from object "dado" in the same scope

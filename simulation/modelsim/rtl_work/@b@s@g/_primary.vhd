@@ -2,8 +2,14 @@ library verilog;
 use verilog.vl_types.all;
 entity BSG is
     port(
-        saida           : out    vl_logic_vector(7 downto 0);
-        clk             : in     vl_logic;
-        reset           : in     vl_logic
+        SYS_CLK         : in     vl_logic;
+        G_CLK_TX        : in     vl_logic;
+        \OUT\           : out    vl_logic_vector(7 downto 0);
+        BSG_INT         : out    vl_logic;
+        Data_in         : in     vl_logic_vector(7 downto 0);
+        addr            : in     vl_logic_vector(7 downto 0);
+        Data_out        : out    vl_logic_vector(7 downto 0);
+        valid           : in     vl_logic;
+        ready           : out    vl_logic
     );
 end BSG;

@@ -3,27 +3,97 @@ K3
 13
 cModel Technology
 Z0 d/home/lucasf/Desktop/BSG/simulation/modelsim
-vBSG
-DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
-!i10b 1
-!s100 fIOW@HU<O=YXV3bCLT]]^0
-I=Go[2[hRzOe886;XghJ8n0
-V96U]cD>D^Ii0H9oD6Y`]93
-!s105 BSG_sv_unit
+vAMBA
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+IF=8[Y2G]KfAPMMFX=RdoH2
+VTOQao0SooegQB=COfa0nE2
 S1
-Z1 d/home/lucasf/Desktop/BSG/simulation/modelsim
-w1489093186
+Z2 d/home/lucasf/Desktop/BSG/simulation/modelsim
+w1490034980
+8/home/lucasf/Desktop/BSG/AMBA.sv
+F/home/lucasf/Desktop/BSG/AMBA.sv
+L0 3
+Z3 OV;L;10.1d;51
+r1
+31
+Z4 o-sv -work work -O0
+Z5 !s92 -sv -work work +incdir+/home/lucasf/Desktop/BSG -O0
+n@a@m@b@a
+!i10b 1
+!s100 Cgg0VdTdB8BneVzMB67ZL0
+!s105 AMBA_sv_unit
+!s85 0
+!s108 1490035177.441147
+!s107 /home/lucasf/Desktop/BSG/AMBA.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/lucasf/Desktop/BSG|/home/lucasf/Desktop/BSG/AMBA.sv|
+!s101 -O0
+vBSG
+R1
+ILoSD[NGk5m2OTbXlZZoH40
+VmXYZF0O3CMAfQI?f6BK?G0
+S1
+R2
+w1490035163
 8/home/lucasf/Desktop/BSG/BSG.sv
 F/home/lucasf/Desktop/BSG/BSG.sv
-L0 1
-Z2 OV;L;10.1d;51
+L0 3
+R3
 r1
-!s85 0
 31
-!s108 1489093209.989810
+R4
+n@b@s@g
+R5
+!i10b 1
+!s100 1?D=C@KkE<Si83E6JO0nJ1
+!s105 BSG_sv_unit
+!s85 0
+!s108 1490035177.425890
 !s107 /home/lucasf/Desktop/BSG/BSG.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+/home/lucasf/Desktop/BSG|/home/lucasf/Desktop/BSG/BSG.sv|
 !s101 -O0
-o-sv -work work -O0
-!s92 -sv -work work +incdir+/home/lucasf/Desktop/BSG -O0
-n@b@s@g
+vencoder
+R1
+I_W0YfG_=3j[8VB85ic9WT1
+VLhzUeCR=WU[=Ah[b>?fo<1
+S1
+R2
+w1490034304
+8/home/lucasf/Desktop/BSG/encoder.sv
+F/home/lucasf/Desktop/BSG/encoder.sv
+L0 2
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 bEDQ?:mWMXGC8Q1E7G:kX2
+!s105 encoder_sv_unit
+!s85 0
+!s108 1490035177.456247
+!s107 /home/lucasf/Desktop/BSG/encoder.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/lucasf/Desktop/BSG|/home/lucasf/Desktop/BSG/encoder.sv|
+!s101 -O0
+vmodulador
+R1
+!i10b 1
+!s100 Ym`33WUSHa3So6:RBDg6Q1
+I185^SfJ:MlX>V=P[]G:K_1
+VE<DSH>G8M9iU5UeA4J^oN0
+!s105 modulador_sv_unit
+S1
+R2
+w1490035053
+8/home/lucasf/Desktop/BSG/modulador.sv
+F/home/lucasf/Desktop/BSG/modulador.sv
+L0 1
+R3
+r1
+!s85 0
+31
+!s108 1490035177.471707
+!s107 /home/lucasf/Desktop/BSG/modulador.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/lucasf/Desktop/BSG|/home/lucasf/Desktop/BSG/modulador.sv|
+!s101 -O0
+R4
+R5

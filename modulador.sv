@@ -2,7 +2,7 @@ module modulador(
 	input clk,
 	output logic [7:0]saida,
 	input logic [7:0]DADO,
-	output flag_byte, status // fim da transmissão do byte
+	output logic flag_byte, status // fim da transmissão do byte
 );
 logic [4:0]entrada;
 logic flag; 

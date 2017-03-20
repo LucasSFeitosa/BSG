@@ -8,8 +8,8 @@ module BSG(
 	//Abaixo -> comunicaç~ao AMBA
 	input logic [7:0]Data_in, addr,	//addr = endereço do registrador
 	output logic [7:0]Data_out,
-	input valid,
-	output ready
+	input logic valid,
+	output logic ready
 );
 
 logic [7:0]BSG_CONTROL;	// 0 - TXENABLE,	1 - INTMSK, 2 - INTFLAG, 3 - STATUS
@@ -17,11 +17,9 @@ logic [7:0]BSG_DATA_0;
 logic [7:0]BSG_DATA_1;
 
 logic data_flag; // Especifica o BSG_DATA a ser lido;
-wire [7:0] BSG_DATA, DATA_GRAY;	//DATA_GRAY ´e apenas um fio para conectar a saida do encoder ao modulador
+logic [7:0] BSG_DATA, DATA_GRAY;	//DATA_GRAY ´e apenas um fio para conectar a saida do encoder ao modulador
 
 
-initial
-	data_flag = 0;
 
 
 AMBA AMBA_H( .clk(SYS_CLK), .controle1(BSG_CONTROL[2:0]), .controle2(BSG_CONTROL[7:3]), .data1(BSG_DATA_0), .data2(BSG_DATA_1),

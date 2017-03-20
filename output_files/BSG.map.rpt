@@ -1,5 +1,5 @@
 Analysis & Synthesis report for BSG
-Thu Mar  9 17:59:49 2017
+Mon Mar 20 15:40:07 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
 
 
@@ -13,10 +13,13 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web E
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Port Connectivity Checks: "AMBA:AMBA_H"
+ 12. Elapsed Time Per Partition
+ 13. Analysis & Synthesis Messages
+ 14. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -42,16 +45,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Mar  9 17:59:49 2017              ;
+; Analysis & Synthesis Status        ; Successful - Mon Mar 20 15:40:07 2017              ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1.78 SJ Web Edition ;
 ; Revision Name                      ; BSG                                                ;
 ; Top-level Entity Name              ; BSG                                                ;
 ; Family                             ; Cyclone II                                         ;
-; Total logic elements               ; 96                                                 ;
-;     Total combinational functions  ; 96                                                 ;
-;     Dedicated logic registers      ; 15                                                 ;
-; Total registers                    ; 15                                                 ;
-; Total pins                         ; 10                                                 ;
+; Total logic elements               ; 143                                                ;
+;     Total combinational functions  ; 125                                                ;
+;     Dedicated logic registers      ; 46                                                 ;
+; Total registers                    ; 46                                                 ;
+; Total pins                         ; 37                                                 ;
 ; Total virtual pins                 ; 0                                                  ;
 ; Total memory bits                  ; 0                                                  ;
 ; Embedded Multiplier 9-bit elements ; 0                                                  ;
@@ -155,53 +158,69 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                        ;
-+----------------------------------+-----------------+------------------------------+---------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path    ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------+---------+
-; BSG.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/lucasf/Desktop/BSG/BSG.sv ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                              ;
++----------------------------------+-----------------+------------------------------+---------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path          ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------+---------+
+; BSG.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/lucasf/Desktop/BSG/BSG.sv       ;         ;
+; AMBA.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/lucasf/Desktop/BSG/AMBA.sv      ;         ;
+; encoder.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/lucasf/Desktop/BSG/encoder.sv   ;         ;
+; modulador.sv                     ; yes             ; User SystemVerilog HDL File  ; /home/lucasf/Desktop/BSG/modulador.sv ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------+---------+
 
 
-+----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary              ;
-+---------------------------------------------+------------+
-; Resource                                    ; Usage      ;
-+---------------------------------------------+------------+
-; Estimated Total logic elements              ; 96         ;
-;                                             ;            ;
-; Total combinational functions               ; 96         ;
-; Logic element usage by number of LUT inputs ;            ;
-;     -- 4 input functions                    ; 77         ;
-;     -- 3 input functions                    ; 12         ;
-;     -- <=2 input functions                  ; 7          ;
-;                                             ;            ;
-; Logic elements by mode                      ;            ;
-;     -- normal mode                          ; 93         ;
-;     -- arithmetic mode                      ; 3          ;
-;                                             ;            ;
-; Total registers                             ; 15         ;
-;     -- Dedicated logic registers            ; 15         ;
-;     -- I/O registers                        ; 0          ;
-;                                             ;            ;
-; I/O pins                                    ; 10         ;
-; Embedded Multiplier 9-bit elements          ; 0          ;
-; Maximum fan-out node                        ; entrada[2] ;
-; Maximum fan-out                             ; 45         ;
-; Total fan-out                               ; 399        ;
-; Average fan-out                             ; 3.30       ;
-+---------------------------------------------+------------+
++--------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                    ;
++---------------------------------------------+----------------------------------+
+; Resource                                    ; Usage                            ;
++---------------------------------------------+----------------------------------+
+; Estimated Total logic elements              ; 143                              ;
+;                                             ;                                  ;
+; Total combinational functions               ; 125                              ;
+; Logic element usage by number of LUT inputs ;                                  ;
+;     -- 4 input functions                    ; 83                               ;
+;     -- 3 input functions                    ; 36                               ;
+;     -- <=2 input functions                  ; 6                                ;
+;                                             ;                                  ;
+; Logic elements by mode                      ;                                  ;
+;     -- normal mode                          ; 125                              ;
+;     -- arithmetic mode                      ; 0                                ;
+;                                             ;                                  ;
+; Total registers                             ; 46                               ;
+;     -- Dedicated logic registers            ; 46                               ;
+;     -- I/O registers                        ; 0                                ;
+;                                             ;                                  ;
+; I/O pins                                    ; 37                               ;
+; Embedded Multiplier 9-bit elements          ; 0                                ;
+; Maximum fan-out node                        ; modulador:modulador_h|entrada[1] ;
+; Maximum fan-out                             ; 38                               ;
+; Total fan-out                               ; 596                              ;
+; Average fan-out                             ; 2.87                             ;
++---------------------------------------------+----------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
-; |BSG                       ; 96 (96)           ; 15 (15)      ; 0           ; 0            ; 0       ; 0         ; 10   ; 0            ; |BSG                ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
+; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Library Name ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
+; |BSG                       ; 125 (3)           ; 46 (0)       ; 0           ; 0            ; 0       ; 0         ; 37   ; 0            ; |BSG                       ; work         ;
+;    |AMBA:AMBA_H|           ; 18 (18)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BSG|AMBA:AMBA_H           ; work         ;
+;    |encoder:encoder_h|     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BSG|encoder:encoder_h     ; work         ;
+;    |modulador:modulador_h| ; 100 (100)         ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BSG|modulador:modulador_h ; work         ;
++----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; AMBA:AMBA_H|ready                     ; Stuck at VCC due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -209,23 +228,34 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 15    ;
+; Total registers                              ; 46    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 5     ;
+; Number of registers using Synchronous Load   ; 4     ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 29    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 4:1                ; 8 bits    ; 16 LEs        ; 16 LEs               ; 0 LEs                  ; Yes        ; |BSG|saida[0]~reg0         ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |BSG|modulador:modulador_h|saida[0] ;
+; 256:1              ; 4 bits    ; 680 LEs       ; 8 LEs                ; 672 LEs                ; Yes        ; |BSG|AMBA:AMBA_H|data_out[4]        ;
+; 256:1              ; 4 bits    ; 680 LEs       ; 8 LEs                ; 672 LEs                ; Yes        ; |BSG|AMBA:AMBA_H|data_out[0]        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "AMBA:AMBA_H"                                                                                   ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port            ; Type   ; Severity ; Details                                                                             ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
+; controle1[1..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -243,27 +273,45 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
-    Info: Processing started: Thu Mar  9 17:59:48 2017
+    Info: Processing started: Mon Mar 20 15:40:06 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BSG -c BSG
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file BSG.sv
     Info (12023): Found entity 1: BSG
+Info (12021): Found 1 design units, including 1 entities, in source file AMBA.sv
+    Info (12023): Found entity 1: AMBA
+Info (12021): Found 1 design units, including 1 entities, in source file encoder.sv
+    Info (12023): Found entity 1: encoder
+Info (12021): Found 1 design units, including 1 entities, in source file modulador.sv
+    Info (12023): Found entity 1: modulador
 Info (12127): Elaborating entity "BSG" for the top level hierarchy
+Info (12128): Elaborating entity "AMBA" for hierarchy "AMBA:AMBA_H"
+Info (12128): Elaborating entity "encoder" for hierarchy "encoder:encoder_h"
+Info (12128): Elaborating entity "modulador" for hierarchy "modulador:modulador_h"
 Info (276014): Found 4 instances of uninferred RAM logic
-    Info (276004): RAM logic "Ram0" is uninferred due to inappropriate RAM size
-    Info (276004): RAM logic "Ram1" is uninferred due to inappropriate RAM size
-    Info (276004): RAM logic "Ram2" is uninferred due to inappropriate RAM size
-    Info (276004): RAM logic "Ram3" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "modulador:modulador_h|Ram0" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "modulador:modulador_h|Ram1" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "modulador:modulador_h|Ram2" is uninferred due to inappropriate RAM size
+    Info (276004): RAM logic "modulador:modulador_h|Ram3" is uninferred due to inappropriate RAM size
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "ready" is stuck at VCC
+Info (144001): Generated suppressed messages file /home/lucasf/Desktop/BSG/output_files/BSG.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 107 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 8 output pins
-    Info (21061): Implemented 97 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 703 megabytes
-    Info: Processing ended: Thu Mar  9 17:59:49 2017
+Info (21057): Implemented 180 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 19 input pins
+    Info (21059): Implemented 18 output pins
+    Info (21061): Implemented 143 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 701 megabytes
+    Info: Processing ended: Mon Mar 20 15:40:07 2017
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/lucasf/Desktop/BSG/output_files/BSG.map.smsg.
 
 
