@@ -13,7 +13,7 @@ initial	begin
 	flag=0;
 	flag_byte=0;
 	aux=0;
-	
+	entrada=0;
 end
 
 always_comb	

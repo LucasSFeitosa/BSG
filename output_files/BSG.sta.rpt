@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for BSG
-Mon Mar 20 15:40:16 2017
+Tue Mar 21 20:09:16 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
 
 
@@ -113,8 +113,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +------------+-----------------+------------+---------------------------------------------------------------+
 ; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
 +------------+-----------------+------------+---------------------------------------------------------------+
-; 152.02 MHz ; 152.02 MHz      ; G_CLK_TX   ;                                                               ;
-; 492.13 MHz ; 380.08 MHz      ; SYS_CLK    ; limit due to minimum period restriction (max I/O toggle rate) ;
+; 149.95 MHz ; 149.95 MHz      ; G_CLK_TX   ;                                                               ;
+; 503.52 MHz ; 380.08 MHz      ; SYS_CLK    ; limit due to minimum period restriction (max I/O toggle rate) ;
 +------------+-----------------+------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -124,8 +124,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +----------+--------+---------------+
 ; Clock    ; Slack  ; End Point TNS ;
 +----------+--------+---------------+
-; G_CLK_TX ; -5.655 ; -61.777       ;
-; SYS_CLK  ; -1.032 ; -5.177        ;
+; G_CLK_TX ; -5.814 ; -59.183       ;
+; SYS_CLK  ; -0.986 ; -5.986        ;
 +----------+--------+---------------+
 
 
@@ -135,7 +135,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; Clock    ; Slack ; End Point TNS ;
 +----------+-------+---------------+
 ; G_CLK_TX ; 0.445 ; 0.000         ;
-; SYS_CLK  ; 0.858 ; 0.000         ;
+; SYS_CLK  ; 0.614 ; 0.000         ;
 +----------+-------+---------------+
 
 
@@ -166,106 +166,106 @@ No paths to report.
 +--------+----------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                        ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+----------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; -5.655 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 6.689      ;
-; -5.578 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[0] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.001      ; 6.617      ;
-; -5.474 ; AMBA:AMBA_H|data1[1]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 6.508      ;
-; -5.462 ; AMBA:AMBA_H|data2[6]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 6.496      ;
-; -5.370 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[0] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.001      ; 6.409      ;
-; -5.303 ; AMBA:AMBA_H|data2[3]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 6.337      ;
-; -5.261 ; AMBA:AMBA_H|data1[2]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 6.295      ;
-; -5.199 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 6.232      ;
-; -5.129 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.003     ; 6.164      ;
-; -5.122 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[2] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 6.160      ;
-; -5.078 ; AMBA:AMBA_H|data2[4]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 6.112      ;
-; -5.077 ; AMBA:AMBA_H|data1[1]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.003     ; 6.112      ;
-; -5.065 ; AMBA:AMBA_H|data2[2]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 6.099      ;
-; -5.058 ; AMBA:AMBA_H|data2[7]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 6.092      ;
-; -5.056 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[4] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.002      ; 6.096      ;
-; -5.018 ; AMBA:AMBA_H|data1[1]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 6.051      ;
-; -5.010 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 6.036      ;
-; -5.006 ; AMBA:AMBA_H|data2[6]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 6.039      ;
-; -4.991 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 6.023      ;
-; -4.944 ; AMBA:AMBA_H|data2[1]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 5.978      ;
-; -4.937 ; AMBA:AMBA_H|data1[6]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 5.971      ;
-; -4.936 ; AMBA:AMBA_H|data2[6]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.003     ; 5.971      ;
-; -4.933 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[6] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.007     ; 5.964      ;
-; -4.914 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[5] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.001     ; 5.951      ;
-; -4.914 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[2] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 5.952      ;
-; -4.910 ; AMBA:AMBA_H|data1[0]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 5.944      ;
-; -4.906 ; AMBA:AMBA_H|data2[3]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.003     ; 5.941      ;
-; -4.874 ; AMBA:AMBA_H|data1[3]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 5.908      ;
-; -4.864 ; AMBA:AMBA_H|data1[2]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.003     ; 5.899      ;
-; -4.847 ; AMBA:AMBA_H|data2[3]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 5.880      ;
-; -4.844 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[4] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.002      ; 5.884      ;
-; -4.839 ; AMBA:AMBA_H|data1[1]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 5.865      ;
-; -4.820 ; AMBA:AMBA_H|data1[1]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.852      ;
-; -4.817 ; AMBA:AMBA_H|data2[6]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 5.843      ;
-; -4.805 ; AMBA:AMBA_H|data1[2]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 5.838      ;
-; -4.798 ; AMBA:AMBA_H|data2[6]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.830      ;
-; -4.773 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|saida[0] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.001      ; 5.812      ;
-; -4.725 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[6] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.007     ; 5.756      ;
-; -4.706 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[5] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.001     ; 5.743      ;
-; -4.668 ; AMBA:AMBA_H|data2[2]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.003     ; 5.703      ;
-; -4.668 ; AMBA:AMBA_H|data2[3]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 5.694      ;
-; -4.658 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 5.689      ;
-; -4.652 ; AMBA:AMBA_H|data1[7]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 5.686      ;
-; -4.649 ; AMBA:AMBA_H|data2[3]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.681      ;
-; -4.626 ; AMBA:AMBA_H|data1[2]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 5.652      ;
-; -4.622 ; AMBA:AMBA_H|data2[4]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 5.655      ;
-; -4.609 ; AMBA:AMBA_H|data2[2]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 5.642      ;
-; -4.607 ; AMBA:AMBA_H|data1[2]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.639      ;
-; -4.602 ; AMBA:AMBA_H|data2[7]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 5.635      ;
-; -4.581 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[1] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.002     ; 5.617      ;
-; -4.552 ; AMBA:AMBA_H|data2[4]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.003     ; 5.587      ;
-; -4.547 ; AMBA:AMBA_H|data2[1]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.003     ; 5.582      ;
-; -4.532 ; AMBA:AMBA_H|data2[7]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.003     ; 5.567      ;
-; -4.513 ; AMBA:AMBA_H|data1[0]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.003     ; 5.548      ;
-; -4.498 ; AMBA:AMBA_H|data1[5]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 5.532      ;
-; -4.488 ; AMBA:AMBA_H|data2[1]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 5.521      ;
-; -4.487 ; AMBA:AMBA_H|data1[1]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 5.518      ;
-; -4.481 ; AMBA:AMBA_H|data1[6]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 5.514      ;
-; -4.477 ; AMBA:AMBA_H|data1[3]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.003     ; 5.512      ;
-; -4.465 ; AMBA:AMBA_H|data2[6]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 5.496      ;
-; -4.454 ; AMBA:AMBA_H|data1[0]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 5.487      ;
-; -4.433 ; AMBA:AMBA_H|data2[4]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 5.459      ;
-; -4.430 ; AMBA:AMBA_H|data2[2]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 5.456      ;
-; -4.418 ; AMBA:AMBA_H|data1[3]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 5.451      ;
-; -4.414 ; AMBA:AMBA_H|data2[4]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.446      ;
-; -4.413 ; AMBA:AMBA_H|data2[7]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 5.439      ;
-; -4.411 ; AMBA:AMBA_H|data1[6]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.003     ; 5.446      ;
-; -4.411 ; AMBA:AMBA_H|data2[2]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.443      ;
-; -4.394 ; AMBA:AMBA_H|data2[7]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.426      ;
-; -4.373 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[1] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.002     ; 5.409      ;
-; -4.342 ; AMBA:AMBA_H|data2[0]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 5.376      ;
-; -4.323 ; AMBA:AMBA_H|data2[5]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 5.357      ;
-; -4.317 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|saida[2] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 5.355      ;
-; -4.316 ; AMBA:AMBA_H|data2[3]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 5.347      ;
-; -4.309 ; AMBA:AMBA_H|data2[1]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 5.335      ;
-; -4.292 ; AMBA:AMBA_H|data1[6]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 5.318      ;
-; -4.290 ; AMBA:AMBA_H|data2[1]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.322      ;
-; -4.275 ; AMBA:AMBA_H|data1[0]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 5.301      ;
-; -4.274 ; AMBA:AMBA_H|data1[2]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 5.305      ;
-; -4.273 ; AMBA:AMBA_H|data1[6]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.305      ;
-; -4.267 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[1] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.005      ; 5.310      ;
-; -4.256 ; AMBA:AMBA_H|data1[0]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.288      ;
-; -4.247 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|saida[4] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.002      ; 5.287      ;
-; -4.239 ; AMBA:AMBA_H|data1[3]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 5.265      ;
-; -4.220 ; AMBA:AMBA_H|data1[3]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.252      ;
-; -4.196 ; AMBA:AMBA_H|data1[7]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 5.229      ;
-; -4.141 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[3] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.003     ; 5.176      ;
-; -4.128 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|saida[6] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.007     ; 5.159      ;
-; -4.126 ; AMBA:AMBA_H|data1[7]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.003     ; 5.161      ;
-; -4.109 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|saida[5] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.001     ; 5.146      ;
-; -4.081 ; AMBA:AMBA_H|data2[4]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 5.112      ;
-; -4.078 ; AMBA:AMBA_H|data2[2]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 5.109      ;
-; -4.064 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[3] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.002      ; 5.104      ;
-; -4.061 ; AMBA:AMBA_H|data2[7]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 5.092      ;
-; -4.042 ; AMBA:AMBA_H|data1[5]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 5.075      ;
-; -4.007 ; AMBA:AMBA_H|data1[7]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 5.033      ;
-; -3.988 ; AMBA:AMBA_H|data1[7]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.020      ;
-; -3.980 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[1] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.005      ; 5.023      ;
-; -3.972 ; AMBA:AMBA_H|data1[5]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.003     ; 5.007      ;
-; -3.970 ; AMBA:AMBA_H|data1[1]             ; modulador:modulador_h|saida[3] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.003     ; 5.005      ;
+; -5.814 ; AMBA:AMBA_H|data1[1]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 6.846      ;
+; -5.805 ; AMBA:AMBA_H|data1[2]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 6.838      ;
+; -5.669 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[0] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 6.707      ;
+; -5.585 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 6.617      ;
+; -5.520 ; AMBA:AMBA_H|data1[1]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 6.552      ;
+; -5.511 ; AMBA:AMBA_H|data1[2]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 6.544      ;
+; -5.474 ; AMBA:AMBA_H|data2[6]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 6.506      ;
+; -5.375 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[2] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 6.413      ;
+; -5.334 ; AMBA:AMBA_H|data2[3]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 6.366      ;
+; -5.288 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 6.320      ;
+; -5.247 ; AMBA:AMBA_H|data2[1]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 6.279      ;
+; -5.224 ; AMBA:AMBA_H|data1[5]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 6.256      ;
+; -5.210 ; AMBA:AMBA_H|data1[1]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 6.242      ;
+; -5.201 ; AMBA:AMBA_H|data1[2]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 6.234      ;
+; -5.182 ; AMBA:AMBA_H|data2[2]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 6.214      ;
+; -5.177 ; AMBA:AMBA_H|data2[6]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 6.209      ;
+; -5.120 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|saida[0] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.001      ; 6.159      ;
+; -5.074 ; AMBA:AMBA_H|data1[1]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 6.106      ;
+; -5.072 ; AMBA:AMBA_H|data1[1]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 6.102      ;
+; -5.065 ; AMBA:AMBA_H|data1[2]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 6.098      ;
+; -5.065 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[4] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 6.103      ;
+; -5.063 ; AMBA:AMBA_H|data1[2]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 6.094      ;
+; -5.051 ; AMBA:AMBA_H|data2[4]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 6.083      ;
+; -5.040 ; AMBA:AMBA_H|data2[3]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 6.072      ;
+; -5.017 ; AMBA:AMBA_H|data2[7]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 6.049      ;
+; -4.983 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 6.015      ;
+; -4.953 ; AMBA:AMBA_H|data2[1]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.985      ;
+; -4.952 ; AMBA:AMBA_H|data1[0]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.984      ;
+; -4.940 ; AMBA:AMBA_H|data1[6]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.972      ;
+; -4.929 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[5] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 5.967      ;
+; -4.927 ; AMBA:AMBA_H|data1[5]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.959      ;
+; -4.927 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[6] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.002     ; 5.963      ;
+; -4.888 ; AMBA:AMBA_H|data2[2]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.920      ;
+; -4.875 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[0] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 5.913      ;
+; -4.872 ; AMBA:AMBA_H|data2[6]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.904      ;
+; -4.847 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.879      ;
+; -4.845 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 5.875      ;
+; -4.823 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|saida[2] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.001      ; 5.862      ;
+; -4.805 ; AMBA:AMBA_H|data1[3]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.837      ;
+; -4.800 ; AMBA:AMBA_H|data1[1]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 5.831      ;
+; -4.791 ; AMBA:AMBA_H|data1[2]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.823      ;
+; -4.754 ; AMBA:AMBA_H|data2[4]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.786      ;
+; -4.736 ; AMBA:AMBA_H|data2[6]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.768      ;
+; -4.734 ; AMBA:AMBA_H|data2[6]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 5.764      ;
+; -4.730 ; AMBA:AMBA_H|data2[3]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.762      ;
+; -4.720 ; AMBA:AMBA_H|data2[7]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.752      ;
+; -4.688 ; AMBA:AMBA_H|data2[5]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.720      ;
+; -4.658 ; AMBA:AMBA_H|data1[0]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.690      ;
+; -4.655 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[1] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.001     ; 5.692      ;
+; -4.643 ; AMBA:AMBA_H|data2[1]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.675      ;
+; -4.643 ; AMBA:AMBA_H|data1[6]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.675      ;
+; -4.622 ; AMBA:AMBA_H|data1[5]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.654      ;
+; -4.594 ; AMBA:AMBA_H|data2[3]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.626      ;
+; -4.592 ; AMBA:AMBA_H|data2[3]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 5.622      ;
+; -4.578 ; AMBA:AMBA_H|data2[2]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.610      ;
+; -4.578 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[2] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 5.616      ;
+; -4.573 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 5.604      ;
+; -4.518 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|saida[4] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.001      ; 5.557      ;
+; -4.511 ; AMBA:AMBA_H|data1[3]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.543      ;
+; -4.507 ; AMBA:AMBA_H|data2[1]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.539      ;
+; -4.505 ; AMBA:AMBA_H|data2[1]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 5.535      ;
+; -4.486 ; AMBA:AMBA_H|data1[5]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.518      ;
+; -4.484 ; AMBA:AMBA_H|data1[5]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 5.514      ;
+; -4.462 ; AMBA:AMBA_H|data2[6]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 5.493      ;
+; -4.449 ; AMBA:AMBA_H|data2[4]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.481      ;
+; -4.445 ; AMBA:AMBA_H|data1[7]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.477      ;
+; -4.443 ; AMBA:AMBA_H|data1[1]             ; modulador:modulador_h|saida[3] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 5.473      ;
+; -4.442 ; AMBA:AMBA_H|data2[2]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.474      ;
+; -4.440 ; AMBA:AMBA_H|data2[2]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 5.470      ;
+; -4.434 ; AMBA:AMBA_H|data1[2]             ; modulador:modulador_h|saida[3] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 5.465      ;
+; -4.417 ; AMBA:AMBA_H|data2[0]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.449      ;
+; -4.415 ; AMBA:AMBA_H|data2[7]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.447      ;
+; -4.391 ; AMBA:AMBA_H|data2[5]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.423      ;
+; -4.382 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|saida[5] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.001      ; 5.421      ;
+; -4.380 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|saida[6] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.001     ; 5.417      ;
+; -4.348 ; AMBA:AMBA_H|data1[0]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.380      ;
+; -4.338 ; AMBA:AMBA_H|data1[6]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.370      ;
+; -4.320 ; AMBA:AMBA_H|data2[3]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 5.351      ;
+; -4.313 ; AMBA:AMBA_H|data2[4]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.345      ;
+; -4.311 ; AMBA:AMBA_H|data2[4]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 5.341      ;
+; -4.311 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[2] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 5.349      ;
+; -4.298 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[3] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.002     ; 5.334      ;
+; -4.279 ; AMBA:AMBA_H|data2[7]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.311      ;
+; -4.277 ; AMBA:AMBA_H|data2[7]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 5.307      ;
+; -4.273 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[4] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 5.311      ;
+; -4.233 ; AMBA:AMBA_H|data2[1]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 5.264      ;
+; -4.216 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[3] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 5.246      ;
+; -4.212 ; AMBA:AMBA_H|data1[0]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.244      ;
+; -4.212 ; AMBA:AMBA_H|data1[5]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 5.243      ;
+; -4.210 ; AMBA:AMBA_H|data1[0]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 5.240      ;
+; -4.202 ; AMBA:AMBA_H|data1[6]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.234      ;
+; -4.201 ; AMBA:AMBA_H|data1[3]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.233      ;
+; -4.200 ; AMBA:AMBA_H|data1[6]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 5.230      ;
+; -4.168 ; AMBA:AMBA_H|data2[2]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 5.199      ;
+; -4.148 ; AMBA:AMBA_H|data1[7]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.180      ;
+; -4.137 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[5] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 5.175      ;
+; -4.135 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[6] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.002     ; 5.171      ;
+; -4.125 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[1] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 5.163      ;
+; -4.123 ; AMBA:AMBA_H|data2[0]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 5.155      ;
+; -4.108 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|saida[1] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 5.146      ;
 +--------+----------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -274,31 +274,31 @@ No paths to report.
 +--------+------------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack  ; From Node                    ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +--------+------------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; -1.032 ; AMBA:AMBA_H|data1[2]         ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.002     ; 2.068      ;
-; -0.926 ; AMBA:AMBA_H|controle[2]      ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.006      ; 1.970      ;
-; -0.839 ; AMBA:AMBA_H|data2[2]         ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.002     ; 1.875      ;
-; -0.795 ; modulador:modulador_h|status ; AMBA:AMBA_H|data_out[2] ; G_CLK_TX     ; SYS_CLK     ; 1.000        ; 0.010      ; 1.843      ;
-; -0.772 ; AMBA:AMBA_H|data1[6]         ; AMBA:AMBA_H|data_out[6] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 1.809      ;
-; -0.728 ; modulador:modulador_h|status ; AMBA:AMBA_H|data_out[3] ; G_CLK_TX     ; SYS_CLK     ; 1.000        ; 0.011      ; 1.777      ;
-; -0.726 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.006      ; 1.770      ;
-; -0.695 ; AMBA:AMBA_H|controle[2]      ; AMBA:AMBA_H|controle[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.733      ;
-; -0.564 ; modulador:modulador_h|status ; AMBA:AMBA_H|controle[2] ; G_CLK_TX     ; SYS_CLK     ; 1.000        ; 0.004      ; 1.606      ;
-; -0.495 ; AMBA:AMBA_H|data1[7]         ; AMBA:AMBA_H|data_out[7] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 1.532      ;
-; -0.495 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|controle[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.533      ;
-; -0.492 ; AMBA:AMBA_H|data1[0]         ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 1.529      ;
-; -0.458 ; AMBA:AMBA_H|data1[1]         ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 1.495      ;
-; -0.366 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.007      ; 1.411      ;
-; -0.257 ; AMBA:AMBA_H|data1[4]         ; AMBA:AMBA_H|data_out[4] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 1.294      ;
-; -0.256 ; AMBA:AMBA_H|data2[1]         ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 1.293      ;
-; -0.252 ; AMBA:AMBA_H|data2[3]         ; AMBA:AMBA_H|data_out[3] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 1.289      ;
-; -0.248 ; AMBA:AMBA_H|data2[5]         ; AMBA:AMBA_H|data_out[5] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 1.285      ;
-; -0.208 ; AMBA:AMBA_H|controle[0]      ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.246      ;
-; -0.204 ; AMBA:AMBA_H|data2[0]         ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 1.241      ;
-; -0.124 ; AMBA:AMBA_H|data1[5]         ; AMBA:AMBA_H|data_out[5] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 1.161      ;
-; -0.114 ; AMBA:AMBA_H|data2[7]         ; AMBA:AMBA_H|data_out[7] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 1.151      ;
-; -0.112 ; AMBA:AMBA_H|data2[6]         ; AMBA:AMBA_H|data_out[6] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 1.149      ;
-; -0.111 ; AMBA:AMBA_H|data1[3]         ; AMBA:AMBA_H|data_out[3] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 1.148      ;
-; -0.106 ; AMBA:AMBA_H|data2[4]         ; AMBA:AMBA_H|data_out[4] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 1.143      ;
+; -0.986 ; AMBA:AMBA_H|controle[2]      ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 2.024      ;
+; -0.844 ; AMBA:AMBA_H|data2[2]         ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.882      ;
+; -0.812 ; modulador:modulador_h|status ; AMBA:AMBA_H|data_out[3] ; G_CLK_TX     ; SYS_CLK     ; 1.000        ; 0.010      ; 1.860      ;
+; -0.787 ; modulador:modulador_h|status ; AMBA:AMBA_H|data_out[2] ; G_CLK_TX     ; SYS_CLK     ; 1.000        ; 0.010      ; 1.835      ;
+; -0.785 ; AMBA:AMBA_H|data1[2]         ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.001      ; 1.824      ;
+; -0.774 ; AMBA:AMBA_H|data2[7]         ; AMBA:AMBA_H|data_out[7] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.812      ;
+; -0.747 ; AMBA:AMBA_H|data2[6]         ; AMBA:AMBA_H|data_out[6] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.785      ;
+; -0.747 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.785      ;
+; -0.728 ; AMBA:AMBA_H|controle[2]      ; AMBA:AMBA_H|controle[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.766      ;
+; -0.529 ; modulador:modulador_h|status ; AMBA:AMBA_H|controle[2] ; G_CLK_TX     ; SYS_CLK     ; 1.000        ; 0.010      ; 1.577      ;
+; -0.526 ; AMBA:AMBA_H|data2[4]         ; AMBA:AMBA_H|data_out[4] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.564      ;
+; -0.514 ; AMBA:AMBA_H|data2[1]         ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.552      ;
+; -0.499 ; AMBA:AMBA_H|data1[1]         ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.537      ;
+; -0.489 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|controle[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.527      ;
+; -0.485 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.523      ;
+; -0.456 ; AMBA:AMBA_H|data1[0]         ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.494      ;
+; -0.443 ; AMBA:AMBA_H|data1[3]         ; AMBA:AMBA_H|data_out[3] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.481      ;
+; -0.443 ; AMBA:AMBA_H|data1[5]         ; AMBA:AMBA_H|data_out[5] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.481      ;
+; -0.254 ; AMBA:AMBA_H|data2[0]         ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.292      ;
+; -0.197 ; AMBA:AMBA_H|data2[3]         ; AMBA:AMBA_H|data_out[3] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.235      ;
+; -0.099 ; AMBA:AMBA_H|data1[7]         ; AMBA:AMBA_H|data_out[7] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.137      ;
+; -0.099 ; AMBA:AMBA_H|data2[5]         ; AMBA:AMBA_H|data_out[5] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.137      ;
+; -0.092 ; AMBA:AMBA_H|data1[6]         ; AMBA:AMBA_H|data_out[6] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.130      ;
+; -0.054 ; AMBA:AMBA_H|data1[4]         ; AMBA:AMBA_H|data_out[4] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 1.092      ;
+; 0.138  ; AMBA:AMBA_H|controle[0]      ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.900      ;
 +--------+------------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -312,101 +312,101 @@ No paths to report.
 ; 0.445 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|entrada[2] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|entrada[3] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|entrada[4] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.731      ;
+; 0.445 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|aux[0]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|aux[1]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|aux[2]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; modulador:modulador_h|status     ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.731      ;
 ; 0.445 ; modulador:modulador_h|flag       ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.731      ;
-; 0.645 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|aux[1]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.931      ;
-; 1.021 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.307      ;
-; 1.104 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 1.389      ;
-; 1.202 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|aux[2]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.007     ; 1.481      ;
-; 1.254 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|entrada[2] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.006      ; 1.546      ;
-; 1.445 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.731      ;
-; 1.462 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[6]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.748      ;
-; 1.471 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.757      ;
-; 1.514 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|entrada[3] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.009      ; 1.809      ;
-; 1.546 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|aux[2]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.007     ; 1.825      ;
-; 1.547 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|entrada[4] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.009     ; 1.824      ;
-; 1.551 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|entrada[3] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.003      ; 1.840      ;
-; 1.554 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.002     ; 1.838      ;
-; 1.609 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|entrada[3] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.895      ;
-; 1.692 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|entrada[4] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.978      ;
-; 1.775 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.061      ;
-; 1.783 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.007     ; 2.062      ;
-; 1.804 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|entrada[1] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.009     ; 2.081      ;
-; 1.810 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[6]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.006     ; 2.090      ;
-; 1.847 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.003      ; 2.136      ;
-; 1.859 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.145      ;
-; 1.877 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.163      ;
-; 1.901 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|aux[2]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.187      ;
-; 1.921 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|entrada[2] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 2.204      ;
-; 1.936 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.005      ; 2.227      ;
-; 2.076 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.007     ; 2.355      ;
-; 2.097 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 2.382      ;
-; 2.124 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.006      ; 2.416      ;
-; 2.148 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.004     ; 2.430      ;
-; 2.191 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.005      ; 2.482      ;
-; 2.199 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 2.484      ;
-; 2.224 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.007     ; 2.503      ;
-; 2.231 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|aux[2]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.517      ;
-; 2.324 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 2.609      ;
-; 2.325 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.612      ;
-; 2.338 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.009      ; 2.633      ;
-; 2.340 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.009      ; 2.635      ;
-; 2.344 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.007      ; 2.637      ;
-; 2.352 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|aux[0]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.638      ;
-; 2.354 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 2.639      ;
-; 2.366 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.003      ; 2.655      ;
-; 2.383 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.007      ; 2.676      ;
-; 2.389 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.009     ; 2.666      ;
-; 2.404 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.006      ; 2.696      ;
-; 2.404 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.002      ; 2.692      ;
-; 2.406 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 2.689      ;
-; 2.406 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.005      ; 2.697      ;
-; 2.407 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[6]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.693      ;
-; 2.415 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.002      ; 2.703      ;
-; 2.424 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.711      ;
-; 2.453 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|aux[0]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.007      ; 2.746      ;
-; 2.453 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|aux[1]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.007      ; 2.746      ;
-; 2.482 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.006      ; 2.774      ;
-; 2.514 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.007      ; 2.807      ;
-; 2.523 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.003      ; 2.812      ;
-; 2.545 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 2.828      ;
-; 2.548 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.002     ; 2.832      ;
-; 2.550 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 2.833      ;
-; 2.562 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 2.847      ;
-; 2.600 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.886      ;
-; 2.635 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.004     ; 2.917      ;
-; 2.642 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 2.925      ;
-; 2.647 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.003      ; 2.936      ;
-; 2.664 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.950      ;
-; 2.668 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.954      ;
-; 2.674 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.007      ; 2.967      ;
-; 2.685 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.009      ; 2.980      ;
-; 2.687 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|entrada[4] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.009     ; 2.964      ;
-; 2.690 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.005      ; 2.981      ;
-; 2.696 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.004     ; 2.978      ;
-; 2.703 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.004     ; 2.985      ;
-; 2.704 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.006      ; 2.996      ;
-; 2.722 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|entrada[4] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.006     ; 3.002      ;
-; 2.746 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.005      ; 3.037      ;
-; 2.748 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 3.034      ;
-; 2.763 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.009     ; 3.040      ;
-; 2.768 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.006      ; 3.060      ;
-; 2.783 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|aux[0]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.007      ; 3.076      ;
-; 2.783 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|aux[1]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.007      ; 3.076      ;
-; 2.804 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.008      ; 3.098      ;
-; 2.804 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 3.090      ;
-; 2.831 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.006     ; 3.111      ;
-; 2.833 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.002     ; 3.117      ;
-; 2.845 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|aux[2]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.009     ; 3.122      ;
-; 2.846 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 3.132      ;
-; 2.865 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.007      ; 3.158      ;
-; 2.877 ; AMBA:AMBA_H|data2[3]             ; modulador:modulador_h|saida[7]   ; SYS_CLK      ; G_CLK_TX    ; 0.000        ; -0.007     ; 3.156      ;
-; 2.885 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[6]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.009     ; 3.162      ;
-; 2.891 ; AMBA:AMBA_H|data2[3]             ; modulador:modulador_h|flag       ; SYS_CLK      ; G_CLK_TX    ; 0.000        ; -0.006     ; 3.171      ;
-; 2.924 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.002      ; 3.212      ;
+; 0.678 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|entrada[1] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.964      ;
+; 0.682 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|entrada[2] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.968      ;
+; 0.693 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|entrada[3] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.979      ;
+; 0.868 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|entrada[4] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.154      ;
+; 1.044 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|entrada[2] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.330      ;
+; 1.045 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|entrada[3] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.331      ;
+; 1.278 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|entrada[3] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.564      ;
+; 1.375 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 1.660      ;
+; 1.401 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.687      ;
+; 1.446 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|aux[2]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.004     ; 1.728      ;
+; 1.475 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 1.760      ;
+; 1.483 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.769      ;
+; 1.536 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|aux[1]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.823      ;
+; 1.537 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.824      ;
+; 1.543 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[6]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.002     ; 1.827      ;
+; 1.576 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.002     ; 1.860      ;
+; 1.587 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.874      ;
+; 1.594 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|entrada[4] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.880      ;
+; 1.597 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 1.882      ;
+; 1.625 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|aux[0]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.911      ;
+; 1.652 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 1.937      ;
+; 1.700 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.987      ;
+; 1.716 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 2.001      ;
+; 1.749 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|entrada[4] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.035      ;
+; 1.777 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.064      ;
+; 1.810 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.096      ;
+; 1.838 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|aux[2]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 2.121      ;
+; 1.860 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.004     ; 2.142      ;
+; 1.902 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|entrada[4] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.188      ;
+; 1.917 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.004     ; 2.199      ;
+; 1.951 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.004      ; 2.241      ;
+; 1.965 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.002     ; 2.249      ;
+; 2.023 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.310      ;
+; 2.032 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.319      ;
+; 2.035 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.322      ;
+; 2.055 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|aux[0]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.341      ;
+; 2.060 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.347      ;
+; 2.068 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[6]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 2.353      ;
+; 2.069 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 2.352      ;
+; 2.070 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.357      ;
+; 2.078 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.365      ;
+; 2.080 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.366      ;
+; 2.082 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 2.367      ;
+; 2.109 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.396      ;
+; 2.111 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|aux[1]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.398      ;
+; 2.142 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.428      ;
+; 2.179 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.466      ;
+; 2.183 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.470      ;
+; 2.193 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.479      ;
+; 2.248 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.002      ; 2.536      ;
+; 2.284 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[6]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 2.569      ;
+; 2.304 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.591      ;
+; 2.308 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.595      ;
+; 2.320 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 2.603      ;
+; 2.325 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|aux[0]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.611      ;
+; 2.388 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|aux[2]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 2.671      ;
+; 2.397 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.683      ;
+; 2.407 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.004      ; 2.697      ;
+; 2.407 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.694      ;
+; 2.435 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 2.720      ;
+; 2.438 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.724      ;
+; 2.449 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.736      ;
+; 2.461 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.748      ;
+; 2.462 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.749      ;
+; 2.467 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.753      ;
+; 2.480 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|aux[0]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.766      ;
+; 2.493 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[6]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 2.778      ;
+; 2.538 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.825      ;
+; 2.541 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|aux[1]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.828      ;
+; 2.545 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.832      ;
+; 2.558 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.845      ;
+; 2.584 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.002      ; 2.872      ;
+; 2.586 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 2.871      ;
+; 2.600 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.887      ;
+; 2.619 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 2.906      ;
+; 2.633 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|aux[0]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.919      ;
+; 2.637 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[6]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 2.922      ;
+; 2.687 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 2.973      ;
+; 2.717 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.002     ; 3.001      ;
+; 2.719 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 3.006      ;
+; 2.727 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 3.012      ;
+; 2.732 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 3.019      ;
+; 2.750 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 3.033      ;
+; 2.770 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 3.055      ;
+; 2.787 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[6]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 3.072      ;
+; 2.790 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 3.077      ;
+; 2.811 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|aux[1]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 3.098      ;
+; 2.816 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 3.102      ;
+; 2.818 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|aux[2]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 3.101      ;
 +-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -415,31 +415,31 @@ No paths to report.
 +-------+------------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                    ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+------------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; 0.858 ; AMBA:AMBA_H|data2[4]         ; AMBA:AMBA_H|data_out[4] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 1.143      ;
-; 0.863 ; AMBA:AMBA_H|data1[3]         ; AMBA:AMBA_H|data_out[3] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 1.148      ;
-; 0.864 ; AMBA:AMBA_H|data2[6]         ; AMBA:AMBA_H|data_out[6] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 1.149      ;
-; 0.866 ; AMBA:AMBA_H|data2[7]         ; AMBA:AMBA_H|data_out[7] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 1.151      ;
-; 0.876 ; AMBA:AMBA_H|data1[5]         ; AMBA:AMBA_H|data_out[5] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 1.161      ;
-; 0.956 ; AMBA:AMBA_H|data2[0]         ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 1.241      ;
-; 0.960 ; AMBA:AMBA_H|controle[0]      ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.246      ;
-; 1.000 ; AMBA:AMBA_H|data2[5]         ; AMBA:AMBA_H|data_out[5] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 1.285      ;
-; 1.004 ; AMBA:AMBA_H|data2[3]         ; AMBA:AMBA_H|data_out[3] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 1.289      ;
-; 1.008 ; AMBA:AMBA_H|data2[1]         ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 1.293      ;
-; 1.009 ; AMBA:AMBA_H|data1[4]         ; AMBA:AMBA_H|data_out[4] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 1.294      ;
-; 1.118 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.007      ; 1.411      ;
-; 1.210 ; AMBA:AMBA_H|data1[1]         ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 1.495      ;
-; 1.244 ; AMBA:AMBA_H|data1[0]         ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 1.529      ;
-; 1.247 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|controle[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.533      ;
-; 1.247 ; AMBA:AMBA_H|data1[7]         ; AMBA:AMBA_H|data_out[7] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 1.532      ;
-; 1.316 ; modulador:modulador_h|status ; AMBA:AMBA_H|controle[2] ; G_CLK_TX     ; SYS_CLK     ; 0.000        ; 0.004      ; 1.606      ;
-; 1.447 ; AMBA:AMBA_H|controle[2]      ; AMBA:AMBA_H|controle[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.733      ;
-; 1.478 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.006      ; 1.770      ;
-; 1.480 ; modulador:modulador_h|status ; AMBA:AMBA_H|data_out[3] ; G_CLK_TX     ; SYS_CLK     ; 0.000        ; 0.011      ; 1.777      ;
-; 1.524 ; AMBA:AMBA_H|data1[6]         ; AMBA:AMBA_H|data_out[6] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 1.809      ;
-; 1.547 ; modulador:modulador_h|status ; AMBA:AMBA_H|data_out[2] ; G_CLK_TX     ; SYS_CLK     ; 0.000        ; 0.010      ; 1.843      ;
-; 1.591 ; AMBA:AMBA_H|data2[2]         ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.002     ; 1.875      ;
-; 1.678 ; AMBA:AMBA_H|controle[2]      ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.006      ; 1.970      ;
-; 1.784 ; AMBA:AMBA_H|data1[2]         ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.002     ; 2.068      ;
+; 0.614 ; AMBA:AMBA_H|controle[0]      ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.900      ;
+; 0.806 ; AMBA:AMBA_H|data1[4]         ; AMBA:AMBA_H|data_out[4] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.092      ;
+; 0.844 ; AMBA:AMBA_H|data1[6]         ; AMBA:AMBA_H|data_out[6] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.130      ;
+; 0.851 ; AMBA:AMBA_H|data2[5]         ; AMBA:AMBA_H|data_out[5] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.137      ;
+; 0.851 ; AMBA:AMBA_H|data1[7]         ; AMBA:AMBA_H|data_out[7] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.137      ;
+; 0.949 ; AMBA:AMBA_H|data2[3]         ; AMBA:AMBA_H|data_out[3] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.235      ;
+; 1.006 ; AMBA:AMBA_H|data2[0]         ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.292      ;
+; 1.195 ; AMBA:AMBA_H|data1[3]         ; AMBA:AMBA_H|data_out[3] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.481      ;
+; 1.195 ; AMBA:AMBA_H|data1[5]         ; AMBA:AMBA_H|data_out[5] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.481      ;
+; 1.208 ; AMBA:AMBA_H|data1[0]         ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.494      ;
+; 1.237 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.523      ;
+; 1.241 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|controle[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.527      ;
+; 1.251 ; AMBA:AMBA_H|data1[1]         ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.537      ;
+; 1.266 ; AMBA:AMBA_H|data2[1]         ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.552      ;
+; 1.278 ; AMBA:AMBA_H|data2[4]         ; AMBA:AMBA_H|data_out[4] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.564      ;
+; 1.281 ; modulador:modulador_h|status ; AMBA:AMBA_H|controle[2] ; G_CLK_TX     ; SYS_CLK     ; 0.000        ; 0.010      ; 1.577      ;
+; 1.480 ; AMBA:AMBA_H|controle[2]      ; AMBA:AMBA_H|controle[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.766      ;
+; 1.499 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.785      ;
+; 1.499 ; AMBA:AMBA_H|data2[6]         ; AMBA:AMBA_H|data_out[6] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.785      ;
+; 1.526 ; AMBA:AMBA_H|data2[7]         ; AMBA:AMBA_H|data_out[7] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.812      ;
+; 1.537 ; AMBA:AMBA_H|data1[2]         ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.001      ; 1.824      ;
+; 1.539 ; modulador:modulador_h|status ; AMBA:AMBA_H|data_out[2] ; G_CLK_TX     ; SYS_CLK     ; 0.000        ; 0.010      ; 1.835      ;
+; 1.564 ; modulador:modulador_h|status ; AMBA:AMBA_H|data_out[3] ; G_CLK_TX     ; SYS_CLK     ; 0.000        ; 0.010      ; 1.860      ;
+; 1.596 ; AMBA:AMBA_H|data2[2]         ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 1.882      ;
+; 1.738 ; AMBA:AMBA_H|controle[2]      ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 2.024      ;
 +-------+------------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -647,25 +647,24 @@ No paths to report.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; Data_in[*]  ; SYS_CLK    ; 4.184 ; 4.184 ; Rise       ; SYS_CLK         ;
-;  Data_in[0] ; SYS_CLK    ; 3.931 ; 3.931 ; Rise       ; SYS_CLK         ;
-;  Data_in[1] ; SYS_CLK    ; 3.900 ; 3.900 ; Rise       ; SYS_CLK         ;
-;  Data_in[2] ; SYS_CLK    ; 3.886 ; 3.886 ; Rise       ; SYS_CLK         ;
-;  Data_in[3] ; SYS_CLK    ; 4.177 ; 4.177 ; Rise       ; SYS_CLK         ;
-;  Data_in[4] ; SYS_CLK    ; 3.637 ; 3.637 ; Rise       ; SYS_CLK         ;
-;  Data_in[5] ; SYS_CLK    ; 4.184 ; 4.184 ; Rise       ; SYS_CLK         ;
-;  Data_in[6] ; SYS_CLK    ; 3.663 ; 3.663 ; Rise       ; SYS_CLK         ;
-;  Data_in[7] ; SYS_CLK    ; 3.642 ; 3.642 ; Rise       ; SYS_CLK         ;
-; addr[*]     ; SYS_CLK    ; 7.942 ; 7.942 ; Rise       ; SYS_CLK         ;
-;  addr[0]    ; SYS_CLK    ; 5.921 ; 5.921 ; Rise       ; SYS_CLK         ;
-;  addr[1]    ; SYS_CLK    ; 6.214 ; 6.214 ; Rise       ; SYS_CLK         ;
-;  addr[2]    ; SYS_CLK    ; 7.652 ; 7.652 ; Rise       ; SYS_CLK         ;
-;  addr[3]    ; SYS_CLK    ; 7.900 ; 7.900 ; Rise       ; SYS_CLK         ;
-;  addr[4]    ; SYS_CLK    ; 7.942 ; 7.942 ; Rise       ; SYS_CLK         ;
-;  addr[5]    ; SYS_CLK    ; 7.815 ; 7.815 ; Rise       ; SYS_CLK         ;
-;  addr[6]    ; SYS_CLK    ; 5.897 ; 5.897 ; Rise       ; SYS_CLK         ;
-;  addr[7]    ; SYS_CLK    ; 5.756 ; 5.756 ; Rise       ; SYS_CLK         ;
-; valid       ; SYS_CLK    ; 6.042 ; 6.042 ; Rise       ; SYS_CLK         ;
+; Data_in[*]  ; SYS_CLK    ; 4.219 ; 4.219 ; Rise       ; SYS_CLK         ;
+;  Data_in[0] ; SYS_CLK    ; 3.883 ; 3.883 ; Rise       ; SYS_CLK         ;
+;  Data_in[1] ; SYS_CLK    ; 3.924 ; 3.924 ; Rise       ; SYS_CLK         ;
+;  Data_in[2] ; SYS_CLK    ; 4.203 ; 4.203 ; Rise       ; SYS_CLK         ;
+;  Data_in[3] ; SYS_CLK    ; 3.628 ; 3.628 ; Rise       ; SYS_CLK         ;
+;  Data_in[4] ; SYS_CLK    ; 4.219 ; 4.219 ; Rise       ; SYS_CLK         ;
+;  Data_in[5] ; SYS_CLK    ; 4.178 ; 4.178 ; Rise       ; SYS_CLK         ;
+;  Data_in[6] ; SYS_CLK    ; 3.591 ; 3.591 ; Rise       ; SYS_CLK         ;
+;  Data_in[7] ; SYS_CLK    ; 4.180 ; 4.180 ; Rise       ; SYS_CLK         ;
+; addr[*]     ; SYS_CLK    ; 8.193 ; 8.193 ; Rise       ; SYS_CLK         ;
+;  addr[0]    ; SYS_CLK    ; 7.138 ; 7.138 ; Rise       ; SYS_CLK         ;
+;  addr[1]    ; SYS_CLK    ; 6.619 ; 6.619 ; Rise       ; SYS_CLK         ;
+;  addr[2]    ; SYS_CLK    ; 6.850 ; 6.850 ; Rise       ; SYS_CLK         ;
+;  addr[3]    ; SYS_CLK    ; 7.722 ; 7.722 ; Rise       ; SYS_CLK         ;
+;  addr[4]    ; SYS_CLK    ; 7.973 ; 7.973 ; Rise       ; SYS_CLK         ;
+;  addr[5]    ; SYS_CLK    ; 8.193 ; 8.193 ; Rise       ; SYS_CLK         ;
+;  addr[6]    ; SYS_CLK    ; 7.844 ; 7.844 ; Rise       ; SYS_CLK         ;
+;  addr[7]    ; SYS_CLK    ; 5.198 ; 5.198 ; Rise       ; SYS_CLK         ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -674,25 +673,24 @@ No paths to report.
 +-------------+------------+--------+--------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-------------+------------+--------+--------+------------+-----------------+
-; Data_in[*]  ; SYS_CLK    ; -3.199 ; -3.199 ; Rise       ; SYS_CLK         ;
-;  Data_in[0] ; SYS_CLK    ; -3.644 ; -3.644 ; Rise       ; SYS_CLK         ;
-;  Data_in[1] ; SYS_CLK    ; -3.199 ; -3.199 ; Rise       ; SYS_CLK         ;
-;  Data_in[2] ; SYS_CLK    ; -3.557 ; -3.557 ; Rise       ; SYS_CLK         ;
-;  Data_in[3] ; SYS_CLK    ; -3.929 ; -3.929 ; Rise       ; SYS_CLK         ;
-;  Data_in[4] ; SYS_CLK    ; -3.384 ; -3.384 ; Rise       ; SYS_CLK         ;
-;  Data_in[5] ; SYS_CLK    ; -3.936 ; -3.936 ; Rise       ; SYS_CLK         ;
-;  Data_in[6] ; SYS_CLK    ; -3.411 ; -3.411 ; Rise       ; SYS_CLK         ;
-;  Data_in[7] ; SYS_CLK    ; -3.390 ; -3.390 ; Rise       ; SYS_CLK         ;
-; addr[*]     ; SYS_CLK    ; -3.790 ; -3.790 ; Rise       ; SYS_CLK         ;
-;  addr[0]    ; SYS_CLK    ; -3.790 ; -3.790 ; Rise       ; SYS_CLK         ;
-;  addr[1]    ; SYS_CLK    ; -3.892 ; -3.892 ; Rise       ; SYS_CLK         ;
-;  addr[2]    ; SYS_CLK    ; -6.419 ; -6.419 ; Rise       ; SYS_CLK         ;
-;  addr[3]    ; SYS_CLK    ; -6.667 ; -6.667 ; Rise       ; SYS_CLK         ;
-;  addr[4]    ; SYS_CLK    ; -6.709 ; -6.709 ; Rise       ; SYS_CLK         ;
-;  addr[5]    ; SYS_CLK    ; -6.582 ; -6.582 ; Rise       ; SYS_CLK         ;
-;  addr[6]    ; SYS_CLK    ; -4.974 ; -4.974 ; Rise       ; SYS_CLK         ;
-;  addr[7]    ; SYS_CLK    ; -4.982 ; -4.982 ; Rise       ; SYS_CLK         ;
-; valid       ; SYS_CLK    ; -4.760 ; -4.760 ; Rise       ; SYS_CLK         ;
+; Data_in[*]  ; SYS_CLK    ; -3.339 ; -3.339 ; Rise       ; SYS_CLK         ;
+;  Data_in[0] ; SYS_CLK    ; -3.546 ; -3.546 ; Rise       ; SYS_CLK         ;
+;  Data_in[1] ; SYS_CLK    ; -3.644 ; -3.644 ; Rise       ; SYS_CLK         ;
+;  Data_in[2] ; SYS_CLK    ; -3.928 ; -3.928 ; Rise       ; SYS_CLK         ;
+;  Data_in[3] ; SYS_CLK    ; -3.379 ; -3.379 ; Rise       ; SYS_CLK         ;
+;  Data_in[4] ; SYS_CLK    ; -3.794 ; -3.794 ; Rise       ; SYS_CLK         ;
+;  Data_in[5] ; SYS_CLK    ; -3.925 ; -3.925 ; Rise       ; SYS_CLK         ;
+;  Data_in[6] ; SYS_CLK    ; -3.339 ; -3.339 ; Rise       ; SYS_CLK         ;
+;  Data_in[7] ; SYS_CLK    ; -3.929 ; -3.929 ; Rise       ; SYS_CLK         ;
+; addr[*]     ; SYS_CLK    ; -4.089 ; -4.089 ; Rise       ; SYS_CLK         ;
+;  addr[0]    ; SYS_CLK    ; -4.089 ; -4.089 ; Rise       ; SYS_CLK         ;
+;  addr[1]    ; SYS_CLK    ; -5.604 ; -5.604 ; Rise       ; SYS_CLK         ;
+;  addr[2]    ; SYS_CLK    ; -4.490 ; -4.490 ; Rise       ; SYS_CLK         ;
+;  addr[3]    ; SYS_CLK    ; -7.004 ; -7.004 ; Rise       ; SYS_CLK         ;
+;  addr[4]    ; SYS_CLK    ; -7.255 ; -7.255 ; Rise       ; SYS_CLK         ;
+;  addr[5]    ; SYS_CLK    ; -7.475 ; -7.475 ; Rise       ; SYS_CLK         ;
+;  addr[6]    ; SYS_CLK    ; -7.126 ; -7.126 ; Rise       ; SYS_CLK         ;
+;  addr[7]    ; SYS_CLK    ; -4.563 ; -4.563 ; Rise       ; SYS_CLK         ;
 +-------------+------------+--------+--------+------------+-----------------+
 
 
@@ -701,25 +699,25 @@ No paths to report.
 +--------------+------------+-------+-------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------+------------+-------+-------+------------+-----------------+
-; OUT[*]       ; G_CLK_TX   ; 7.419 ; 7.419 ; Rise       ; G_CLK_TX        ;
-;  OUT[0]      ; G_CLK_TX   ; 7.176 ; 7.176 ; Rise       ; G_CLK_TX        ;
-;  OUT[1]      ; G_CLK_TX   ; 7.060 ; 7.060 ; Rise       ; G_CLK_TX        ;
-;  OUT[2]      ; G_CLK_TX   ; 7.419 ; 7.419 ; Rise       ; G_CLK_TX        ;
-;  OUT[3]      ; G_CLK_TX   ; 6.791 ; 6.791 ; Rise       ; G_CLK_TX        ;
-;  OUT[4]      ; G_CLK_TX   ; 7.322 ; 7.322 ; Rise       ; G_CLK_TX        ;
-;  OUT[5]      ; G_CLK_TX   ; 7.179 ; 7.179 ; Rise       ; G_CLK_TX        ;
-;  OUT[6]      ; G_CLK_TX   ; 6.857 ; 6.857 ; Rise       ; G_CLK_TX        ;
-;  OUT[7]      ; G_CLK_TX   ; 7.056 ; 7.056 ; Rise       ; G_CLK_TX        ;
-; BSG_INT      ; SYS_CLK    ; 7.142 ; 7.142 ; Rise       ; SYS_CLK         ;
-; Data_out[*]  ; SYS_CLK    ; 7.248 ; 7.248 ; Rise       ; SYS_CLK         ;
-;  Data_out[0] ; SYS_CLK    ; 7.188 ; 7.188 ; Rise       ; SYS_CLK         ;
-;  Data_out[1] ; SYS_CLK    ; 6.881 ; 6.881 ; Rise       ; SYS_CLK         ;
-;  Data_out[2] ; SYS_CLK    ; 6.907 ; 6.907 ; Rise       ; SYS_CLK         ;
-;  Data_out[3] ; SYS_CLK    ; 7.163 ; 7.163 ; Rise       ; SYS_CLK         ;
-;  Data_out[4] ; SYS_CLK    ; 7.248 ; 7.248 ; Rise       ; SYS_CLK         ;
-;  Data_out[5] ; SYS_CLK    ; 7.175 ; 7.175 ; Rise       ; SYS_CLK         ;
-;  Data_out[6] ; SYS_CLK    ; 6.880 ; 6.880 ; Rise       ; SYS_CLK         ;
-;  Data_out[7] ; SYS_CLK    ; 7.173 ; 7.173 ; Rise       ; SYS_CLK         ;
+; OUT[*]       ; G_CLK_TX   ; 7.490 ; 7.490 ; Rise       ; G_CLK_TX        ;
+;  OUT[0]      ; G_CLK_TX   ; 6.862 ; 6.862 ; Rise       ; G_CLK_TX        ;
+;  OUT[1]      ; G_CLK_TX   ; 7.490 ; 7.490 ; Rise       ; G_CLK_TX        ;
+;  OUT[2]      ; G_CLK_TX   ; 6.840 ; 6.840 ; Rise       ; G_CLK_TX        ;
+;  OUT[3]      ; G_CLK_TX   ; 7.223 ; 7.223 ; Rise       ; G_CLK_TX        ;
+;  OUT[4]      ; G_CLK_TX   ; 6.870 ; 6.870 ; Rise       ; G_CLK_TX        ;
+;  OUT[5]      ; G_CLK_TX   ; 6.850 ; 6.850 ; Rise       ; G_CLK_TX        ;
+;  OUT[6]      ; G_CLK_TX   ; 7.223 ; 7.223 ; Rise       ; G_CLK_TX        ;
+;  OUT[7]      ; G_CLK_TX   ; 6.866 ; 6.866 ; Rise       ; G_CLK_TX        ;
+; BSG_INT      ; SYS_CLK    ; 7.449 ; 7.449 ; Rise       ; SYS_CLK         ;
+; Data_out[*]  ; SYS_CLK    ; 7.466 ; 7.466 ; Rise       ; SYS_CLK         ;
+;  Data_out[0] ; SYS_CLK    ; 7.436 ; 7.436 ; Rise       ; SYS_CLK         ;
+;  Data_out[1] ; SYS_CLK    ; 6.886 ; 6.886 ; Rise       ; SYS_CLK         ;
+;  Data_out[2] ; SYS_CLK    ; 7.424 ; 7.424 ; Rise       ; SYS_CLK         ;
+;  Data_out[3] ; SYS_CLK    ; 7.454 ; 7.454 ; Rise       ; SYS_CLK         ;
+;  Data_out[4] ; SYS_CLK    ; 7.466 ; 7.466 ; Rise       ; SYS_CLK         ;
+;  Data_out[5] ; SYS_CLK    ; 7.131 ; 7.131 ; Rise       ; SYS_CLK         ;
+;  Data_out[6] ; SYS_CLK    ; 7.429 ; 7.429 ; Rise       ; SYS_CLK         ;
+;  Data_out[7] ; SYS_CLK    ; 6.860 ; 6.860 ; Rise       ; SYS_CLK         ;
 +--------------+------------+-------+-------+------------+-----------------+
 
 
@@ -728,25 +726,25 @@ No paths to report.
 +--------------+------------+-------+-------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------+------------+-------+-------+------------+-----------------+
-; OUT[*]       ; G_CLK_TX   ; 6.791 ; 6.791 ; Rise       ; G_CLK_TX        ;
-;  OUT[0]      ; G_CLK_TX   ; 7.176 ; 7.176 ; Rise       ; G_CLK_TX        ;
-;  OUT[1]      ; G_CLK_TX   ; 7.060 ; 7.060 ; Rise       ; G_CLK_TX        ;
-;  OUT[2]      ; G_CLK_TX   ; 7.419 ; 7.419 ; Rise       ; G_CLK_TX        ;
-;  OUT[3]      ; G_CLK_TX   ; 6.791 ; 6.791 ; Rise       ; G_CLK_TX        ;
-;  OUT[4]      ; G_CLK_TX   ; 7.322 ; 7.322 ; Rise       ; G_CLK_TX        ;
-;  OUT[5]      ; G_CLK_TX   ; 7.179 ; 7.179 ; Rise       ; G_CLK_TX        ;
-;  OUT[6]      ; G_CLK_TX   ; 6.857 ; 6.857 ; Rise       ; G_CLK_TX        ;
-;  OUT[7]      ; G_CLK_TX   ; 7.056 ; 7.056 ; Rise       ; G_CLK_TX        ;
-; BSG_INT      ; SYS_CLK    ; 7.142 ; 7.142 ; Rise       ; SYS_CLK         ;
-; Data_out[*]  ; SYS_CLK    ; 6.880 ; 6.880 ; Rise       ; SYS_CLK         ;
-;  Data_out[0] ; SYS_CLK    ; 7.188 ; 7.188 ; Rise       ; SYS_CLK         ;
-;  Data_out[1] ; SYS_CLK    ; 6.881 ; 6.881 ; Rise       ; SYS_CLK         ;
-;  Data_out[2] ; SYS_CLK    ; 6.907 ; 6.907 ; Rise       ; SYS_CLK         ;
-;  Data_out[3] ; SYS_CLK    ; 7.163 ; 7.163 ; Rise       ; SYS_CLK         ;
-;  Data_out[4] ; SYS_CLK    ; 7.248 ; 7.248 ; Rise       ; SYS_CLK         ;
-;  Data_out[5] ; SYS_CLK    ; 7.175 ; 7.175 ; Rise       ; SYS_CLK         ;
-;  Data_out[6] ; SYS_CLK    ; 6.880 ; 6.880 ; Rise       ; SYS_CLK         ;
-;  Data_out[7] ; SYS_CLK    ; 7.173 ; 7.173 ; Rise       ; SYS_CLK         ;
+; OUT[*]       ; G_CLK_TX   ; 6.840 ; 6.840 ; Rise       ; G_CLK_TX        ;
+;  OUT[0]      ; G_CLK_TX   ; 6.862 ; 6.862 ; Rise       ; G_CLK_TX        ;
+;  OUT[1]      ; G_CLK_TX   ; 7.490 ; 7.490 ; Rise       ; G_CLK_TX        ;
+;  OUT[2]      ; G_CLK_TX   ; 6.840 ; 6.840 ; Rise       ; G_CLK_TX        ;
+;  OUT[3]      ; G_CLK_TX   ; 7.223 ; 7.223 ; Rise       ; G_CLK_TX        ;
+;  OUT[4]      ; G_CLK_TX   ; 6.870 ; 6.870 ; Rise       ; G_CLK_TX        ;
+;  OUT[5]      ; G_CLK_TX   ; 6.850 ; 6.850 ; Rise       ; G_CLK_TX        ;
+;  OUT[6]      ; G_CLK_TX   ; 7.223 ; 7.223 ; Rise       ; G_CLK_TX        ;
+;  OUT[7]      ; G_CLK_TX   ; 6.866 ; 6.866 ; Rise       ; G_CLK_TX        ;
+; BSG_INT      ; SYS_CLK    ; 7.449 ; 7.449 ; Rise       ; SYS_CLK         ;
+; Data_out[*]  ; SYS_CLK    ; 6.860 ; 6.860 ; Rise       ; SYS_CLK         ;
+;  Data_out[0] ; SYS_CLK    ; 7.436 ; 7.436 ; Rise       ; SYS_CLK         ;
+;  Data_out[1] ; SYS_CLK    ; 6.886 ; 6.886 ; Rise       ; SYS_CLK         ;
+;  Data_out[2] ; SYS_CLK    ; 7.424 ; 7.424 ; Rise       ; SYS_CLK         ;
+;  Data_out[3] ; SYS_CLK    ; 7.454 ; 7.454 ; Rise       ; SYS_CLK         ;
+;  Data_out[4] ; SYS_CLK    ; 7.466 ; 7.466 ; Rise       ; SYS_CLK         ;
+;  Data_out[5] ; SYS_CLK    ; 7.131 ; 7.131 ; Rise       ; SYS_CLK         ;
+;  Data_out[6] ; SYS_CLK    ; 7.429 ; 7.429 ; Rise       ; SYS_CLK         ;
+;  Data_out[7] ; SYS_CLK    ; 6.860 ; 6.860 ; Rise       ; SYS_CLK         ;
 +--------------+------------+-------+-------+------------+-----------------+
 
 
@@ -755,8 +753,8 @@ No paths to report.
 +----------+--------+---------------+
 ; Clock    ; Slack  ; End Point TNS ;
 +----------+--------+---------------+
-; G_CLK_TX ; -1.381 ; -12.368       ;
-; SYS_CLK  ; 0.211  ; 0.000         ;
+; G_CLK_TX ; -1.467 ; -12.458       ;
+; SYS_CLK  ; 0.239  ; 0.000         ;
 +----------+--------+---------------+
 
 
@@ -766,7 +764,7 @@ No paths to report.
 ; Clock    ; Slack ; End Point TNS ;
 +----------+-------+---------------+
 ; G_CLK_TX ; 0.215 ; 0.000         ;
-; SYS_CLK  ; 0.326 ; 0.000         ;
+; SYS_CLK  ; 0.238 ; 0.000         ;
 +----------+-------+---------------+
 
 
@@ -792,112 +790,112 @@ No paths to report.
 +----------+--------+--------------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fast Model Setup: 'G_CLK_TX'                                                                                                                     ;
-+--------+----------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; Slack  ; From Node                        ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
-+--------+----------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
-; -1.381 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.409      ;
-; -1.377 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[0] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.001      ; 2.410      ;
-; -1.338 ; AMBA:AMBA_H|data1[1]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.366      ;
-; -1.320 ; AMBA:AMBA_H|data2[6]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.348      ;
-; -1.300 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[0] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.001      ; 2.333      ;
-; -1.268 ; AMBA:AMBA_H|data2[3]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.296      ;
-; -1.260 ; AMBA:AMBA_H|data1[2]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.288      ;
-; -1.228 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[4] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.001      ; 2.261      ;
-; -1.225 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 2.252      ;
-; -1.222 ; AMBA:AMBA_H|data2[4]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.250      ;
-; -1.221 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.249      ;
-; -1.221 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[2] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 2.253      ;
-; -1.211 ; AMBA:AMBA_H|data1[1]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.239      ;
-; -1.195 ; AMBA:AMBA_H|data2[2]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.223      ;
-; -1.193 ; AMBA:AMBA_H|data2[1]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.221      ;
-; -1.186 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 2.206      ;
-; -1.183 ; AMBA:AMBA_H|data2[7]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.211      ;
-; -1.182 ; AMBA:AMBA_H|data1[1]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 2.209      ;
-; -1.182 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[6] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.007     ; 2.207      ;
-; -1.177 ; AMBA:AMBA_H|data1[6]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.205      ;
-; -1.164 ; AMBA:AMBA_H|data2[6]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 2.191      ;
-; -1.160 ; AMBA:AMBA_H|data2[6]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.188      ;
-; -1.159 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.185      ;
-; -1.155 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[5] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.001     ; 2.186      ;
-; -1.152 ; AMBA:AMBA_H|data1[1]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 2.172      ;
-; -1.144 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[2] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 2.176      ;
-; -1.141 ; AMBA:AMBA_H|data1[0]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.169      ;
-; -1.141 ; AMBA:AMBA_H|data2[3]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.169      ;
-; -1.140 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[4] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.001      ; 2.173      ;
-; -1.133 ; AMBA:AMBA_H|data1[2]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.161      ;
-; -1.125 ; AMBA:AMBA_H|data2[6]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 2.145      ;
-; -1.125 ; AMBA:AMBA_H|data1[1]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.151      ;
-; -1.123 ; AMBA:AMBA_H|data1[3]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.151      ;
-; -1.112 ; AMBA:AMBA_H|data2[3]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 2.139      ;
-; -1.105 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[6] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.007     ; 2.130      ;
-; -1.104 ; AMBA:AMBA_H|data1[2]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 2.131      ;
-; -1.098 ; AMBA:AMBA_H|data2[6]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.124      ;
-; -1.082 ; AMBA:AMBA_H|data2[3]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 2.102      ;
-; -1.079 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|saida[0] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.001      ; 2.112      ;
-; -1.078 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[5] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.001     ; 2.109      ;
-; -1.075 ; AMBA:AMBA_H|data1[7]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.103      ;
-; -1.074 ; AMBA:AMBA_H|data1[2]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 2.094      ;
-; -1.068 ; AMBA:AMBA_H|data2[2]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.096      ;
-; -1.066 ; AMBA:AMBA_H|data2[4]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 2.093      ;
-; -1.066 ; AMBA:AMBA_H|data2[1]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.094      ;
-; -1.062 ; AMBA:AMBA_H|data2[4]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.090      ;
-; -1.055 ; AMBA:AMBA_H|data2[3]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.081      ;
-; -1.047 ; AMBA:AMBA_H|data1[2]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.073      ;
-; -1.040 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 2.065      ;
-; -1.039 ; AMBA:AMBA_H|data2[2]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 2.066      ;
-; -1.037 ; AMBA:AMBA_H|data2[1]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 2.064      ;
-; -1.036 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[1] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.002     ; 2.066      ;
-; -1.027 ; AMBA:AMBA_H|data2[7]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 2.054      ;
-; -1.027 ; AMBA:AMBA_H|data2[4]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 2.047      ;
-; -1.023 ; AMBA:AMBA_H|data2[7]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.051      ;
-; -1.021 ; AMBA:AMBA_H|data1[6]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 2.048      ;
-; -1.017 ; AMBA:AMBA_H|data1[6]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.045      ;
-; -1.014 ; AMBA:AMBA_H|data1[0]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.042      ;
-; -1.009 ; AMBA:AMBA_H|data2[2]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 2.029      ;
-; -1.007 ; AMBA:AMBA_H|data2[1]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 2.027      ;
-; -1.006 ; AMBA:AMBA_H|data1[1]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 2.031      ;
-; -1.000 ; AMBA:AMBA_H|data2[4]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.026      ;
-; -0.996 ; AMBA:AMBA_H|data1[3]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.024      ;
-; -0.989 ; AMBA:AMBA_H|data1[5]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.017      ;
-; -0.988 ; AMBA:AMBA_H|data2[7]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 2.008      ;
-; -0.987 ; AMBA:AMBA_H|data2[0]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 2.015      ;
-; -0.985 ; AMBA:AMBA_H|data1[0]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 2.012      ;
-; -0.982 ; AMBA:AMBA_H|data1[6]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 2.002      ;
-; -0.982 ; AMBA:AMBA_H|data2[2]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.008      ;
-; -0.980 ; AMBA:AMBA_H|data2[1]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.006      ;
-; -0.979 ; AMBA:AMBA_H|data2[6]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 2.004      ;
-; -0.967 ; AMBA:AMBA_H|data1[3]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 1.994      ;
-; -0.966 ; AMBA:AMBA_H|data2[5]             ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 1.994      ;
-; -0.961 ; AMBA:AMBA_H|data2[7]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 1.987      ;
-; -0.959 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[1] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.002     ; 1.989      ;
-; -0.955 ; AMBA:AMBA_H|data1[0]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 1.975      ;
-; -0.955 ; AMBA:AMBA_H|data1[6]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 1.981      ;
-; -0.937 ; AMBA:AMBA_H|data1[3]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 1.957      ;
-; -0.936 ; AMBA:AMBA_H|data2[3]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 1.961      ;
-; -0.932 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[1] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.005      ; 1.969      ;
-; -0.928 ; AMBA:AMBA_H|data1[0]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 1.954      ;
-; -0.928 ; AMBA:AMBA_H|data1[2]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 1.953      ;
-; -0.923 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|saida[2] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 1.955      ;
-; -0.919 ; AMBA:AMBA_H|data1[7]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 1.946      ;
-; -0.919 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|saida[4] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.001      ; 1.952      ;
-; -0.915 ; AMBA:AMBA_H|data1[7]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 1.943      ;
-; -0.910 ; AMBA:AMBA_H|data1[3]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 1.936      ;
-; -0.884 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|saida[6] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.007     ; 1.909      ;
-; -0.881 ; AMBA:AMBA_H|data2[4]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 1.906      ;
-; -0.880 ; AMBA:AMBA_H|data1[7]             ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.012     ; 1.900      ;
-; -0.863 ; AMBA:AMBA_H|data2[2]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 1.888      ;
-; -0.861 ; AMBA:AMBA_H|data2[1]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 1.886      ;
-; -0.860 ; AMBA:AMBA_H|data2[0]             ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 1.888      ;
-; -0.857 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|saida[5] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.001     ; 1.888      ;
-; -0.855 ; AMBA:AMBA_H|data1[4]             ; modulador:modulador_h|saida[3] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.004     ; 1.883      ;
-; -0.853 ; AMBA:AMBA_H|data1[7]             ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 1.879      ;
-; -0.851 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|saida[3] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.001      ; 1.884      ;
-; -0.842 ; AMBA:AMBA_H|data2[7]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 1.867      ;
-; -0.836 ; AMBA:AMBA_H|data1[6]             ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 1.861      ;
-; -0.833 ; AMBA:AMBA_H|data1[5]             ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 1.860      ;
-+--------+----------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'G_CLK_TX'                                                                                                                    ;
++--------+---------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                       ; To Node                        ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+---------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.467 ; AMBA:AMBA_H|data1[2]            ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 2.494      ;
+; -1.462 ; AMBA:AMBA_H|data1[1]            ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.488      ;
+; -1.440 ; modulador:modulador_h|flag_byte ; modulador:modulador_h|saida[0] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 2.472      ;
+; -1.392 ; AMBA:AMBA_H|data1[4]            ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.418      ;
+; -1.352 ; AMBA:AMBA_H|data2[6]            ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.378      ;
+; -1.344 ; AMBA:AMBA_H|data1[2]            ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 2.371      ;
+; -1.339 ; AMBA:AMBA_H|data1[1]            ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.365      ;
+; -1.317 ; modulador:modulador_h|flag_byte ; modulador:modulador_h|saida[2] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 2.349      ;
+; -1.309 ; AMBA:AMBA_H|data2[3]            ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.335      ;
+; -1.308 ; AMBA:AMBA_H|data2[1]            ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.334      ;
+; -1.266 ; AMBA:AMBA_H|data1[5]            ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.292      ;
+; -1.266 ; AMBA:AMBA_H|data1[4]            ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.292      ;
+; -1.264 ; AMBA:AMBA_H|data1[2]            ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.005     ; 2.291      ;
+; -1.259 ; AMBA:AMBA_H|data1[1]            ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.285      ;
+; -1.252 ; AMBA:AMBA_H|data2[2]            ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.278      ;
+; -1.244 ; AMBA:AMBA_H|data2[4]            ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.270      ;
+; -1.237 ; modulador:modulador_h|flag_byte ; modulador:modulador_h|saida[4] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 2.269      ;
+; -1.231 ; modulador:modulador_h|aux[0]    ; modulador:modulador_h|saida[0] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.001      ; 2.264      ;
+; -1.226 ; AMBA:AMBA_H|data2[6]            ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.252      ;
+; -1.207 ; AMBA:AMBA_H|data1[2]            ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.233      ;
+; -1.204 ; AMBA:AMBA_H|data1[6]            ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.230      ;
+; -1.202 ; AMBA:AMBA_H|data1[2]            ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 2.227      ;
+; -1.202 ; AMBA:AMBA_H|data1[1]            ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 2.227      ;
+; -1.197 ; AMBA:AMBA_H|data1[1]            ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 2.221      ;
+; -1.191 ; AMBA:AMBA_H|data1[4]            ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.217      ;
+; -1.187 ; AMBA:AMBA_H|data2[7]            ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.213      ;
+; -1.186 ; AMBA:AMBA_H|data2[3]            ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.212      ;
+; -1.185 ; AMBA:AMBA_H|data2[1]            ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.211      ;
+; -1.180 ; modulador:modulador_h|flag_byte ; modulador:modulador_h|saida[5] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.001     ; 2.211      ;
+; -1.175 ; modulador:modulador_h|flag_byte ; modulador:modulador_h|saida[6] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.002     ; 2.205      ;
+; -1.168 ; AMBA:AMBA_H|data1[0]            ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.194      ;
+; -1.159 ; AMBA:AMBA_H|data1[3]            ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.185      ;
+; -1.151 ; AMBA:AMBA_H|data2[6]            ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.177      ;
+; -1.140 ; AMBA:AMBA_H|data1[5]            ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.166      ;
+; -1.134 ; AMBA:AMBA_H|data1[4]            ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 2.159      ;
+; -1.132 ; modulador:modulador_h|aux[1]    ; modulador:modulador_h|saida[0] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 2.164      ;
+; -1.129 ; AMBA:AMBA_H|data1[4]            ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 2.153      ;
+; -1.129 ; AMBA:AMBA_H|data2[2]            ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.155      ;
+; -1.118 ; AMBA:AMBA_H|data2[4]            ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.144      ;
+; -1.109 ; AMBA:AMBA_H|data1[2]            ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.135      ;
+; -1.107 ; AMBA:AMBA_H|data2[5]            ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.133      ;
+; -1.106 ; AMBA:AMBA_H|data2[3]            ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.132      ;
+; -1.105 ; AMBA:AMBA_H|data2[1]            ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.131      ;
+; -1.105 ; modulador:modulador_h|aux[0]    ; modulador:modulador_h|saida[2] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.001      ; 2.138      ;
+; -1.104 ; AMBA:AMBA_H|data1[1]            ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 2.129      ;
+; -1.094 ; AMBA:AMBA_H|data2[6]            ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 2.119      ;
+; -1.089 ; AMBA:AMBA_H|data2[6]            ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 2.113      ;
+; -1.082 ; modulador:modulador_h|flag_byte ; modulador:modulador_h|saida[1] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.001     ; 2.113      ;
+; -1.078 ; AMBA:AMBA_H|data1[6]            ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.104      ;
+; -1.065 ; AMBA:AMBA_H|data1[5]            ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.091      ;
+; -1.061 ; AMBA:AMBA_H|data2[7]            ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.087      ;
+; -1.049 ; AMBA:AMBA_H|data2[3]            ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 2.074      ;
+; -1.049 ; AMBA:AMBA_H|data2[2]            ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.075      ;
+; -1.048 ; AMBA:AMBA_H|data2[1]            ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 2.073      ;
+; -1.045 ; AMBA:AMBA_H|data1[0]            ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.071      ;
+; -1.044 ; AMBA:AMBA_H|data2[3]            ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 2.068      ;
+; -1.043 ; AMBA:AMBA_H|data2[1]            ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 2.067      ;
+; -1.043 ; AMBA:AMBA_H|data2[4]            ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.069      ;
+; -1.036 ; AMBA:AMBA_H|data1[3]            ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.062      ;
+; -1.036 ; AMBA:AMBA_H|data1[4]            ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 2.061      ;
+; -1.030 ; modulador:modulador_h|aux[0]    ; modulador:modulador_h|saida[4] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.001      ; 2.063      ;
+; -1.024 ; AMBA:AMBA_H|data1[7]            ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.050      ;
+; -1.019 ; AMBA:AMBA_H|data2[0]            ; modulador:modulador_h|saida[0] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.045      ;
+; -1.008 ; AMBA:AMBA_H|data1[5]            ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 2.033      ;
+; -1.006 ; modulador:modulador_h|aux[1]    ; modulador:modulador_h|saida[2] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 2.038      ;
+; -1.003 ; AMBA:AMBA_H|data1[6]            ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.029      ;
+; -1.003 ; AMBA:AMBA_H|data1[5]            ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 2.027      ;
+; -0.996 ; AMBA:AMBA_H|data2[6]            ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 2.021      ;
+; -0.992 ; AMBA:AMBA_H|data2[2]            ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 2.017      ;
+; -0.987 ; AMBA:AMBA_H|data2[2]            ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 2.011      ;
+; -0.986 ; AMBA:AMBA_H|data2[7]            ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.012      ;
+; -0.986 ; AMBA:AMBA_H|data2[4]            ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 2.011      ;
+; -0.982 ; AMBA:AMBA_H|data1[2]            ; modulador:modulador_h|saida[3] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 2.007      ;
+; -0.981 ; AMBA:AMBA_H|data2[5]            ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 2.007      ;
+; -0.981 ; AMBA:AMBA_H|data2[4]            ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 2.005      ;
+; -0.977 ; AMBA:AMBA_H|data1[1]            ; modulador:modulador_h|saida[3] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 2.001      ;
+; -0.974 ; modulador:modulador_h|flag      ; modulador:modulador_h|saida[2] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.001      ; 2.007      ;
+; -0.973 ; modulador:modulador_h|aux[0]    ; modulador:modulador_h|saida[5] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 2.005      ;
+; -0.968 ; modulador:modulador_h|aux[0]    ; modulador:modulador_h|saida[6] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.001     ; 1.999      ;
+; -0.965 ; AMBA:AMBA_H|data1[0]            ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 1.991      ;
+; -0.956 ; AMBA:AMBA_H|data1[3]            ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 1.982      ;
+; -0.955 ; modulador:modulador_h|flag_byte ; modulador:modulador_h|saida[3] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; -0.002     ; 1.985      ;
+; -0.951 ; AMBA:AMBA_H|data2[3]            ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 1.976      ;
+; -0.950 ; AMBA:AMBA_H|data2[1]            ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 1.975      ;
+; -0.946 ; AMBA:AMBA_H|data1[6]            ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 1.971      ;
+; -0.941 ; AMBA:AMBA_H|data1[6]            ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 1.965      ;
+; -0.931 ; modulador:modulador_h|aux[1]    ; modulador:modulador_h|saida[4] ; G_CLK_TX     ; G_CLK_TX    ; 1.000        ; 0.000      ; 1.963      ;
+; -0.929 ; AMBA:AMBA_H|data2[7]            ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 1.954      ;
+; -0.924 ; AMBA:AMBA_H|data2[7]            ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 1.948      ;
+; -0.910 ; AMBA:AMBA_H|data1[5]            ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 1.935      ;
+; -0.909 ; AMBA:AMBA_H|data1[4]            ; modulador:modulador_h|saida[3] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 1.933      ;
+; -0.908 ; AMBA:AMBA_H|data1[0]            ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 1.933      ;
+; -0.906 ; AMBA:AMBA_H|data2[5]            ; modulador:modulador_h|saida[4] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 1.932      ;
+; -0.903 ; AMBA:AMBA_H|data1[0]            ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 1.927      ;
+; -0.899 ; AMBA:AMBA_H|data1[3]            ; modulador:modulador_h|saida[5] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 1.924      ;
+; -0.898 ; AMBA:AMBA_H|data1[7]            ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 1.924      ;
+; -0.896 ; AMBA:AMBA_H|data2[0]            ; modulador:modulador_h|saida[2] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.006     ; 1.922      ;
+; -0.894 ; AMBA:AMBA_H|data1[3]            ; modulador:modulador_h|saida[6] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.008     ; 1.918      ;
+; -0.894 ; AMBA:AMBA_H|data2[2]            ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 1.919      ;
+; -0.888 ; AMBA:AMBA_H|data2[4]            ; modulador:modulador_h|saida[1] ; SYS_CLK      ; G_CLK_TX    ; 1.000        ; -0.007     ; 1.913      ;
++--------+---------------------------------+--------------------------------+--------------+-------------+--------------+------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------+
@@ -905,31 +903,31 @@ No paths to report.
 +-------+------------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                    ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+------------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; 0.211 ; AMBA:AMBA_H|data1[2]         ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 0.820      ;
-; 0.239 ; AMBA:AMBA_H|data2[2]         ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 0.792      ;
-; 0.276 ; AMBA:AMBA_H|controle[2]      ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.007      ; 0.763      ;
-; 0.319 ; AMBA:AMBA_H|data1[6]         ; AMBA:AMBA_H|data_out[6] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 0.712      ;
-; 0.322 ; modulador:modulador_h|status ; AMBA:AMBA_H|data_out[2] ; G_CLK_TX     ; SYS_CLK     ; 1.000        ; 0.011      ; 0.721      ;
-; 0.332 ; modulador:modulador_h|status ; AMBA:AMBA_H|data_out[3] ; G_CLK_TX     ; SYS_CLK     ; 1.000        ; 0.011      ; 0.711      ;
-; 0.345 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.007      ; 0.694      ;
-; 0.355 ; AMBA:AMBA_H|controle[2]      ; AMBA:AMBA_H|controle[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.677      ;
-; 0.401 ; modulador:modulador_h|status ; AMBA:AMBA_H|controle[2] ; G_CLK_TX     ; SYS_CLK     ; 1.000        ; 0.004      ; 0.635      ;
-; 0.420 ; AMBA:AMBA_H|data1[0]         ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 0.611      ;
-; 0.424 ; AMBA:AMBA_H|data1[7]         ; AMBA:AMBA_H|data_out[7] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 0.607      ;
-; 0.424 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|controle[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.608      ;
-; 0.436 ; AMBA:AMBA_H|data1[1]         ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 0.595      ;
-; 0.443 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.007      ; 0.596      ;
-; 0.464 ; AMBA:AMBA_H|data2[1]         ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 0.567      ;
-; 0.469 ; AMBA:AMBA_H|data2[3]         ; AMBA:AMBA_H|data_out[3] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 0.562      ;
-; 0.471 ; AMBA:AMBA_H|data2[0]         ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 0.560      ;
-; 0.506 ; AMBA:AMBA_H|data1[4]         ; AMBA:AMBA_H|data_out[4] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 0.525      ;
-; 0.506 ; AMBA:AMBA_H|data2[5]         ; AMBA:AMBA_H|data_out[5] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 0.525      ;
-; 0.523 ; AMBA:AMBA_H|controle[0]      ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.509      ;
-; 0.547 ; AMBA:AMBA_H|data1[5]         ; AMBA:AMBA_H|data_out[5] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 0.484      ;
-; 0.550 ; AMBA:AMBA_H|data2[7]         ; AMBA:AMBA_H|data_out[7] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 0.481      ;
-; 0.552 ; AMBA:AMBA_H|data1[3]         ; AMBA:AMBA_H|data_out[3] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 0.479      ;
-; 0.553 ; AMBA:AMBA_H|data2[4]         ; AMBA:AMBA_H|data_out[4] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 0.478      ;
-; 0.554 ; AMBA:AMBA_H|data2[6]         ; AMBA:AMBA_H|data_out[6] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; -0.001     ; 0.477      ;
+; 0.239 ; AMBA:AMBA_H|data2[2]         ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.793      ;
+; 0.252 ; AMBA:AMBA_H|controle[2]      ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.780      ;
+; 0.304 ; modulador:modulador_h|status ; AMBA:AMBA_H|data_out[2] ; G_CLK_TX     ; SYS_CLK     ; 1.000        ; 0.010      ; 0.738      ;
+; 0.304 ; modulador:modulador_h|status ; AMBA:AMBA_H|data_out[3] ; G_CLK_TX     ; SYS_CLK     ; 1.000        ; 0.010      ; 0.738      ;
+; 0.316 ; AMBA:AMBA_H|data1[2]         ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.001      ; 0.717      ;
+; 0.320 ; AMBA:AMBA_H|data2[7]         ; AMBA:AMBA_H|data_out[7] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.712      ;
+; 0.328 ; AMBA:AMBA_H|data2[6]         ; AMBA:AMBA_H|data_out[6] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.704      ;
+; 0.331 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.701      ;
+; 0.350 ; AMBA:AMBA_H|controle[2]      ; AMBA:AMBA_H|controle[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.682      ;
+; 0.371 ; AMBA:AMBA_H|data2[1]         ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.661      ;
+; 0.396 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.636      ;
+; 0.402 ; modulador:modulador_h|status ; AMBA:AMBA_H|controle[2] ; G_CLK_TX     ; SYS_CLK     ; 1.000        ; 0.010      ; 0.640      ;
+; 0.404 ; AMBA:AMBA_H|data2[4]         ; AMBA:AMBA_H|data_out[4] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.628      ;
+; 0.424 ; AMBA:AMBA_H|data1[1]         ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.608      ;
+; 0.429 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|controle[2] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.603      ;
+; 0.436 ; AMBA:AMBA_H|data1[0]         ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.596      ;
+; 0.437 ; AMBA:AMBA_H|data1[3]         ; AMBA:AMBA_H|data_out[3] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.595      ;
+; 0.438 ; AMBA:AMBA_H|data1[5]         ; AMBA:AMBA_H|data_out[5] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.594      ;
+; 0.466 ; AMBA:AMBA_H|data2[0]         ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.566      ;
+; 0.478 ; AMBA:AMBA_H|data2[3]         ; AMBA:AMBA_H|data_out[3] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.554      ;
+; 0.557 ; AMBA:AMBA_H|data1[7]         ; AMBA:AMBA_H|data_out[7] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.475      ;
+; 0.557 ; AMBA:AMBA_H|data2[5]         ; AMBA:AMBA_H|data_out[5] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.475      ;
+; 0.561 ; AMBA:AMBA_H|data1[6]         ; AMBA:AMBA_H|data_out[6] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.471      ;
+; 0.563 ; AMBA:AMBA_H|data1[4]         ; AMBA:AMBA_H|data_out[4] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.469      ;
+; 0.642 ; AMBA:AMBA_H|controle[0]      ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 1.000        ; 0.000      ; 0.390      ;
 +-------+------------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -943,101 +941,101 @@ No paths to report.
 ; 0.215 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|entrada[2] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|entrada[3] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|entrada[4] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|aux[0]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|aux[1]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|aux[2]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; modulador:modulador_h|status     ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.367      ;
 ; 0.215 ; modulador:modulador_h|flag       ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.367      ;
-; 0.252 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|aux[1]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.404      ;
-; 0.385 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.537      ;
-; 0.432 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 0.583      ;
-; 0.467 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|aux[2]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.007     ; 0.612      ;
-; 0.496 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|entrada[2] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.006      ; 0.654      ;
-; 0.538 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[6]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.690      ;
-; 0.540 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.692      ;
-; 0.567 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.719      ;
-; 0.574 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.002     ; 0.724      ;
-; 0.581 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|entrada[3] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.002      ; 0.735      ;
-; 0.587 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|entrada[3] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.008      ; 0.747      ;
-; 0.601 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|entrada[3] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 0.752      ;
-; 0.611 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|aux[2]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.007     ; 0.756      ;
-; 0.613 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|entrada[4] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.008     ; 0.757      ;
-; 0.644 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|entrada[4] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.796      ;
-; 0.670 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.822      ;
-; 0.670 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.007     ; 0.815      ;
-; 0.679 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.831      ;
-; 0.692 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.002      ; 0.846      ;
-; 0.701 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|entrada[1] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.009     ; 0.844      ;
-; 0.703 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.855      ;
-; 0.709 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[6]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.006     ; 0.855      ;
-; 0.725 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|entrada[2] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 0.874      ;
-; 0.738 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.005      ; 0.895      ;
-; 0.768 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.007     ; 0.913      ;
-; 0.794 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 0.945      ;
-; 0.796 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.006      ; 0.954      ;
-; 0.802 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.005      ; 0.959      ;
-; 0.813 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 0.964      ;
-; 0.814 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|aux[2]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.966      ;
-; 0.819 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.004     ; 0.967      ;
-; 0.855 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.008      ;
-; 0.857 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.009      ;
-; 0.862 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.007      ; 1.021      ;
-; 0.862 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 1.013      ;
-; 0.864 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.008      ; 1.024      ;
-; 0.866 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.008      ; 1.026      ;
-; 0.866 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.002      ; 1.020      ;
-; 0.869 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.007     ; 1.014      ;
-; 0.875 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.007      ; 1.034      ;
-; 0.879 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[6]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.031      ;
-; 0.887 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.002      ; 1.041      ;
-; 0.888 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.002     ; 1.038      ;
-; 0.905 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.005      ; 1.062      ;
-; 0.905 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.002      ; 1.059      ;
-; 0.909 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.062      ;
-; 0.916 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.006      ; 1.074      ;
-; 0.924 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.006      ; 1.082      ;
-; 0.924 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.007      ; 1.083      ;
-; 0.928 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.002      ; 1.082      ;
-; 0.929 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.002     ; 1.079      ;
-; 0.930 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.008     ; 1.074      ;
-; 0.935 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 1.086      ;
-; 0.939 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|aux[0]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.091      ;
-; 0.941 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 1.090      ;
-; 0.950 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|aux[2]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.102      ;
-; 0.960 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.112      ;
-; 0.963 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.002      ; 1.117      ;
-; 0.970 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 1.119      ;
-; 0.971 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.002     ; 1.121      ;
-; 0.972 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 1.123      ;
-; 0.976 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 1.125      ;
-; 0.978 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.130      ;
-; 0.982 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.008      ; 1.142      ;
-; 0.996 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.004     ; 1.144      ;
-; 0.997 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.005      ; 1.154      ;
-; 1.003 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.006      ; 1.161      ;
-; 1.009 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|entrada[4] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.009     ; 1.152      ;
-; 1.011 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.007      ; 1.170      ;
-; 1.013 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.005      ; 1.170      ;
-; 1.013 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 1.164      ;
-; 1.015 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|entrada[4] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.006     ; 1.161      ;
-; 1.018 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.170      ;
-; 1.023 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 1.172      ;
-; 1.024 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|aux[0]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.007      ; 1.183      ;
-; 1.024 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|aux[1]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.007      ; 1.183      ;
-; 1.025 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.008      ; 1.185      ;
-; 1.026 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.178      ;
-; 1.046 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.199      ;
-; 1.055 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.007      ; 1.214      ;
-; 1.056 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.006      ; 1.214      ;
-; 1.061 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.009     ; 1.204      ;
-; 1.061 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.213      ;
-; 1.066 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 1.217      ;
-; 1.069 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.006     ; 1.215      ;
-; 1.075 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[6]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.008     ; 1.219      ;
-; 1.079 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.232      ;
-; 1.081 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.008      ; 1.241      ;
-; 1.084 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 1.235      ;
-; 1.086 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.007      ; 1.245      ;
+; 0.270 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|entrada[1] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.422      ;
+; 0.274 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|entrada[2] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.426      ;
+; 0.275 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|entrada[3] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.427      ;
+; 0.328 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|entrada[4] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.480      ;
+; 0.399 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|entrada[2] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.551      ;
+; 0.400 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|entrada[3] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.552      ;
+; 0.470 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|entrada[3] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.622      ;
+; 0.513 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 0.664      ;
+; 0.525 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.677      ;
+; 0.549 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.701      ;
+; 0.549 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|aux[2]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.004     ; 0.697      ;
+; 0.561 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 0.712      ;
+; 0.568 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|aux[1]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 0.721      ;
+; 0.577 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 0.730      ;
+; 0.585 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 0.736      ;
+; 0.591 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.743      ;
+; 0.593 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[6]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 0.744      ;
+; 0.594 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|entrada[4] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.746      ;
+; 0.602 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 0.753      ;
+; 0.641 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 0.792      ;
+; 0.643 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.795      ;
+; 0.664 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.816      ;
+; 0.671 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 0.822      ;
+; 0.676 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|entrada[4] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.828      ;
+; 0.682 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.834      ;
+; 0.689 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|aux[2]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 0.838      ;
+; 0.706 ; modulador:modulador_h|flag_byte  ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.004     ; 0.854      ;
+; 0.709 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|aux[0]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.861      ;
+; 0.713 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.004     ; 0.861      ;
+; 0.716 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|entrada[4] ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.868      ;
+; 0.732 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.004      ; 0.888      ;
+; 0.734 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 0.887      ;
+; 0.735 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.887      ;
+; 0.742 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 0.895      ;
+; 0.754 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 0.905      ;
+; 0.771 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 0.924      ;
+; 0.772 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 0.921      ;
+; 0.773 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[6]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 0.924      ;
+; 0.774 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.926      ;
+; 0.775 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 0.926      ;
+; 0.779 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.931      ;
+; 0.781 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.933      ;
+; 0.783 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 0.936      ;
+; 0.796 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 0.949      ;
+; 0.805 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.957      ;
+; 0.817 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 0.970      ;
+; 0.825 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 0.978      ;
+; 0.828 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.002      ; 0.982      ;
+; 0.835 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 0.987      ;
+; 0.835 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[6]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 0.986      ;
+; 0.849 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 0.998      ;
+; 0.853 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.006      ;
+; 0.859 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|aux[0]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.011      ;
+; 0.877 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[5]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.029      ;
+; 0.881 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|aux[1]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.034      ;
+; 0.884 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.037      ;
+; 0.890 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.042      ;
+; 0.896 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.048      ;
+; 0.900 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 1.051      ;
+; 0.904 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.057      ;
+; 0.905 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.003      ; 1.060      ;
+; 0.912 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[6]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 1.063      ;
+; 0.913 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.066      ;
+; 0.920 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.072      ;
+; 0.943 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.096      ;
+; 0.944 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.097      ;
+; 0.950 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[2]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.103      ;
+; 0.953 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 1.104      ;
+; 0.957 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.110      ;
+; 0.960 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[6]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 1.111      ;
+; 0.964 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|aux[0]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.116      ;
+; 0.971 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|saida[7]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.002      ; 1.125      ;
+; 0.979 ; modulador:modulador_h|aux[0]     ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.132      ;
+; 0.979 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.002     ; 1.129      ;
+; 0.989 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|aux[2]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 1.138      ;
+; 0.989 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|flag_byte  ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.142      ;
+; 0.991 ; modulador:modulador_h|entrada[2] ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.144      ;
+; 0.999 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|status     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.003     ; 1.148      ;
+; 1.000 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.152      ;
+; 1.013 ; modulador:modulador_h|flag       ; modulador:modulador_h|saida[1]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.165      ;
+; 1.015 ; modulador:modulador_h|entrada[0] ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 1.166      ;
+; 1.017 ; modulador:modulador_h|entrada[4] ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.170      ;
+; 1.026 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|saida[6]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 1.177      ;
+; 1.030 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[3]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 1.181      ;
+; 1.030 ; modulador:modulador_h|aux[1]     ; modulador:modulador_h|flag       ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; -0.001     ; 1.181      ;
+; 1.031 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|aux[1]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.184      ;
+; 1.034 ; modulador:modulador_h|entrada[3] ; modulador:modulador_h|saida[4]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.001      ; 1.187      ;
+; 1.046 ; modulador:modulador_h|entrada[1] ; modulador:modulador_h|aux[0]     ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.000      ; 1.198      ;
+; 1.069 ; modulador:modulador_h|aux[2]     ; modulador:modulador_h|saida[0]   ; G_CLK_TX     ; G_CLK_TX    ; 0.000        ; 0.004      ; 1.225      ;
 +-------+----------------------------------+----------------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -1046,31 +1044,31 @@ No paths to report.
 +-------+------------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 ; Slack ; From Node                    ; To Node                 ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
 +-------+------------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
-; 0.326 ; AMBA:AMBA_H|data2[6]         ; AMBA:AMBA_H|data_out[6] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 0.477      ;
-; 0.327 ; AMBA:AMBA_H|data2[4]         ; AMBA:AMBA_H|data_out[4] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 0.478      ;
-; 0.328 ; AMBA:AMBA_H|data1[3]         ; AMBA:AMBA_H|data_out[3] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 0.479      ;
-; 0.330 ; AMBA:AMBA_H|data2[7]         ; AMBA:AMBA_H|data_out[7] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 0.481      ;
-; 0.333 ; AMBA:AMBA_H|data1[5]         ; AMBA:AMBA_H|data_out[5] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 0.484      ;
-; 0.357 ; AMBA:AMBA_H|controle[0]      ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.509      ;
-; 0.374 ; AMBA:AMBA_H|data1[4]         ; AMBA:AMBA_H|data_out[4] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 0.525      ;
-; 0.374 ; AMBA:AMBA_H|data2[5]         ; AMBA:AMBA_H|data_out[5] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 0.525      ;
-; 0.409 ; AMBA:AMBA_H|data2[0]         ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 0.560      ;
-; 0.411 ; AMBA:AMBA_H|data2[3]         ; AMBA:AMBA_H|data_out[3] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 0.562      ;
-; 0.416 ; AMBA:AMBA_H|data2[1]         ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 0.567      ;
-; 0.437 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.007      ; 0.596      ;
-; 0.444 ; AMBA:AMBA_H|data1[1]         ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 0.595      ;
-; 0.456 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|controle[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.608      ;
-; 0.456 ; AMBA:AMBA_H|data1[7]         ; AMBA:AMBA_H|data_out[7] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 0.607      ;
-; 0.460 ; AMBA:AMBA_H|data1[0]         ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 0.611      ;
-; 0.479 ; modulador:modulador_h|status ; AMBA:AMBA_H|controle[2] ; G_CLK_TX     ; SYS_CLK     ; 0.000        ; 0.004      ; 0.635      ;
-; 0.525 ; AMBA:AMBA_H|controle[2]      ; AMBA:AMBA_H|controle[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.677      ;
-; 0.535 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.007      ; 0.694      ;
-; 0.548 ; modulador:modulador_h|status ; AMBA:AMBA_H|data_out[3] ; G_CLK_TX     ; SYS_CLK     ; 0.000        ; 0.011      ; 0.711      ;
-; 0.558 ; modulador:modulador_h|status ; AMBA:AMBA_H|data_out[2] ; G_CLK_TX     ; SYS_CLK     ; 0.000        ; 0.011      ; 0.721      ;
-; 0.561 ; AMBA:AMBA_H|data1[6]         ; AMBA:AMBA_H|data_out[6] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 0.712      ;
-; 0.604 ; AMBA:AMBA_H|controle[2]      ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.007      ; 0.763      ;
-; 0.641 ; AMBA:AMBA_H|data2[2]         ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 0.792      ;
-; 0.669 ; AMBA:AMBA_H|data1[2]         ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; -0.001     ; 0.820      ;
+; 0.238 ; AMBA:AMBA_H|controle[0]      ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.390      ;
+; 0.317 ; AMBA:AMBA_H|data1[4]         ; AMBA:AMBA_H|data_out[4] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.469      ;
+; 0.319 ; AMBA:AMBA_H|data1[6]         ; AMBA:AMBA_H|data_out[6] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.471      ;
+; 0.323 ; AMBA:AMBA_H|data2[5]         ; AMBA:AMBA_H|data_out[5] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.475      ;
+; 0.323 ; AMBA:AMBA_H|data1[7]         ; AMBA:AMBA_H|data_out[7] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.475      ;
+; 0.402 ; AMBA:AMBA_H|data2[3]         ; AMBA:AMBA_H|data_out[3] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.554      ;
+; 0.414 ; AMBA:AMBA_H|data2[0]         ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.566      ;
+; 0.442 ; AMBA:AMBA_H|data1[5]         ; AMBA:AMBA_H|data_out[5] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.594      ;
+; 0.443 ; AMBA:AMBA_H|data1[3]         ; AMBA:AMBA_H|data_out[3] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.595      ;
+; 0.444 ; AMBA:AMBA_H|data1[0]         ; AMBA:AMBA_H|data_out[0] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.596      ;
+; 0.451 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|controle[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.603      ;
+; 0.456 ; AMBA:AMBA_H|data1[1]         ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.608      ;
+; 0.476 ; AMBA:AMBA_H|data2[4]         ; AMBA:AMBA_H|data_out[4] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.628      ;
+; 0.478 ; modulador:modulador_h|status ; AMBA:AMBA_H|controle[2] ; G_CLK_TX     ; SYS_CLK     ; 0.000        ; 0.010      ; 0.640      ;
+; 0.484 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.636      ;
+; 0.509 ; AMBA:AMBA_H|data2[1]         ; AMBA:AMBA_H|data_out[1] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.661      ;
+; 0.530 ; AMBA:AMBA_H|controle[2]      ; AMBA:AMBA_H|controle[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.682      ;
+; 0.549 ; AMBA:AMBA_H|controle[1]      ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.701      ;
+; 0.552 ; AMBA:AMBA_H|data2[6]         ; AMBA:AMBA_H|data_out[6] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.704      ;
+; 0.560 ; AMBA:AMBA_H|data2[7]         ; AMBA:AMBA_H|data_out[7] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.712      ;
+; 0.564 ; AMBA:AMBA_H|data1[2]         ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.001      ; 0.717      ;
+; 0.576 ; modulador:modulador_h|status ; AMBA:AMBA_H|data_out[2] ; G_CLK_TX     ; SYS_CLK     ; 0.000        ; 0.010      ; 0.738      ;
+; 0.576 ; modulador:modulador_h|status ; AMBA:AMBA_H|data_out[3] ; G_CLK_TX     ; SYS_CLK     ; 0.000        ; 0.010      ; 0.738      ;
+; 0.628 ; AMBA:AMBA_H|controle[2]      ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.780      ;
+; 0.641 ; AMBA:AMBA_H|data2[2]         ; AMBA:AMBA_H|data_out[2] ; SYS_CLK      ; SYS_CLK     ; 0.000        ; 0.000      ; 0.793      ;
 +-------+------------------------------+-------------------------+--------------+-------------+--------------+------------+------------+
 
 
@@ -1278,25 +1276,24 @@ No paths to report.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; Data_in[*]  ; SYS_CLK    ; 1.864 ; 1.864 ; Rise       ; SYS_CLK         ;
-;  Data_in[0] ; SYS_CLK    ; 1.788 ; 1.788 ; Rise       ; SYS_CLK         ;
-;  Data_in[1] ; SYS_CLK    ; 1.756 ; 1.756 ; Rise       ; SYS_CLK         ;
-;  Data_in[2] ; SYS_CLK    ; 1.769 ; 1.769 ; Rise       ; SYS_CLK         ;
-;  Data_in[3] ; SYS_CLK    ; 1.860 ; 1.860 ; Rise       ; SYS_CLK         ;
-;  Data_in[4] ; SYS_CLK    ; 1.664 ; 1.664 ; Rise       ; SYS_CLK         ;
-;  Data_in[5] ; SYS_CLK    ; 1.864 ; 1.864 ; Rise       ; SYS_CLK         ;
-;  Data_in[6] ; SYS_CLK    ; 1.682 ; 1.682 ; Rise       ; SYS_CLK         ;
-;  Data_in[7] ; SYS_CLK    ; 1.670 ; 1.670 ; Rise       ; SYS_CLK         ;
-; addr[*]     ; SYS_CLK    ; 3.442 ; 3.442 ; Rise       ; SYS_CLK         ;
-;  addr[0]    ; SYS_CLK    ; 2.563 ; 2.563 ; Rise       ; SYS_CLK         ;
-;  addr[1]    ; SYS_CLK    ; 2.703 ; 2.703 ; Rise       ; SYS_CLK         ;
-;  addr[2]    ; SYS_CLK    ; 3.303 ; 3.303 ; Rise       ; SYS_CLK         ;
-;  addr[3]    ; SYS_CLK    ; 3.442 ; 3.442 ; Rise       ; SYS_CLK         ;
-;  addr[4]    ; SYS_CLK    ; 3.440 ; 3.440 ; Rise       ; SYS_CLK         ;
-;  addr[5]    ; SYS_CLK    ; 3.403 ; 3.403 ; Rise       ; SYS_CLK         ;
-;  addr[6]    ; SYS_CLK    ; 2.538 ; 2.538 ; Rise       ; SYS_CLK         ;
-;  addr[7]    ; SYS_CLK    ; 2.493 ; 2.493 ; Rise       ; SYS_CLK         ;
-; valid       ; SYS_CLK    ; 2.645 ; 2.645 ; Rise       ; SYS_CLK         ;
+; Data_in[*]  ; SYS_CLK    ; 1.886 ; 1.886 ; Rise       ; SYS_CLK         ;
+;  Data_in[0] ; SYS_CLK    ; 1.753 ; 1.753 ; Rise       ; SYS_CLK         ;
+;  Data_in[1] ; SYS_CLK    ; 1.778 ; 1.778 ; Rise       ; SYS_CLK         ;
+;  Data_in[2] ; SYS_CLK    ; 1.884 ; 1.884 ; Rise       ; SYS_CLK         ;
+;  Data_in[3] ; SYS_CLK    ; 1.655 ; 1.655 ; Rise       ; SYS_CLK         ;
+;  Data_in[4] ; SYS_CLK    ; 1.886 ; 1.886 ; Rise       ; SYS_CLK         ;
+;  Data_in[5] ; SYS_CLK    ; 1.866 ; 1.866 ; Rise       ; SYS_CLK         ;
+;  Data_in[6] ; SYS_CLK    ; 1.629 ; 1.629 ; Rise       ; SYS_CLK         ;
+;  Data_in[7] ; SYS_CLK    ; 1.868 ; 1.868 ; Rise       ; SYS_CLK         ;
+; addr[*]     ; SYS_CLK    ; 3.438 ; 3.438 ; Rise       ; SYS_CLK         ;
+;  addr[0]    ; SYS_CLK    ; 3.007 ; 3.007 ; Rise       ; SYS_CLK         ;
+;  addr[1]    ; SYS_CLK    ; 2.828 ; 2.828 ; Rise       ; SYS_CLK         ;
+;  addr[2]    ; SYS_CLK    ; 2.930 ; 2.930 ; Rise       ; SYS_CLK         ;
+;  addr[3]    ; SYS_CLK    ; 3.255 ; 3.255 ; Rise       ; SYS_CLK         ;
+;  addr[4]    ; SYS_CLK    ; 3.320 ; 3.320 ; Rise       ; SYS_CLK         ;
+;  addr[5]    ; SYS_CLK    ; 3.438 ; 3.438 ; Rise       ; SYS_CLK         ;
+;  addr[6]    ; SYS_CLK    ; 3.299 ; 3.299 ; Rise       ; SYS_CLK         ;
+;  addr[7]    ; SYS_CLK    ; 2.300 ; 2.300 ; Rise       ; SYS_CLK         ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -1305,25 +1302,24 @@ No paths to report.
 +-------------+------------+--------+--------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-------------+------------+--------+--------+------------+-----------------+
-; Data_in[*]  ; SYS_CLK    ; -1.428 ; -1.428 ; Rise       ; SYS_CLK         ;
-;  Data_in[0] ; SYS_CLK    ; -1.654 ; -1.654 ; Rise       ; SYS_CLK         ;
-;  Data_in[1] ; SYS_CLK    ; -1.428 ; -1.428 ; Rise       ; SYS_CLK         ;
-;  Data_in[2] ; SYS_CLK    ; -1.555 ; -1.555 ; Rise       ; SYS_CLK         ;
-;  Data_in[3] ; SYS_CLK    ; -1.740 ; -1.740 ; Rise       ; SYS_CLK         ;
-;  Data_in[4] ; SYS_CLK    ; -1.539 ; -1.539 ; Rise       ; SYS_CLK         ;
-;  Data_in[5] ; SYS_CLK    ; -1.744 ; -1.744 ; Rise       ; SYS_CLK         ;
-;  Data_in[6] ; SYS_CLK    ; -1.559 ; -1.559 ; Rise       ; SYS_CLK         ;
-;  Data_in[7] ; SYS_CLK    ; -1.547 ; -1.547 ; Rise       ; SYS_CLK         ;
-; addr[*]     ; SYS_CLK    ; -1.652 ; -1.652 ; Rise       ; SYS_CLK         ;
-;  addr[0]    ; SYS_CLK    ; -1.652 ; -1.652 ; Rise       ; SYS_CLK         ;
-;  addr[1]    ; SYS_CLK    ; -1.720 ; -1.720 ; Rise       ; SYS_CLK         ;
-;  addr[2]    ; SYS_CLK    ; -2.802 ; -2.802 ; Rise       ; SYS_CLK         ;
-;  addr[3]    ; SYS_CLK    ; -2.941 ; -2.941 ; Rise       ; SYS_CLK         ;
-;  addr[4]    ; SYS_CLK    ; -2.939 ; -2.939 ; Rise       ; SYS_CLK         ;
-;  addr[5]    ; SYS_CLK    ; -2.902 ; -2.902 ; Rise       ; SYS_CLK         ;
-;  addr[6]    ; SYS_CLK    ; -2.085 ; -2.085 ; Rise       ; SYS_CLK         ;
-;  addr[7]    ; SYS_CLK    ; -2.156 ; -2.156 ; Rise       ; SYS_CLK         ;
-; valid       ; SYS_CLK    ; -2.142 ; -2.142 ; Rise       ; SYS_CLK         ;
+; Data_in[*]  ; SYS_CLK    ; -1.505 ; -1.505 ; Rise       ; SYS_CLK         ;
+;  Data_in[0] ; SYS_CLK    ; -1.576 ; -1.576 ; Rise       ; SYS_CLK         ;
+;  Data_in[1] ; SYS_CLK    ; -1.639 ; -1.639 ; Rise       ; SYS_CLK         ;
+;  Data_in[2] ; SYS_CLK    ; -1.707 ; -1.707 ; Rise       ; SYS_CLK         ;
+;  Data_in[3] ; SYS_CLK    ; -1.535 ; -1.535 ; Rise       ; SYS_CLK         ;
+;  Data_in[4] ; SYS_CLK    ; -1.662 ; -1.662 ; Rise       ; SYS_CLK         ;
+;  Data_in[5] ; SYS_CLK    ; -1.741 ; -1.741 ; Rise       ; SYS_CLK         ;
+;  Data_in[6] ; SYS_CLK    ; -1.505 ; -1.505 ; Rise       ; SYS_CLK         ;
+;  Data_in[7] ; SYS_CLK    ; -1.747 ; -1.747 ; Rise       ; SYS_CLK         ;
+; addr[*]     ; SYS_CLK    ; -1.765 ; -1.765 ; Rise       ; SYS_CLK         ;
+;  addr[0]    ; SYS_CLK    ; -1.765 ; -1.765 ; Rise       ; SYS_CLK         ;
+;  addr[1]    ; SYS_CLK    ; -2.388 ; -2.388 ; Rise       ; SYS_CLK         ;
+;  addr[2]    ; SYS_CLK    ; -1.934 ; -1.934 ; Rise       ; SYS_CLK         ;
+;  addr[3]    ; SYS_CLK    ; -2.928 ; -2.928 ; Rise       ; SYS_CLK         ;
+;  addr[4]    ; SYS_CLK    ; -2.993 ; -2.993 ; Rise       ; SYS_CLK         ;
+;  addr[5]    ; SYS_CLK    ; -3.111 ; -3.111 ; Rise       ; SYS_CLK         ;
+;  addr[6]    ; SYS_CLK    ; -2.972 ; -2.972 ; Rise       ; SYS_CLK         ;
+;  addr[7]    ; SYS_CLK    ; -2.006 ; -2.006 ; Rise       ; SYS_CLK         ;
 +-------------+------------+--------+--------+------------+-----------------+
 
 
@@ -1332,25 +1328,25 @@ No paths to report.
 +--------------+------------+-------+-------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------+------------+-------+-------+------------+-----------------+
-; OUT[*]       ; G_CLK_TX   ; 3.971 ; 3.971 ; Rise       ; G_CLK_TX        ;
-;  OUT[0]      ; G_CLK_TX   ; 3.893 ; 3.893 ; Rise       ; G_CLK_TX        ;
-;  OUT[1]      ; G_CLK_TX   ; 3.773 ; 3.773 ; Rise       ; G_CLK_TX        ;
-;  OUT[2]      ; G_CLK_TX   ; 3.971 ; 3.971 ; Rise       ; G_CLK_TX        ;
-;  OUT[3]      ; G_CLK_TX   ; 3.681 ; 3.681 ; Rise       ; G_CLK_TX        ;
-;  OUT[4]      ; G_CLK_TX   ; 3.943 ; 3.943 ; Rise       ; G_CLK_TX        ;
-;  OUT[5]      ; G_CLK_TX   ; 3.865 ; 3.865 ; Rise       ; G_CLK_TX        ;
-;  OUT[6]      ; G_CLK_TX   ; 3.745 ; 3.745 ; Rise       ; G_CLK_TX        ;
-;  OUT[7]      ; G_CLK_TX   ; 3.776 ; 3.776 ; Rise       ; G_CLK_TX        ;
-; BSG_INT      ; SYS_CLK    ; 3.847 ; 3.847 ; Rise       ; SYS_CLK         ;
-; Data_out[*]  ; SYS_CLK    ; 3.923 ; 3.923 ; Rise       ; SYS_CLK         ;
-;  Data_out[0] ; SYS_CLK    ; 3.890 ; 3.890 ; Rise       ; SYS_CLK         ;
-;  Data_out[1] ; SYS_CLK    ; 3.768 ; 3.768 ; Rise       ; SYS_CLK         ;
-;  Data_out[2] ; SYS_CLK    ; 3.792 ; 3.792 ; Rise       ; SYS_CLK         ;
-;  Data_out[3] ; SYS_CLK    ; 3.883 ; 3.883 ; Rise       ; SYS_CLK         ;
-;  Data_out[4] ; SYS_CLK    ; 3.923 ; 3.923 ; Rise       ; SYS_CLK         ;
-;  Data_out[5] ; SYS_CLK    ; 3.889 ; 3.889 ; Rise       ; SYS_CLK         ;
-;  Data_out[6] ; SYS_CLK    ; 3.768 ; 3.768 ; Rise       ; SYS_CLK         ;
-;  Data_out[7] ; SYS_CLK    ; 3.874 ; 3.874 ; Rise       ; SYS_CLK         ;
+; OUT[*]       ; G_CLK_TX   ; 4.011 ; 4.011 ; Rise       ; G_CLK_TX        ;
+;  OUT[0]      ; G_CLK_TX   ; 3.750 ; 3.750 ; Rise       ; G_CLK_TX        ;
+;  OUT[1]      ; G_CLK_TX   ; 4.011 ; 4.011 ; Rise       ; G_CLK_TX        ;
+;  OUT[2]      ; G_CLK_TX   ; 3.730 ; 3.730 ; Rise       ; G_CLK_TX        ;
+;  OUT[3]      ; G_CLK_TX   ; 3.902 ; 3.902 ; Rise       ; G_CLK_TX        ;
+;  OUT[4]      ; G_CLK_TX   ; 3.760 ; 3.760 ; Rise       ; G_CLK_TX        ;
+;  OUT[5]      ; G_CLK_TX   ; 3.737 ; 3.737 ; Rise       ; G_CLK_TX        ;
+;  OUT[6]      ; G_CLK_TX   ; 3.901 ; 3.901 ; Rise       ; G_CLK_TX        ;
+;  OUT[7]      ; G_CLK_TX   ; 3.755 ; 3.755 ; Rise       ; G_CLK_TX        ;
+; BSG_INT      ; SYS_CLK    ; 3.973 ; 3.973 ; Rise       ; SYS_CLK         ;
+; Data_out[*]  ; SYS_CLK    ; 3.998 ; 3.998 ; Rise       ; SYS_CLK         ;
+;  Data_out[0] ; SYS_CLK    ; 3.970 ; 3.970 ; Rise       ; SYS_CLK         ;
+;  Data_out[1] ; SYS_CLK    ; 3.776 ; 3.776 ; Rise       ; SYS_CLK         ;
+;  Data_out[2] ; SYS_CLK    ; 3.960 ; 3.960 ; Rise       ; SYS_CLK         ;
+;  Data_out[3] ; SYS_CLK    ; 3.991 ; 3.991 ; Rise       ; SYS_CLK         ;
+;  Data_out[4] ; SYS_CLK    ; 3.998 ; 3.998 ; Rise       ; SYS_CLK         ;
+;  Data_out[5] ; SYS_CLK    ; 3.847 ; 3.847 ; Rise       ; SYS_CLK         ;
+;  Data_out[6] ; SYS_CLK    ; 3.968 ; 3.968 ; Rise       ; SYS_CLK         ;
+;  Data_out[7] ; SYS_CLK    ; 3.747 ; 3.747 ; Rise       ; SYS_CLK         ;
 +--------------+------------+-------+-------+------------+-----------------+
 
 
@@ -1359,25 +1355,25 @@ No paths to report.
 +--------------+------------+-------+-------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------+------------+-------+-------+------------+-----------------+
-; OUT[*]       ; G_CLK_TX   ; 3.681 ; 3.681 ; Rise       ; G_CLK_TX        ;
-;  OUT[0]      ; G_CLK_TX   ; 3.893 ; 3.893 ; Rise       ; G_CLK_TX        ;
-;  OUT[1]      ; G_CLK_TX   ; 3.773 ; 3.773 ; Rise       ; G_CLK_TX        ;
-;  OUT[2]      ; G_CLK_TX   ; 3.971 ; 3.971 ; Rise       ; G_CLK_TX        ;
-;  OUT[3]      ; G_CLK_TX   ; 3.681 ; 3.681 ; Rise       ; G_CLK_TX        ;
-;  OUT[4]      ; G_CLK_TX   ; 3.943 ; 3.943 ; Rise       ; G_CLK_TX        ;
-;  OUT[5]      ; G_CLK_TX   ; 3.865 ; 3.865 ; Rise       ; G_CLK_TX        ;
-;  OUT[6]      ; G_CLK_TX   ; 3.745 ; 3.745 ; Rise       ; G_CLK_TX        ;
-;  OUT[7]      ; G_CLK_TX   ; 3.776 ; 3.776 ; Rise       ; G_CLK_TX        ;
-; BSG_INT      ; SYS_CLK    ; 3.847 ; 3.847 ; Rise       ; SYS_CLK         ;
-; Data_out[*]  ; SYS_CLK    ; 3.768 ; 3.768 ; Rise       ; SYS_CLK         ;
-;  Data_out[0] ; SYS_CLK    ; 3.890 ; 3.890 ; Rise       ; SYS_CLK         ;
-;  Data_out[1] ; SYS_CLK    ; 3.768 ; 3.768 ; Rise       ; SYS_CLK         ;
-;  Data_out[2] ; SYS_CLK    ; 3.792 ; 3.792 ; Rise       ; SYS_CLK         ;
-;  Data_out[3] ; SYS_CLK    ; 3.883 ; 3.883 ; Rise       ; SYS_CLK         ;
-;  Data_out[4] ; SYS_CLK    ; 3.923 ; 3.923 ; Rise       ; SYS_CLK         ;
-;  Data_out[5] ; SYS_CLK    ; 3.889 ; 3.889 ; Rise       ; SYS_CLK         ;
-;  Data_out[6] ; SYS_CLK    ; 3.768 ; 3.768 ; Rise       ; SYS_CLK         ;
-;  Data_out[7] ; SYS_CLK    ; 3.874 ; 3.874 ; Rise       ; SYS_CLK         ;
+; OUT[*]       ; G_CLK_TX   ; 3.730 ; 3.730 ; Rise       ; G_CLK_TX        ;
+;  OUT[0]      ; G_CLK_TX   ; 3.750 ; 3.750 ; Rise       ; G_CLK_TX        ;
+;  OUT[1]      ; G_CLK_TX   ; 4.011 ; 4.011 ; Rise       ; G_CLK_TX        ;
+;  OUT[2]      ; G_CLK_TX   ; 3.730 ; 3.730 ; Rise       ; G_CLK_TX        ;
+;  OUT[3]      ; G_CLK_TX   ; 3.902 ; 3.902 ; Rise       ; G_CLK_TX        ;
+;  OUT[4]      ; G_CLK_TX   ; 3.760 ; 3.760 ; Rise       ; G_CLK_TX        ;
+;  OUT[5]      ; G_CLK_TX   ; 3.737 ; 3.737 ; Rise       ; G_CLK_TX        ;
+;  OUT[6]      ; G_CLK_TX   ; 3.901 ; 3.901 ; Rise       ; G_CLK_TX        ;
+;  OUT[7]      ; G_CLK_TX   ; 3.755 ; 3.755 ; Rise       ; G_CLK_TX        ;
+; BSG_INT      ; SYS_CLK    ; 3.973 ; 3.973 ; Rise       ; SYS_CLK         ;
+; Data_out[*]  ; SYS_CLK    ; 3.747 ; 3.747 ; Rise       ; SYS_CLK         ;
+;  Data_out[0] ; SYS_CLK    ; 3.970 ; 3.970 ; Rise       ; SYS_CLK         ;
+;  Data_out[1] ; SYS_CLK    ; 3.776 ; 3.776 ; Rise       ; SYS_CLK         ;
+;  Data_out[2] ; SYS_CLK    ; 3.960 ; 3.960 ; Rise       ; SYS_CLK         ;
+;  Data_out[3] ; SYS_CLK    ; 3.991 ; 3.991 ; Rise       ; SYS_CLK         ;
+;  Data_out[4] ; SYS_CLK    ; 3.998 ; 3.998 ; Rise       ; SYS_CLK         ;
+;  Data_out[5] ; SYS_CLK    ; 3.847 ; 3.847 ; Rise       ; SYS_CLK         ;
+;  Data_out[6] ; SYS_CLK    ; 3.968 ; 3.968 ; Rise       ; SYS_CLK         ;
+;  Data_out[7] ; SYS_CLK    ; 3.747 ; 3.747 ; Rise       ; SYS_CLK         ;
 +--------------+------------+-------+-------+------------+-----------------+
 
 
@@ -1386,12 +1382,12 @@ No paths to report.
 +------------------+---------+-------+----------+---------+---------------------+
 ; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack ; -5.655  ; 0.215 ; N/A      ; N/A     ; -1.631              ;
-;  G_CLK_TX        ; -5.655  ; 0.215 ; N/A      ; N/A     ; -1.631              ;
-;  SYS_CLK         ; -1.032  ; 0.326 ; N/A      ; N/A     ; -1.631              ;
-; Design-wide TNS  ; -66.954 ; 0.0   ; 0.0      ; 0.0     ; -59.474             ;
-;  G_CLK_TX        ; -61.777 ; 0.000 ; N/A      ; N/A     ; -24.849             ;
-;  SYS_CLK         ; -5.177  ; 0.000 ; N/A      ; N/A     ; -34.625             ;
+; Worst-case Slack ; -5.814  ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  G_CLK_TX        ; -5.814  ; 0.215 ; N/A      ; N/A     ; -1.631              ;
+;  SYS_CLK         ; -0.986  ; 0.238 ; N/A      ; N/A     ; -1.631              ;
+; Design-wide TNS  ; -65.169 ; 0.0   ; 0.0      ; 0.0     ; -59.474             ;
+;  G_CLK_TX        ; -59.183 ; 0.000 ; N/A      ; N/A     ; -24.849             ;
+;  SYS_CLK         ; -5.986  ; 0.000 ; N/A      ; N/A     ; -34.625             ;
 +------------------+---------+-------+----------+---------+---------------------+
 
 
@@ -1400,25 +1396,24 @@ No paths to report.
 +-------------+------------+-------+-------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +-------------+------------+-------+-------+------------+-----------------+
-; Data_in[*]  ; SYS_CLK    ; 4.184 ; 4.184 ; Rise       ; SYS_CLK         ;
-;  Data_in[0] ; SYS_CLK    ; 3.931 ; 3.931 ; Rise       ; SYS_CLK         ;
-;  Data_in[1] ; SYS_CLK    ; 3.900 ; 3.900 ; Rise       ; SYS_CLK         ;
-;  Data_in[2] ; SYS_CLK    ; 3.886 ; 3.886 ; Rise       ; SYS_CLK         ;
-;  Data_in[3] ; SYS_CLK    ; 4.177 ; 4.177 ; Rise       ; SYS_CLK         ;
-;  Data_in[4] ; SYS_CLK    ; 3.637 ; 3.637 ; Rise       ; SYS_CLK         ;
-;  Data_in[5] ; SYS_CLK    ; 4.184 ; 4.184 ; Rise       ; SYS_CLK         ;
-;  Data_in[6] ; SYS_CLK    ; 3.663 ; 3.663 ; Rise       ; SYS_CLK         ;
-;  Data_in[7] ; SYS_CLK    ; 3.642 ; 3.642 ; Rise       ; SYS_CLK         ;
-; addr[*]     ; SYS_CLK    ; 7.942 ; 7.942 ; Rise       ; SYS_CLK         ;
-;  addr[0]    ; SYS_CLK    ; 5.921 ; 5.921 ; Rise       ; SYS_CLK         ;
-;  addr[1]    ; SYS_CLK    ; 6.214 ; 6.214 ; Rise       ; SYS_CLK         ;
-;  addr[2]    ; SYS_CLK    ; 7.652 ; 7.652 ; Rise       ; SYS_CLK         ;
-;  addr[3]    ; SYS_CLK    ; 7.900 ; 7.900 ; Rise       ; SYS_CLK         ;
-;  addr[4]    ; SYS_CLK    ; 7.942 ; 7.942 ; Rise       ; SYS_CLK         ;
-;  addr[5]    ; SYS_CLK    ; 7.815 ; 7.815 ; Rise       ; SYS_CLK         ;
-;  addr[6]    ; SYS_CLK    ; 5.897 ; 5.897 ; Rise       ; SYS_CLK         ;
-;  addr[7]    ; SYS_CLK    ; 5.756 ; 5.756 ; Rise       ; SYS_CLK         ;
-; valid       ; SYS_CLK    ; 6.042 ; 6.042 ; Rise       ; SYS_CLK         ;
+; Data_in[*]  ; SYS_CLK    ; 4.219 ; 4.219 ; Rise       ; SYS_CLK         ;
+;  Data_in[0] ; SYS_CLK    ; 3.883 ; 3.883 ; Rise       ; SYS_CLK         ;
+;  Data_in[1] ; SYS_CLK    ; 3.924 ; 3.924 ; Rise       ; SYS_CLK         ;
+;  Data_in[2] ; SYS_CLK    ; 4.203 ; 4.203 ; Rise       ; SYS_CLK         ;
+;  Data_in[3] ; SYS_CLK    ; 3.628 ; 3.628 ; Rise       ; SYS_CLK         ;
+;  Data_in[4] ; SYS_CLK    ; 4.219 ; 4.219 ; Rise       ; SYS_CLK         ;
+;  Data_in[5] ; SYS_CLK    ; 4.178 ; 4.178 ; Rise       ; SYS_CLK         ;
+;  Data_in[6] ; SYS_CLK    ; 3.591 ; 3.591 ; Rise       ; SYS_CLK         ;
+;  Data_in[7] ; SYS_CLK    ; 4.180 ; 4.180 ; Rise       ; SYS_CLK         ;
+; addr[*]     ; SYS_CLK    ; 8.193 ; 8.193 ; Rise       ; SYS_CLK         ;
+;  addr[0]    ; SYS_CLK    ; 7.138 ; 7.138 ; Rise       ; SYS_CLK         ;
+;  addr[1]    ; SYS_CLK    ; 6.619 ; 6.619 ; Rise       ; SYS_CLK         ;
+;  addr[2]    ; SYS_CLK    ; 6.850 ; 6.850 ; Rise       ; SYS_CLK         ;
+;  addr[3]    ; SYS_CLK    ; 7.722 ; 7.722 ; Rise       ; SYS_CLK         ;
+;  addr[4]    ; SYS_CLK    ; 7.973 ; 7.973 ; Rise       ; SYS_CLK         ;
+;  addr[5]    ; SYS_CLK    ; 8.193 ; 8.193 ; Rise       ; SYS_CLK         ;
+;  addr[6]    ; SYS_CLK    ; 7.844 ; 7.844 ; Rise       ; SYS_CLK         ;
+;  addr[7]    ; SYS_CLK    ; 5.198 ; 5.198 ; Rise       ; SYS_CLK         ;
 +-------------+------------+-------+-------+------------+-----------------+
 
 
@@ -1427,25 +1422,24 @@ No paths to report.
 +-------------+------------+--------+--------+------------+-----------------+
 ; Data Port   ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
 +-------------+------------+--------+--------+------------+-----------------+
-; Data_in[*]  ; SYS_CLK    ; -1.428 ; -1.428 ; Rise       ; SYS_CLK         ;
-;  Data_in[0] ; SYS_CLK    ; -1.654 ; -1.654 ; Rise       ; SYS_CLK         ;
-;  Data_in[1] ; SYS_CLK    ; -1.428 ; -1.428 ; Rise       ; SYS_CLK         ;
-;  Data_in[2] ; SYS_CLK    ; -1.555 ; -1.555 ; Rise       ; SYS_CLK         ;
-;  Data_in[3] ; SYS_CLK    ; -1.740 ; -1.740 ; Rise       ; SYS_CLK         ;
-;  Data_in[4] ; SYS_CLK    ; -1.539 ; -1.539 ; Rise       ; SYS_CLK         ;
-;  Data_in[5] ; SYS_CLK    ; -1.744 ; -1.744 ; Rise       ; SYS_CLK         ;
-;  Data_in[6] ; SYS_CLK    ; -1.559 ; -1.559 ; Rise       ; SYS_CLK         ;
-;  Data_in[7] ; SYS_CLK    ; -1.547 ; -1.547 ; Rise       ; SYS_CLK         ;
-; addr[*]     ; SYS_CLK    ; -1.652 ; -1.652 ; Rise       ; SYS_CLK         ;
-;  addr[0]    ; SYS_CLK    ; -1.652 ; -1.652 ; Rise       ; SYS_CLK         ;
-;  addr[1]    ; SYS_CLK    ; -1.720 ; -1.720 ; Rise       ; SYS_CLK         ;
-;  addr[2]    ; SYS_CLK    ; -2.802 ; -2.802 ; Rise       ; SYS_CLK         ;
-;  addr[3]    ; SYS_CLK    ; -2.941 ; -2.941 ; Rise       ; SYS_CLK         ;
-;  addr[4]    ; SYS_CLK    ; -2.939 ; -2.939 ; Rise       ; SYS_CLK         ;
-;  addr[5]    ; SYS_CLK    ; -2.902 ; -2.902 ; Rise       ; SYS_CLK         ;
-;  addr[6]    ; SYS_CLK    ; -2.085 ; -2.085 ; Rise       ; SYS_CLK         ;
-;  addr[7]    ; SYS_CLK    ; -2.156 ; -2.156 ; Rise       ; SYS_CLK         ;
-; valid       ; SYS_CLK    ; -2.142 ; -2.142 ; Rise       ; SYS_CLK         ;
+; Data_in[*]  ; SYS_CLK    ; -1.505 ; -1.505 ; Rise       ; SYS_CLK         ;
+;  Data_in[0] ; SYS_CLK    ; -1.576 ; -1.576 ; Rise       ; SYS_CLK         ;
+;  Data_in[1] ; SYS_CLK    ; -1.639 ; -1.639 ; Rise       ; SYS_CLK         ;
+;  Data_in[2] ; SYS_CLK    ; -1.707 ; -1.707 ; Rise       ; SYS_CLK         ;
+;  Data_in[3] ; SYS_CLK    ; -1.535 ; -1.535 ; Rise       ; SYS_CLK         ;
+;  Data_in[4] ; SYS_CLK    ; -1.662 ; -1.662 ; Rise       ; SYS_CLK         ;
+;  Data_in[5] ; SYS_CLK    ; -1.741 ; -1.741 ; Rise       ; SYS_CLK         ;
+;  Data_in[6] ; SYS_CLK    ; -1.505 ; -1.505 ; Rise       ; SYS_CLK         ;
+;  Data_in[7] ; SYS_CLK    ; -1.747 ; -1.747 ; Rise       ; SYS_CLK         ;
+; addr[*]     ; SYS_CLK    ; -1.765 ; -1.765 ; Rise       ; SYS_CLK         ;
+;  addr[0]    ; SYS_CLK    ; -1.765 ; -1.765 ; Rise       ; SYS_CLK         ;
+;  addr[1]    ; SYS_CLK    ; -2.388 ; -2.388 ; Rise       ; SYS_CLK         ;
+;  addr[2]    ; SYS_CLK    ; -1.934 ; -1.934 ; Rise       ; SYS_CLK         ;
+;  addr[3]    ; SYS_CLK    ; -2.928 ; -2.928 ; Rise       ; SYS_CLK         ;
+;  addr[4]    ; SYS_CLK    ; -2.993 ; -2.993 ; Rise       ; SYS_CLK         ;
+;  addr[5]    ; SYS_CLK    ; -3.111 ; -3.111 ; Rise       ; SYS_CLK         ;
+;  addr[6]    ; SYS_CLK    ; -2.972 ; -2.972 ; Rise       ; SYS_CLK         ;
+;  addr[7]    ; SYS_CLK    ; -2.006 ; -2.006 ; Rise       ; SYS_CLK         ;
 +-------------+------------+--------+--------+------------+-----------------+
 
 
@@ -1454,25 +1448,25 @@ No paths to report.
 +--------------+------------+-------+-------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------+------------+-------+-------+------------+-----------------+
-; OUT[*]       ; G_CLK_TX   ; 7.419 ; 7.419 ; Rise       ; G_CLK_TX        ;
-;  OUT[0]      ; G_CLK_TX   ; 7.176 ; 7.176 ; Rise       ; G_CLK_TX        ;
-;  OUT[1]      ; G_CLK_TX   ; 7.060 ; 7.060 ; Rise       ; G_CLK_TX        ;
-;  OUT[2]      ; G_CLK_TX   ; 7.419 ; 7.419 ; Rise       ; G_CLK_TX        ;
-;  OUT[3]      ; G_CLK_TX   ; 6.791 ; 6.791 ; Rise       ; G_CLK_TX        ;
-;  OUT[4]      ; G_CLK_TX   ; 7.322 ; 7.322 ; Rise       ; G_CLK_TX        ;
-;  OUT[5]      ; G_CLK_TX   ; 7.179 ; 7.179 ; Rise       ; G_CLK_TX        ;
-;  OUT[6]      ; G_CLK_TX   ; 6.857 ; 6.857 ; Rise       ; G_CLK_TX        ;
-;  OUT[7]      ; G_CLK_TX   ; 7.056 ; 7.056 ; Rise       ; G_CLK_TX        ;
-; BSG_INT      ; SYS_CLK    ; 7.142 ; 7.142 ; Rise       ; SYS_CLK         ;
-; Data_out[*]  ; SYS_CLK    ; 7.248 ; 7.248 ; Rise       ; SYS_CLK         ;
-;  Data_out[0] ; SYS_CLK    ; 7.188 ; 7.188 ; Rise       ; SYS_CLK         ;
-;  Data_out[1] ; SYS_CLK    ; 6.881 ; 6.881 ; Rise       ; SYS_CLK         ;
-;  Data_out[2] ; SYS_CLK    ; 6.907 ; 6.907 ; Rise       ; SYS_CLK         ;
-;  Data_out[3] ; SYS_CLK    ; 7.163 ; 7.163 ; Rise       ; SYS_CLK         ;
-;  Data_out[4] ; SYS_CLK    ; 7.248 ; 7.248 ; Rise       ; SYS_CLK         ;
-;  Data_out[5] ; SYS_CLK    ; 7.175 ; 7.175 ; Rise       ; SYS_CLK         ;
-;  Data_out[6] ; SYS_CLK    ; 6.880 ; 6.880 ; Rise       ; SYS_CLK         ;
-;  Data_out[7] ; SYS_CLK    ; 7.173 ; 7.173 ; Rise       ; SYS_CLK         ;
+; OUT[*]       ; G_CLK_TX   ; 7.490 ; 7.490 ; Rise       ; G_CLK_TX        ;
+;  OUT[0]      ; G_CLK_TX   ; 6.862 ; 6.862 ; Rise       ; G_CLK_TX        ;
+;  OUT[1]      ; G_CLK_TX   ; 7.490 ; 7.490 ; Rise       ; G_CLK_TX        ;
+;  OUT[2]      ; G_CLK_TX   ; 6.840 ; 6.840 ; Rise       ; G_CLK_TX        ;
+;  OUT[3]      ; G_CLK_TX   ; 7.223 ; 7.223 ; Rise       ; G_CLK_TX        ;
+;  OUT[4]      ; G_CLK_TX   ; 6.870 ; 6.870 ; Rise       ; G_CLK_TX        ;
+;  OUT[5]      ; G_CLK_TX   ; 6.850 ; 6.850 ; Rise       ; G_CLK_TX        ;
+;  OUT[6]      ; G_CLK_TX   ; 7.223 ; 7.223 ; Rise       ; G_CLK_TX        ;
+;  OUT[7]      ; G_CLK_TX   ; 6.866 ; 6.866 ; Rise       ; G_CLK_TX        ;
+; BSG_INT      ; SYS_CLK    ; 7.449 ; 7.449 ; Rise       ; SYS_CLK         ;
+; Data_out[*]  ; SYS_CLK    ; 7.466 ; 7.466 ; Rise       ; SYS_CLK         ;
+;  Data_out[0] ; SYS_CLK    ; 7.436 ; 7.436 ; Rise       ; SYS_CLK         ;
+;  Data_out[1] ; SYS_CLK    ; 6.886 ; 6.886 ; Rise       ; SYS_CLK         ;
+;  Data_out[2] ; SYS_CLK    ; 7.424 ; 7.424 ; Rise       ; SYS_CLK         ;
+;  Data_out[3] ; SYS_CLK    ; 7.454 ; 7.454 ; Rise       ; SYS_CLK         ;
+;  Data_out[4] ; SYS_CLK    ; 7.466 ; 7.466 ; Rise       ; SYS_CLK         ;
+;  Data_out[5] ; SYS_CLK    ; 7.131 ; 7.131 ; Rise       ; SYS_CLK         ;
+;  Data_out[6] ; SYS_CLK    ; 7.429 ; 7.429 ; Rise       ; SYS_CLK         ;
+;  Data_out[7] ; SYS_CLK    ; 6.860 ; 6.860 ; Rise       ; SYS_CLK         ;
 +--------------+------------+-------+-------+------------+-----------------+
 
 
@@ -1481,25 +1475,25 @@ No paths to report.
 +--------------+------------+-------+-------+------------+-----------------+
 ; Data Port    ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
 +--------------+------------+-------+-------+------------+-----------------+
-; OUT[*]       ; G_CLK_TX   ; 3.681 ; 3.681 ; Rise       ; G_CLK_TX        ;
-;  OUT[0]      ; G_CLK_TX   ; 3.893 ; 3.893 ; Rise       ; G_CLK_TX        ;
-;  OUT[1]      ; G_CLK_TX   ; 3.773 ; 3.773 ; Rise       ; G_CLK_TX        ;
-;  OUT[2]      ; G_CLK_TX   ; 3.971 ; 3.971 ; Rise       ; G_CLK_TX        ;
-;  OUT[3]      ; G_CLK_TX   ; 3.681 ; 3.681 ; Rise       ; G_CLK_TX        ;
-;  OUT[4]      ; G_CLK_TX   ; 3.943 ; 3.943 ; Rise       ; G_CLK_TX        ;
-;  OUT[5]      ; G_CLK_TX   ; 3.865 ; 3.865 ; Rise       ; G_CLK_TX        ;
-;  OUT[6]      ; G_CLK_TX   ; 3.745 ; 3.745 ; Rise       ; G_CLK_TX        ;
-;  OUT[7]      ; G_CLK_TX   ; 3.776 ; 3.776 ; Rise       ; G_CLK_TX        ;
-; BSG_INT      ; SYS_CLK    ; 3.847 ; 3.847 ; Rise       ; SYS_CLK         ;
-; Data_out[*]  ; SYS_CLK    ; 3.768 ; 3.768 ; Rise       ; SYS_CLK         ;
-;  Data_out[0] ; SYS_CLK    ; 3.890 ; 3.890 ; Rise       ; SYS_CLK         ;
-;  Data_out[1] ; SYS_CLK    ; 3.768 ; 3.768 ; Rise       ; SYS_CLK         ;
-;  Data_out[2] ; SYS_CLK    ; 3.792 ; 3.792 ; Rise       ; SYS_CLK         ;
-;  Data_out[3] ; SYS_CLK    ; 3.883 ; 3.883 ; Rise       ; SYS_CLK         ;
-;  Data_out[4] ; SYS_CLK    ; 3.923 ; 3.923 ; Rise       ; SYS_CLK         ;
-;  Data_out[5] ; SYS_CLK    ; 3.889 ; 3.889 ; Rise       ; SYS_CLK         ;
-;  Data_out[6] ; SYS_CLK    ; 3.768 ; 3.768 ; Rise       ; SYS_CLK         ;
-;  Data_out[7] ; SYS_CLK    ; 3.874 ; 3.874 ; Rise       ; SYS_CLK         ;
+; OUT[*]       ; G_CLK_TX   ; 3.730 ; 3.730 ; Rise       ; G_CLK_TX        ;
+;  OUT[0]      ; G_CLK_TX   ; 3.750 ; 3.750 ; Rise       ; G_CLK_TX        ;
+;  OUT[1]      ; G_CLK_TX   ; 4.011 ; 4.011 ; Rise       ; G_CLK_TX        ;
+;  OUT[2]      ; G_CLK_TX   ; 3.730 ; 3.730 ; Rise       ; G_CLK_TX        ;
+;  OUT[3]      ; G_CLK_TX   ; 3.902 ; 3.902 ; Rise       ; G_CLK_TX        ;
+;  OUT[4]      ; G_CLK_TX   ; 3.760 ; 3.760 ; Rise       ; G_CLK_TX        ;
+;  OUT[5]      ; G_CLK_TX   ; 3.737 ; 3.737 ; Rise       ; G_CLK_TX        ;
+;  OUT[6]      ; G_CLK_TX   ; 3.901 ; 3.901 ; Rise       ; G_CLK_TX        ;
+;  OUT[7]      ; G_CLK_TX   ; 3.755 ; 3.755 ; Rise       ; G_CLK_TX        ;
+; BSG_INT      ; SYS_CLK    ; 3.973 ; 3.973 ; Rise       ; SYS_CLK         ;
+; Data_out[*]  ; SYS_CLK    ; 3.747 ; 3.747 ; Rise       ; SYS_CLK         ;
+;  Data_out[0] ; SYS_CLK    ; 3.970 ; 3.970 ; Rise       ; SYS_CLK         ;
+;  Data_out[1] ; SYS_CLK    ; 3.776 ; 3.776 ; Rise       ; SYS_CLK         ;
+;  Data_out[2] ; SYS_CLK    ; 3.960 ; 3.960 ; Rise       ; SYS_CLK         ;
+;  Data_out[3] ; SYS_CLK    ; 3.991 ; 3.991 ; Rise       ; SYS_CLK         ;
+;  Data_out[4] ; SYS_CLK    ; 3.998 ; 3.998 ; Rise       ; SYS_CLK         ;
+;  Data_out[5] ; SYS_CLK    ; 3.847 ; 3.847 ; Rise       ; SYS_CLK         ;
+;  Data_out[6] ; SYS_CLK    ; 3.968 ; 3.968 ; Rise       ; SYS_CLK         ;
+;  Data_out[7] ; SYS_CLK    ; 3.747 ; 3.747 ; Rise       ; SYS_CLK         ;
 +--------------+------------+-------+-------+------------+-----------------+
 
 
@@ -1548,8 +1542,8 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 +---------------------------------+-------+------+
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
-; Unconstrained Input Ports       ; 17    ; 17   ;
-; Unconstrained Input Port Paths  ; 254   ; 254  ;
+; Unconstrained Input Ports       ; 16    ; 16   ;
+; Unconstrained Input Port Paths  ; 235   ; 235  ;
 ; Unconstrained Output Ports      ; 17    ; 17   ;
 ; Unconstrained Output Port Paths ; 17    ; 17   ;
 +---------------------------------+-------+------+
@@ -1561,7 +1555,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
-    Info: Processing started: Mon Mar 20 15:40:15 2017
+    Info: Processing started: Tue Mar 21 20:09:15 2017
 Info: Command: quartus_sta BSG -c BSG
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -1575,16 +1569,16 @@ Info (332105): Deriving Clocks
 Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -5.655
+Info (332146): Worst-case setup slack is -5.814
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -5.655       -61.777 G_CLK_TX 
-    Info (332119):    -1.032        -5.177 SYS_CLK 
+    Info (332119):    -5.814       -59.183 G_CLK_TX 
+    Info (332119):    -0.986        -5.986 SYS_CLK 
 Info (332146): Worst-case hold slack is 0.445
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
     Info (332119):     0.445         0.000 G_CLK_TX 
-    Info (332119):     0.858         0.000 SYS_CLK 
+    Info (332119):     0.614         0.000 SYS_CLK 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.631
@@ -1595,16 +1589,16 @@ Info (332146): Worst-case minimum pulse width slack is -1.631
 Info (332001): The selected device family is not supported by the report_metastability command.
 Info: Analyzing Fast Model
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.381
+Info (332146): Worst-case setup slack is -1.467
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
-    Info (332119):    -1.381       -12.368 G_CLK_TX 
-    Info (332119):     0.211         0.000 SYS_CLK 
+    Info (332119):    -1.467       -12.458 G_CLK_TX 
+    Info (332119):     0.239         0.000 SYS_CLK 
 Info (332146): Worst-case hold slack is 0.215
     Info (332119):     Slack End Point TNS Clock 
     Info (332119): ========= ============= =====================
     Info (332119):     0.215         0.000 G_CLK_TX 
-    Info (332119):     0.326         0.000 SYS_CLK 
+    Info (332119):     0.238         0.000 SYS_CLK 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -1.380
@@ -1616,8 +1610,8 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 610 megabytes
-    Info: Processing ended: Mon Mar 20 15:40:16 2017
+    Info: Peak virtual memory: 595 megabytes
+    Info: Processing ended: Tue Mar 21 20:09:16 2017
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:00
 

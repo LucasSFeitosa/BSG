@@ -1,5 +1,5 @@
 Analysis & Synthesis report for BSG
-Mon Mar 20 15:40:07 2017
+Tue Mar 21 20:09:07 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
 
 
@@ -45,16 +45,16 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Mar 20 15:40:07 2017              ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 21 20:09:07 2017              ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1.78 SJ Web Edition ;
 ; Revision Name                      ; BSG                                                ;
 ; Top-level Entity Name              ; BSG                                                ;
 ; Family                             ; Cyclone II                                         ;
-; Total logic elements               ; 143                                                ;
-;     Total combinational functions  ; 125                                                ;
+; Total logic elements               ; 144                                                ;
+;     Total combinational functions  ; 126                                                ;
 ;     Dedicated logic registers      ; 46                                                 ;
 ; Total registers                    ; 46                                                 ;
-; Total pins                         ; 37                                                 ;
+; Total pins                         ; 36                                                 ;
 ; Total virtual pins                 ; 0                                                  ;
 ; Total memory bits                  ; 0                                                  ;
 ; Embedded Multiplier 9-bit elements ; 0                                                  ;
@@ -175,28 +175,28 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------------------------------+
 ; Resource                                    ; Usage                            ;
 +---------------------------------------------+----------------------------------+
-; Estimated Total logic elements              ; 143                              ;
+; Estimated Total logic elements              ; 144                              ;
 ;                                             ;                                  ;
-; Total combinational functions               ; 125                              ;
+; Total combinational functions               ; 126                              ;
 ; Logic element usage by number of LUT inputs ;                                  ;
-;     -- 4 input functions                    ; 83                               ;
-;     -- 3 input functions                    ; 36                               ;
+;     -- 4 input functions                    ; 82                               ;
+;     -- 3 input functions                    ; 38                               ;
 ;     -- <=2 input functions                  ; 6                                ;
 ;                                             ;                                  ;
 ; Logic elements by mode                      ;                                  ;
-;     -- normal mode                          ; 125                              ;
+;     -- normal mode                          ; 126                              ;
 ;     -- arithmetic mode                      ; 0                                ;
 ;                                             ;                                  ;
 ; Total registers                             ; 46                               ;
 ;     -- Dedicated logic registers            ; 46                               ;
 ;     -- I/O registers                        ; 0                                ;
 ;                                             ;                                  ;
-; I/O pins                                    ; 37                               ;
+; I/O pins                                    ; 36                               ;
 ; Embedded Multiplier 9-bit elements          ; 0                                ;
 ; Maximum fan-out node                        ; modulador:modulador_h|entrada[1] ;
 ; Maximum fan-out                             ; 38                               ;
-; Total fan-out                               ; 596                              ;
-; Average fan-out                             ; 2.87                             ;
+; Total fan-out                               ; 598                              ;
+; Average fan-out                             ; 2.88                             ;
 +---------------------------------------------+----------------------------------+
 
 
@@ -205,8 +205,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
-; |BSG                       ; 125 (3)           ; 46 (0)       ; 0           ; 0            ; 0       ; 0         ; 37   ; 0            ; |BSG                       ; work         ;
-;    |AMBA:AMBA_H|           ; 18 (18)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BSG|AMBA:AMBA_H           ; work         ;
+; |BSG                       ; 126 (3)           ; 46 (0)       ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |BSG                       ; work         ;
+;    |AMBA:AMBA_H|           ; 19 (19)           ; 27 (27)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BSG|AMBA:AMBA_H           ; work         ;
 ;    |encoder:encoder_h|     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BSG|encoder:encoder_h     ; work         ;
 ;    |modulador:modulador_h| ; 100 (100)         ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BSG|modulador:modulador_h ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
@@ -273,7 +273,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
-    Info: Processing started: Mon Mar 20 15:40:06 2017
+    Info: Processing started: Tue Mar 21 20:09:06 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BSG -c BSG
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file BSG.sv
@@ -299,12 +299,12 @@ Info (144001): Generated suppressed messages file /home/lucasf/Desktop/BSG/outpu
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Info (21057): Implemented 180 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 19 input pins
+    Info (21058): Implemented 18 input pins
     Info (21059): Implemented 18 output pins
-    Info (21061): Implemented 143 logic cells
+    Info (21061): Implemented 144 logic cells
 Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
-    Info: Peak virtual memory: 701 megabytes
-    Info: Processing ended: Mon Mar 20 15:40:07 2017
+    Info: Peak virtual memory: 702 megabytes
+    Info: Processing ended: Tue Mar 21 20:09:07 2017
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 

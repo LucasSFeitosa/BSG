@@ -10,12 +10,14 @@ output logic [7:0] data1, data2,
 //comunicaÃ§~ao AMBA
 input logic [7:0] data_in, endereco,
 output logic [7:0] data_out,
-input logic valid, 
 output logic ready
 );
 
 logic [7:0] controle;		// 0 - TXENABLE,	1 - INTMSK, 2 - INTFLAG, 3 - STATUS
 //controle representa o BSG_CONTROL[7:0]
+
+initial
+	ready=1'b1;
 
 always_comb
 	controle1 = controle[2:0];	//controle1 Â´e output ai pega os dados do controle
@@ -23,31 +25,32 @@ always_comb
 always_comb
 	controle[7:3]=controle2[4:0]; 	//controle2 Â´e input 
 
-
+always_comb
+	ready=!controle[3];
 
 always_ff@(posedge clk)
 begin
       
-	if (controle[1] & controle[3])
-		controle[2]=1;	//INT_FLAG	BSG_CONTROL[2] - ocorreu uma interrupÃ§~ao INT_FLAG=1
+	if (controle[1] && controle[3])
+		controle[2]=1'b1;	//INT_FLAG	BSG_CONTROL[2] - ocorreu uma interrupÃ§~ao INT_FLAG=1
 
 	if (controle[3]==1'b0)	//STATUS - 0 = n~ao estÂ´a tendo transmiss~ao
 		ready=1'b1;	//terminou a transmissao libera o ready para pegar novos dados
 		
 	case(endereco)
-		8'h10: begin
+		8'd10: begin
 			data_out[7:0] = controle[7:0];
-			if(valid==1'b1 & ready==1'b1)	//Se tiver dado valido no barramento (valid=1) e n~ao estiver ocorrendo transmiss~ao (status=0) (ready=1)
+			if(ready==1'b1)	//Se tiver dado valido no barramento (valid=1) e n~ao estiver ocorrendo transmiss~ao (status=0) (ready=1)
 				controle[2:0] = data_in[2:0];
 		end
-		8'h11:begin
+		8'd11:begin
 			data_out[7:0] = data1[7:0];
-			if(valid==1'b1 & ready==1'b1)
+			if(ready==1'b1)
 				data1 = data_in;
 		end
-		8'h12:begin
+		8'd12:begin
 			data_out[7:0] = data2[7:0];
-			if(valid==1'b1 & ready==1'b1)
+			if(ready==1'b1)
 				data2 = data_in;
 		end
 	endcase

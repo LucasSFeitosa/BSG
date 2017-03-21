@@ -10,7 +10,6 @@ entity AMBA is
         data_in         : in     vl_logic_vector(7 downto 0);
         endereco        : in     vl_logic_vector(7 downto 0);
         data_out        : out    vl_logic_vector(7 downto 0);
-        valid           : in     vl_logic;
         ready           : out    vl_logic
     );
 end AMBA;
