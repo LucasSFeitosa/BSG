@@ -1,5 +1,3 @@
-//falta ajeitar a interrupç~ao
-
 module BSG(	
 	input SYS_CLK, G_CLK_TX,
 	output logic [7:0]OUT,	//Sinal modulado
@@ -20,7 +18,6 @@ logic [7:0] BSG_DATA, DATA_GRAY;	//DATA_GRAY ´e apenas um fio para conectar a s
 
 
 
-
 AMBA AMBA_H( .clk(SYS_CLK), .controle1(BSG_CONTROL[2:0]), .controle2(BSG_CONTROL[7:3]), .data1(BSG_DATA_0), .data2(BSG_DATA_1),
  .data_in(Data_in), .data_out(Data_out), .endereco(addr), .ready(ready));
 
@@ -35,7 +32,7 @@ always_comb
 	endcase
 
 always_comb
-	BSG_INT=BSG_CONTROL[2];		//Sinal de Interrupç~ao
+	BSG_INT=(BSG_CONTROL[1] & BSG_CONTROL[2]);		//Sinal de Interrupç~ao
 
  
 endmodule

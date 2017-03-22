@@ -17,7 +17,7 @@ logic [7:0] controle;		// 0 - TXENABLE,	1 - INTMSK, 2 - INTFLAG, 3 - STATUS
 //controle representa o BSG_CONTROL[7:0]
 
 initial
-	ready=1'b1;
+	controle[2:0]=3'b0;	//valor inicial do BSG_CONTROL[2:0]
 
 always_comb
 	controle1 = controle[2:0];	//controle1 Â´e output ai pega os dados do controle
@@ -26,16 +26,13 @@ always_comb
 	controle[7:3]=controle2[4:0]; 	//controle2 Â´e input 
 
 always_comb
-	ready=!controle[3];
+	ready=!controle[3];	//STATUS - 0 = n~ao estÂ´a tendo transmiss~ao - ent~ao pode pegar dados
 
 always_ff@(posedge clk)
 begin
       
-	if (controle[1] && controle[3])
+	if (controle[3]==1'b0)
 		controle[2]=1'b1;	//INT_FLAG	BSG_CONTROL[2] - ocorreu uma interrupÃ§~ao INT_FLAG=1
-
-	if (controle[3]==1'b0)	//STATUS - 0 = n~ao estÂ´a tendo transmiss~ao
-		ready=1'b1;	//terminou a transmissao libera o ready para pegar novos dados
 		
 	case(endereco)
 		8'd10: begin

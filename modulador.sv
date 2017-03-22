@@ -14,6 +14,7 @@ initial	begin
 	flag_byte=0;
 	aux=0;
 	entrada=0;
+	status=0;
 end
 
 always_comb	
