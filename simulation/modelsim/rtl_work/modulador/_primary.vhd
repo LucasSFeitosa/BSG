@@ -6,6 +6,7 @@ entity modulador is
         saida           : out    vl_logic_vector(7 downto 0);
         DADO            : in     vl_logic_vector(7 downto 0);
         flag_byte       : out    vl_logic;
-        status          : out    vl_logic
+        status          : out    vl_logic;
+        rst             : in     vl_logic
     );
 end modulador;

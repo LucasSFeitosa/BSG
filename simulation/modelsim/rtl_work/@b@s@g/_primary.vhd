@@ -9,6 +9,6 @@ entity BSG is
         Data_in         : in     vl_logic_vector(7 downto 0);
         addr            : in     vl_logic_vector(7 downto 0);
         Data_out        : out    vl_logic_vector(7 downto 0);
-        ready           : out    vl_logic
+        we              : in     vl_logic
     );
 end BSG;
