@@ -1,6 +1,4 @@
-//AMBA comunicaÃ§~ao
-// ajeitar
-module AMBA(
+module Comunica(
 input clk, 
 
 output logic [2:0] controle1,	//configura como leitura e escrita do BSG_CONTROL bits de 0 a 2

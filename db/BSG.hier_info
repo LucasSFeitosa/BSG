@@ -26,18 +26,18 @@ addr[4] => addr[4].IN1
 addr[5] => addr[5].IN1
 addr[6] => addr[6].IN1
 addr[7] => addr[7].IN1
-Data_out[0] <= AMBA:AMBA_H.data_out
-Data_out[1] <= AMBA:AMBA_H.data_out
-Data_out[2] <= AMBA:AMBA_H.data_out
-Data_out[3] <= AMBA:AMBA_H.data_out
-Data_out[4] <= AMBA:AMBA_H.data_out
-Data_out[5] <= AMBA:AMBA_H.data_out
-Data_out[6] <= AMBA:AMBA_H.data_out
-Data_out[7] <= AMBA:AMBA_H.data_out
+Data_out[0] <= Comunica:Comunica_h.data_out
+Data_out[1] <= Comunica:Comunica_h.data_out
+Data_out[2] <= Comunica:Comunica_h.data_out
+Data_out[3] <= Comunica:Comunica_h.data_out
+Data_out[4] <= Comunica:Comunica_h.data_out
+Data_out[5] <= Comunica:Comunica_h.data_out
+Data_out[6] <= Comunica:Comunica_h.data_out
+Data_out[7] <= Comunica:Comunica_h.data_out
 we => we.IN1
 
 
-|BSG|AMBA:AMBA_H
+|BSG|Comunica:Comunica_h
 clk => data1[0]~reg0.CLK
 clk => data1[1]~reg0.CLK
 clk => data1[2]~reg0.CLK

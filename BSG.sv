@@ -21,7 +21,7 @@ logic [7:0] BSG_DATA, DATA_GRAY;	//DATA_GRAY ´e apenas um fio para conectar a s
 always_comb
 	CLK_TX = (G_CLK_TX & BSG_CONTROL[0]);
 
-AMBA AMBA_H( .clk(SYS_CLK), .controle1(BSG_CONTROL[2:0]), .controle2(BSG_CONTROL[7:3]), .data1(BSG_DATA_0), .data2(BSG_DATA_1),
+Comunica Comunica_h( .clk(SYS_CLK), .controle1(BSG_CONTROL[2:0]), .controle2(BSG_CONTROL[7:3]), .data1(BSG_DATA_0), .data2(BSG_DATA_1),
  .data_in(Data_in), .data_out(Data_out), .endereco(addr), .ready(we));
 
 encoder encoder_h(.binario(BSG_DATA), .gray(DATA_GRAY));

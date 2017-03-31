@@ -1,5 +1,5 @@
 Fitter report for BSG
-Tue Mar 28 20:41:38 2017
+Fri Mar 31 11:43:56 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
 
 
@@ -62,7 +62,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                          ;
 +------------------------------------+----------------------------------------------------+
-; Fitter Status                      ; Successful - Tue Mar 28 20:41:38 2017              ;
+; Fitter Status                      ; Successful - Fri Mar 31 11:43:56 2017              ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1.78 SJ Web Edition ;
 ; Revision Name                      ; BSG                                                ;
 ; Top-level Entity Name              ; BSG                                                ;
@@ -906,7 +906,7 @@ Note: User assignments will override these defaults. The user specified values a
 ; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M4Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name        ; Library Name ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------+--------------+
 ; |BSG                       ; 135 (4)     ; 48 (0)                    ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 36   ; 0            ; 87 (4)       ; 7 (0)             ; 41 (1)           ; |BSG                       ; work         ;
-;    |AMBA:AMBA_H|           ; 38 (38)     ; 29 (29)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 7 (7)             ; 22 (22)          ; |BSG|AMBA:AMBA_H           ; work         ;
+;    |Comunica:Comunica_h|   ; 38 (38)     ; 29 (29)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 9 (9)        ; 7 (7)             ; 22 (22)          ; |BSG|Comunica:Comunica_h   ; work         ;
 ;    |encoder:encoder_h|     ; 4 (4)       ; 0 (0)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 0 (0)        ; 0 (0)             ; 4 (4)            ; |BSG|encoder:encoder_h     ; work         ;
 ;    |modulador:modulador_h| ; 99 (99)     ; 19 (19)                   ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0    ; 0            ; 74 (74)      ; 0 (0)             ; 25 (25)          ; |BSG|modulador:modulador_h ; work         ;
 +----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+------+--------------+--------------+-------------------+------------------+----------------------------+--------------+
@@ -957,109 +957,109 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------------+----------+---------------+---------------+-----------------------+-----+
 
 
-+---------------------------------------------------------------------+
-; Pad To Core Delay Chain Fanout                                      ;
-+---------------------------------------+-------------------+---------+
-; Source Pin / Fanout                   ; Pad To Core Index ; Setting ;
-+---------------------------------------+-------------------+---------+
-; Data_in[1]                            ;                   ;         ;
-;      - AMBA:AMBA_H|data1[1]           ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|data2[1]           ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|controle[1]~feeder ; 0                 ; 6       ;
-; SYS_CLK                               ;                   ;         ;
-; addr[3]                               ;                   ;         ;
-;      - AMBA:AMBA_H|data2[7]~0         ; 0                 ; 6       ;
-; addr[4]                               ;                   ;         ;
-;      - AMBA:AMBA_H|data2[7]~0         ; 0                 ; 6       ;
-; addr[5]                               ;                   ;         ;
-;      - AMBA:AMBA_H|data2[7]~0         ; 1                 ; 6       ;
-; addr[6]                               ;                   ;         ;
-;      - AMBA:AMBA_H|data2[7]~0         ; 1                 ; 6       ;
-; addr[0]                               ;                   ;         ;
-;      - AMBA:AMBA_H|data_out[0]~0      ; 1                 ; 6       ;
-;      - AMBA:AMBA_H|data_out[1]~1      ; 1                 ; 6       ;
-;      - AMBA:AMBA_H|data_out[2]~2      ; 1                 ; 6       ;
-;      - AMBA:AMBA_H|data_out[3]~3      ; 1                 ; 6       ;
-;      - AMBA:AMBA_H|data2[7]~1         ; 1                 ; 6       ;
-;      - AMBA:AMBA_H|data_out[0]~4      ; 1                 ; 6       ;
-;      - AMBA:AMBA_H|Selector3~0        ; 1                 ; 6       ;
-;      - AMBA:AMBA_H|Selector2~0        ; 1                 ; 6       ;
-;      - AMBA:AMBA_H|Selector1~0        ; 1                 ; 6       ;
-;      - AMBA:AMBA_H|Selector0~0        ; 1                 ; 6       ;
-;      - AMBA:AMBA_H|data1[7]~0         ; 1                 ; 6       ;
-; we                                    ;                   ;         ;
-;      - AMBA:AMBA_H|data2[7]~1         ; 1                 ; 6       ;
-;      - AMBA:AMBA_H|data_out[0]~4      ; 1                 ; 6       ;
-;      - AMBA:AMBA_H|data1[7]~1         ; 1                 ; 6       ;
-; addr[7]                               ;                   ;         ;
-;      - AMBA:AMBA_H|data2[7]~1         ; 1                 ; 6       ;
-;      - AMBA:AMBA_H|data_out[0]~5      ; 1                 ; 6       ;
-;      - AMBA:AMBA_H|data1[7]~1         ; 1                 ; 6       ;
-; addr[1]                               ;                   ;         ;
-;      - AMBA:AMBA_H|controle[1]~2      ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|data_out[0]~4      ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|data1[7]~0         ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|data2[7]~2         ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|controle[1]~5      ; 0                 ; 6       ;
-; addr[2]                               ;                   ;         ;
-;      - AMBA:AMBA_H|data_out[0]        ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|data_out[1]        ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|data_out[2]        ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|data_out[3]        ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|controle[1]~2      ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|data_out[0]~4      ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|Selector3~0        ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|Selector2~0        ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|Selector1~0        ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|Selector0~0        ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|data1[7]~0         ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|data2[7]~2         ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|controle[1]~5      ; 0                 ; 6       ;
-; Data_in[2]                            ;                   ;         ;
-;      - AMBA:AMBA_H|data1[2]           ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|data2[2]           ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|controle~4         ; 0                 ; 6       ;
-; Data_in[5]                            ;                   ;         ;
-;      - AMBA:AMBA_H|data1[5]           ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|data2[5]           ; 0                 ; 6       ;
-; Data_in[7]                            ;                   ;         ;
-;      - AMBA:AMBA_H|data1[7]           ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|data2[7]           ; 0                 ; 6       ;
-; Data_in[4]                            ;                   ;         ;
-;      - AMBA:AMBA_H|data1[4]           ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|data2[4]           ; 0                 ; 6       ;
-; Data_in[6]                            ;                   ;         ;
-;      - AMBA:AMBA_H|data1[6]           ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|data2[6]           ; 0                 ; 6       ;
-; Data_in[3]                            ;                   ;         ;
-;      - AMBA:AMBA_H|data1[3]           ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|data2[3]           ; 0                 ; 6       ;
-; Data_in[0]                            ;                   ;         ;
-;      - AMBA:AMBA_H|data1[0]           ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|data2[0]           ; 0                 ; 6       ;
-;      - AMBA:AMBA_H|controle[0]        ; 0                 ; 6       ;
-; G_CLK_TX                              ;                   ;         ;
-;      - CLK_TX                         ; 0                 ; 0       ;
-+---------------------------------------+-------------------+---------+
++-----------------------------------------------------------------------------+
+; Pad To Core Delay Chain Fanout                                              ;
++-----------------------------------------------+-------------------+---------+
+; Source Pin / Fanout                           ; Pad To Core Index ; Setting ;
++-----------------------------------------------+-------------------+---------+
+; Data_in[1]                                    ;                   ;         ;
+;      - Comunica:Comunica_h|data1[1]           ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|data2[1]           ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|controle[1]~feeder ; 0                 ; 6       ;
+; SYS_CLK                                       ;                   ;         ;
+; addr[3]                                       ;                   ;         ;
+;      - Comunica:Comunica_h|data2[7]~0         ; 0                 ; 6       ;
+; addr[4]                                       ;                   ;         ;
+;      - Comunica:Comunica_h|data2[7]~0         ; 0                 ; 6       ;
+; addr[5]                                       ;                   ;         ;
+;      - Comunica:Comunica_h|data2[7]~0         ; 1                 ; 6       ;
+; addr[6]                                       ;                   ;         ;
+;      - Comunica:Comunica_h|data2[7]~0         ; 1                 ; 6       ;
+; addr[0]                                       ;                   ;         ;
+;      - Comunica:Comunica_h|data_out[0]~0      ; 1                 ; 6       ;
+;      - Comunica:Comunica_h|data_out[1]~1      ; 1                 ; 6       ;
+;      - Comunica:Comunica_h|data_out[2]~2      ; 1                 ; 6       ;
+;      - Comunica:Comunica_h|data_out[3]~3      ; 1                 ; 6       ;
+;      - Comunica:Comunica_h|data2[7]~1         ; 1                 ; 6       ;
+;      - Comunica:Comunica_h|data_out[0]~4      ; 1                 ; 6       ;
+;      - Comunica:Comunica_h|Selector3~0        ; 1                 ; 6       ;
+;      - Comunica:Comunica_h|Selector2~0        ; 1                 ; 6       ;
+;      - Comunica:Comunica_h|Selector1~0        ; 1                 ; 6       ;
+;      - Comunica:Comunica_h|Selector0~0        ; 1                 ; 6       ;
+;      - Comunica:Comunica_h|data1[7]~0         ; 1                 ; 6       ;
+; we                                            ;                   ;         ;
+;      - Comunica:Comunica_h|data2[7]~1         ; 1                 ; 6       ;
+;      - Comunica:Comunica_h|data_out[0]~4      ; 1                 ; 6       ;
+;      - Comunica:Comunica_h|data1[7]~1         ; 1                 ; 6       ;
+; addr[7]                                       ;                   ;         ;
+;      - Comunica:Comunica_h|data2[7]~1         ; 1                 ; 6       ;
+;      - Comunica:Comunica_h|data_out[0]~5      ; 1                 ; 6       ;
+;      - Comunica:Comunica_h|data1[7]~1         ; 1                 ; 6       ;
+; addr[1]                                       ;                   ;         ;
+;      - Comunica:Comunica_h|controle[1]~2      ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|data_out[0]~4      ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|data1[7]~0         ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|data2[7]~2         ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|controle[1]~5      ; 0                 ; 6       ;
+; addr[2]                                       ;                   ;         ;
+;      - Comunica:Comunica_h|data_out[0]        ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|data_out[1]        ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|data_out[2]        ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|data_out[3]        ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|controle[1]~2      ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|data_out[0]~4      ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|Selector3~0        ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|Selector2~0        ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|Selector1~0        ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|Selector0~0        ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|data1[7]~0         ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|data2[7]~2         ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|controle[1]~5      ; 0                 ; 6       ;
+; Data_in[2]                                    ;                   ;         ;
+;      - Comunica:Comunica_h|data1[2]           ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|data2[2]           ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|controle~4         ; 0                 ; 6       ;
+; Data_in[5]                                    ;                   ;         ;
+;      - Comunica:Comunica_h|data1[5]           ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|data2[5]           ; 0                 ; 6       ;
+; Data_in[7]                                    ;                   ;         ;
+;      - Comunica:Comunica_h|data1[7]           ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|data2[7]           ; 0                 ; 6       ;
+; Data_in[4]                                    ;                   ;         ;
+;      - Comunica:Comunica_h|data1[4]           ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|data2[4]           ; 0                 ; 6       ;
+; Data_in[6]                                    ;                   ;         ;
+;      - Comunica:Comunica_h|data1[6]           ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|data2[6]           ; 0                 ; 6       ;
+; Data_in[3]                                    ;                   ;         ;
+;      - Comunica:Comunica_h|data1[3]           ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|data2[3]           ; 0                 ; 6       ;
+; Data_in[0]                                    ;                   ;         ;
+;      - Comunica:Comunica_h|data1[0]           ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|data2[0]           ; 0                 ; 6       ;
+;      - Comunica:Comunica_h|controle[0]        ; 0                 ; 6       ;
+; G_CLK_TX                                      ;                   ;         ;
+;      - CLK_TX                                 ; 0                 ; 0       ;
++-----------------------------------------------+-------------------+---------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Control Signals                                                                                                                                             ;
-+--------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; Name                           ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
-+--------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; AMBA:AMBA_H|controle[0]        ; LCFF_X42_Y23_N19   ; 21      ; Async. clear ; no     ; --                   ; --               ; --                        ;
-; AMBA:AMBA_H|controle[1]~5      ; LCCOMB_X43_Y22_N18 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; AMBA:AMBA_H|data1[7]~1         ; LCCOMB_X43_Y22_N28 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; AMBA:AMBA_H|data2[7]~2         ; LCCOMB_X43_Y22_N16 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; AMBA:AMBA_H|data_out[0]~5      ; LCCOMB_X43_Y22_N20 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; CLK_TX                         ; LCCOMB_X42_Y23_N8  ; 19      ; Clock        ; yes    ; Global Clock         ; GCLK10           ; --                        ;
-; SYS_CLK                        ; PIN_M1             ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; SYS_CLK                        ; PIN_M1             ; 27      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
-; addr[2]                        ; PIN_G18            ; 13      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
-; modulador:modulador_h|Equal0~1 ; LCCOMB_X40_Y23_N10 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
-; modulador:modulador_h|status   ; LCFF_X43_Y22_N31   ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
-+--------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Control Signals                                                                                                                                                ;
++-----------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; Name                              ; Location           ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
++-----------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
+; CLK_TX                            ; LCCOMB_X42_Y23_N8  ; 19      ; Clock        ; yes    ; Global Clock         ; GCLK10           ; --                        ;
+; Comunica:Comunica_h|controle[0]   ; LCFF_X42_Y23_N19   ; 21      ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; Comunica:Comunica_h|controle[1]~5 ; LCCOMB_X43_Y22_N18 ; 2       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Comunica:Comunica_h|data1[7]~1    ; LCCOMB_X43_Y22_N28 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Comunica:Comunica_h|data2[7]~2    ; LCCOMB_X43_Y22_N16 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; Comunica:Comunica_h|data_out[0]~5 ; LCCOMB_X43_Y22_N20 ; 8       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; SYS_CLK                           ; PIN_M1             ; 2       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; SYS_CLK                           ; PIN_M1             ; 27      ; Clock        ; yes    ; Global Clock         ; GCLK3            ; --                        ;
+; addr[2]                           ; PIN_G18            ; 13      ; Sync. load   ; no     ; --                   ; --               ; --                        ;
+; modulador:modulador_h|Equal0~1    ; LCCOMB_X40_Y23_N10 ; 5       ; Clock enable ; no     ; --                   ; --               ; --                        ;
+; modulador:modulador_h|status      ; LCFF_X43_Y22_N31   ; 3       ; Clock        ; no     ; --                   ; --               ; --                        ;
++-----------------------------------+--------------------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------+
@@ -1083,15 +1083,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; modulador:modulador_h|entrada[3]   ; 29      ;
 ; modulador:modulador_h|entrada[0]   ; 29      ;
 ; modulador:modulador_h|flag         ; 22      ;
-; AMBA:AMBA_H|controle[0]            ; 21      ;
+; Comunica:Comunica_h|controle[0]    ; 21      ;
 ; modulador:modulador_h|Mux0~7       ; 18      ;
 ; addr[2]                            ; 13      ;
 ; modulador:modulador_h|flag_byte    ; 12      ;
 ; addr[0]                            ; 11      ;
 ; modulador:modulador_h|aux[2]       ; 9       ;
-; AMBA:AMBA_H|data2[7]~2             ; 8       ;
-; AMBA:AMBA_H|data1[7]~1             ; 8       ;
-; AMBA:AMBA_H|data_out[0]~5          ; 8       ;
+; Comunica:Comunica_h|data2[7]~2     ; 8       ;
+; Comunica:Comunica_h|data1[7]~1     ; 8       ;
+; Comunica:Comunica_h|data_out[0]~5  ; 8       ;
 ; modulador:modulador_h|aux[1]       ; 7       ;
 ; modulador:modulador_h|Mux0~6       ; 6       ;
 ; modulador:modulador_h|Mux0~4       ; 6       ;
@@ -1105,9 +1105,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Data_in[1]                         ; 3       ;
 ; modulador:modulador_h|Add0~0       ; 3       ;
 ; modulador:modulador_h|status       ; 3       ;
-; AMBA:AMBA_H|aux                    ; 3       ;
-; AMBA:AMBA_H|data2[7]~1             ; 3       ;
-; AMBA:AMBA_H|data2[7]~0             ; 3       ;
+; Comunica:Comunica_h|aux            ; 3       ;
+; Comunica:Comunica_h|data2[7]~1     ; 3       ;
+; Comunica:Comunica_h|data2[7]~0     ; 3       ;
 ; modulador:modulador_h|saida~36     ; 3       ;
 ; modulador:modulador_h|saida~35     ; 3       ;
 ; modulador:modulador_h|saida~34     ; 3       ;
@@ -1116,20 +1116,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; modulador:modulador_h|saida~8      ; 3       ;
 ; modulador:modulador_h|saida~7      ; 3       ;
 ; modulador:modulador_h|saida~6      ; 3       ;
-; AMBA:AMBA_H|data1[3]               ; 3       ;
-; AMBA:AMBA_H|data2[3]               ; 3       ;
-; AMBA:AMBA_H|data2[2]               ; 3       ;
-; AMBA:AMBA_H|data1[2]               ; 3       ;
+; Comunica:Comunica_h|data1[3]       ; 3       ;
+; Comunica:Comunica_h|data2[3]       ; 3       ;
+; Comunica:Comunica_h|data2[2]       ; 3       ;
+; Comunica:Comunica_h|data1[2]       ; 3       ;
 ; Data_in[3]                         ; 2       ;
 ; Data_in[6]                         ; 2       ;
 ; Data_in[4]                         ; 2       ;
 ; Data_in[7]                         ; 2       ;
 ; Data_in[5]                         ; 2       ;
 ; modulador:modulador_h|saida~73     ; 2       ;
-; AMBA:AMBA_H|controle[1]~5          ; 2       ;
+; Comunica:Comunica_h|controle[1]~5  ; 2       ;
 ; modulador:modulador_h|saida~69     ; 2       ;
 ; modulador:modulador_h|flag_byte~0  ; 2       ;
-; AMBA:AMBA_H|controle~3             ; 2       ;
+; Comunica:Comunica_h|controle~3     ; 2       ;
 ; modulador:modulador_h|saida~63     ; 2       ;
 ; modulador:modulador_h|saida~62     ; 2       ;
 ; modulador:modulador_h|saida~61     ; 2       ;
@@ -1141,29 +1141,29 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; modulador:modulador_h|saida~32     ; 2       ;
 ; modulador:modulador_h|saida~20     ; 2       ;
 ; modulador:modulador_h|saida~11     ; 2       ;
-; AMBA:AMBA_H|data2[0]               ; 2       ;
-; AMBA:AMBA_H|data1[0]               ; 2       ;
+; Comunica:Comunica_h|data2[0]       ; 2       ;
+; Comunica:Comunica_h|data1[0]       ; 2       ;
 ; BSG_DATA[1]~2                      ; 2       ;
-; AMBA:AMBA_H|data1[1]               ; 2       ;
-; AMBA:AMBA_H|data2[1]               ; 2       ;
-; AMBA:AMBA_H|data1[6]               ; 2       ;
-; AMBA:AMBA_H|data2[6]               ; 2       ;
+; Comunica:Comunica_h|data1[1]       ; 2       ;
+; Comunica:Comunica_h|data2[1]       ; 2       ;
+; Comunica:Comunica_h|data1[6]       ; 2       ;
+; Comunica:Comunica_h|data2[6]       ; 2       ;
 ; BSG_DATA[4]~0                      ; 2       ;
-; AMBA:AMBA_H|data1[4]               ; 2       ;
-; AMBA:AMBA_H|data2[4]               ; 2       ;
-; AMBA:AMBA_H|data1[7]               ; 2       ;
-; AMBA:AMBA_H|data2[7]               ; 2       ;
-; AMBA:AMBA_H|data2[5]               ; 2       ;
-; AMBA:AMBA_H|data1[5]               ; 2       ;
-; AMBA:AMBA_H|controle[2]            ; 2       ;
-; AMBA:AMBA_H|controle[1]            ; 2       ;
+; Comunica:Comunica_h|data1[4]       ; 2       ;
+; Comunica:Comunica_h|data2[4]       ; 2       ;
+; Comunica:Comunica_h|data1[7]       ; 2       ;
+; Comunica:Comunica_h|data2[7]       ; 2       ;
+; Comunica:Comunica_h|data2[5]       ; 2       ;
+; Comunica:Comunica_h|data1[5]       ; 2       ;
+; Comunica:Comunica_h|controle[2]    ; 2       ;
+; Comunica:Comunica_h|controle[1]    ; 2       ;
 ; G_CLK_TX                           ; 1       ;
 ; addr[6]                            ; 1       ;
 ; addr[5]                            ; 1       ;
 ; addr[4]                            ; 1       ;
 ; addr[3]                            ; 1       ;
 ; SYS_CLK                            ; 1       ;
-; AMBA:AMBA_H|aux~0                  ; 1       ;
+; Comunica:Comunica_h|aux~0          ; 1       ;
 ; modulador:modulador_h|aux[0]~0     ; 1       ;
 ; modulador:modulador_h|entrada[0]~0 ; 1       ;
 ; modulador:modulador_h|saida~82     ; 1       ;
@@ -1183,19 +1183,19 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; modulador:modulador_h|flag~0       ; 1       ;
 ; modulador:modulador_h|Add0~2       ; 1       ;
 ; modulador:modulador_h|Add1~1       ; 1       ;
-; AMBA:AMBA_H|data1[7]~0             ; 1       ;
+; Comunica:Comunica_h|data1[7]~0     ; 1       ;
 ; modulador:modulador_h|flag_byte~1  ; 1       ;
 ; modulador:modulador_h|Equal0~0     ; 1       ;
 ; modulador:modulador_h|Add1~0       ; 1       ;
 ; modulador:modulador_h|Add0~1       ; 1       ;
-; AMBA:AMBA_H|Selector0~0            ; 1       ;
-; AMBA:AMBA_H|Selector1~0            ; 1       ;
-; AMBA:AMBA_H|Selector2~0            ; 1       ;
-; AMBA:AMBA_H|Selector3~0            ; 1       ;
-; AMBA:AMBA_H|data_out[0]~4          ; 1       ;
-; AMBA:AMBA_H|controle~4             ; 1       ;
-; AMBA:AMBA_H|aux1                   ; 1       ;
-; AMBA:AMBA_H|controle[1]~2          ; 1       ;
+; Comunica:Comunica_h|Selector0~0    ; 1       ;
+; Comunica:Comunica_h|Selector1~0    ; 1       ;
+; Comunica:Comunica_h|Selector2~0    ; 1       ;
+; Comunica:Comunica_h|Selector3~0    ; 1       ;
+; Comunica:Comunica_h|data_out[0]~4  ; 1       ;
+; Comunica:Comunica_h|controle~4     ; 1       ;
+; Comunica:Comunica_h|aux1           ; 1       ;
+; Comunica:Comunica_h|controle[1]~2  ; 1       ;
 ; modulador:modulador_h|saida~68     ; 1       ;
 ; modulador:modulador_h|saida~67     ; 1       ;
 ; modulador:modulador_h|saida~66     ; 1       ;
@@ -1250,10 +1250,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; modulador:modulador_h|Mux0~2       ; 1       ;
 ; modulador:modulador_h|Mux0~1       ; 1       ;
 ; modulador:modulador_h|Mux0~0       ; 1       ;
-; AMBA:AMBA_H|data_out[7]            ; 1       ;
-; AMBA:AMBA_H|data_out[6]            ; 1       ;
-; AMBA:AMBA_H|data_out[5]            ; 1       ;
-; AMBA:AMBA_H|data_out[4]            ; 1       ;
+; Comunica:Comunica_h|data_out[7]    ; 1       ;
+; Comunica:Comunica_h|data_out[6]    ; 1       ;
+; Comunica:Comunica_h|data_out[5]    ; 1       ;
+; Comunica:Comunica_h|data_out[4]    ; 1       ;
 ; BSG_INT~0                          ; 1       ;
 ; modulador:modulador_h|saida[7]     ; 1       ;
 ; modulador:modulador_h|saida[6]     ; 1       ;
@@ -1263,14 +1263,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; modulador:modulador_h|saida[2]     ; 1       ;
 ; modulador:modulador_h|saida[1]     ; 1       ;
 ; modulador:modulador_h|saida[0]     ; 1       ;
-; AMBA:AMBA_H|data_out[3]~3          ; 1       ;
-; AMBA:AMBA_H|data_out[2]~2          ; 1       ;
-; AMBA:AMBA_H|data_out[1]~1          ; 1       ;
-; AMBA:AMBA_H|data_out[0]~0          ; 1       ;
-; AMBA:AMBA_H|data_out[3]            ; 1       ;
-; AMBA:AMBA_H|data_out[2]            ; 1       ;
-; AMBA:AMBA_H|data_out[1]            ; 1       ;
-; AMBA:AMBA_H|data_out[0]            ; 1       ;
+; Comunica:Comunica_h|data_out[3]~3  ; 1       ;
+; Comunica:Comunica_h|data_out[2]~2  ; 1       ;
+; Comunica:Comunica_h|data_out[1]~1  ; 1       ;
+; Comunica:Comunica_h|data_out[0]~0  ; 1       ;
+; Comunica:Comunica_h|data_out[3]    ; 1       ;
+; Comunica:Comunica_h|data_out[2]    ; 1       ;
+; Comunica:Comunica_h|data_out[1]    ; 1       ;
+; Comunica:Comunica_h|data_out[0]    ; 1       ;
 +------------------------------------+---------+
 
 
@@ -1505,7 +1505,7 @@ Info (332130): Timing requirements not specified -- quality metrics such as perf
 Info (176353): Automatically promoted node SYS_CLK (placed in PIN M1 (CLK2, LVDSCLK1p, Input))
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock CLKCTRL_G3
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node AMBA:AMBA_H|controle[0]
+        Info (176357): Destination node Comunica:Comunica_h|controle[0]
 Info (176353): Automatically promoted node CLK_TX 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176233): Starting register packing
@@ -1524,7 +1524,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 6 does not use VREF pins and has undetermined VCCIO pins. 1 total pin(s) used --  35 pins available
         Info (176213): I/O bank number 7 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  40 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  43 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -1536,7 +1536,7 @@ Info (170195): Router estimated average interconnect usage is 0% of the availabl
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
-Info (11888): Total time spent on timing analysis during the Fitter is 0.18 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.20 seconds.
 Info (306004): Started post-fitting delay annotation
 Warning (306006): Found 17 output pins without output pin load capacitance assignment
     Info (306007): Pin "OUT[0]" has no specified output pin load capacitance -- assuming default load capacitance of 0 pF for timing analysis
@@ -1559,13 +1559,13 @@ Warning (306006): Found 17 output pins without output pin load capacitance assig
 Info (306005): Delay annotation completed successfully
 Info (306004): Started post-fitting delay annotation
 Info (306005): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Warning (169174): The Reserve All Unused Pins setting has not been specified, and will default to 'As output driving ground'.
 Info (144001): Generated suppressed messages file /home/lucasf/Desktop/BSG/output_files/BSG.fit.smsg
 Info: Quartus II 64-Bit Fitter was successful. 0 errors, 6 warnings
     Info: Peak virtual memory: 774 megabytes
-    Info: Processing ended: Tue Mar 28 20:41:38 2017
-    Info: Elapsed time: 00:00:03
+    Info: Processing ended: Fri Mar 31 11:43:56 2017
+    Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 
 

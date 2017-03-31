@@ -16,7 +16,7 @@
 -- PROGRAM "Quartus II 64-Bit"
 -- VERSION "Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition"
 
--- DATE "03/28/2017 20:41:45"
+-- DATE "03/31/2017 11:44:02"
 
 -- 
 -- Device: Altera EP2C20F484C7 Package FBGA484
@@ -118,9 +118,9 @@ SIGNAL \modulador_h|saida~61_combout\ : std_logic;
 SIGNAL \modulador_h|saida~67_combout\ : std_logic;
 SIGNAL \G_CLK_TX~combout\ : std_logic;
 SIGNAL \we~combout\ : std_logic;
-SIGNAL \AMBA_H|data2[7]~0_combout\ : std_logic;
-SIGNAL \AMBA_H|data2[7]~1_combout\ : std_logic;
-SIGNAL \AMBA_H|controle[1]~5_combout\ : std_logic;
+SIGNAL \Comunica_h|data2[7]~0_combout\ : std_logic;
+SIGNAL \Comunica_h|data2[7]~1_combout\ : std_logic;
+SIGNAL \Comunica_h|controle[1]~5_combout\ : std_logic;
 SIGNAL \CLK_TX~combout\ : std_logic;
 SIGNAL \CLK_TX~clkctrl_outclk\ : std_logic;
 SIGNAL \modulador_h|entrada[0]~0_combout\ : std_logic;
@@ -134,13 +134,13 @@ SIGNAL \modulador_h|Equal0~0_combout\ : std_logic;
 SIGNAL \modulador_h|Equal0~1_combout\ : std_logic;
 SIGNAL \modulador_h|Add1~1_combout\ : std_logic;
 SIGNAL \modulador_h|Add1~0_combout\ : std_logic;
-SIGNAL \AMBA_H|data1[7]~0_combout\ : std_logic;
-SIGNAL \AMBA_H|data1[7]~1_combout\ : std_logic;
+SIGNAL \Comunica_h|data1[7]~0_combout\ : std_logic;
+SIGNAL \Comunica_h|data1[7]~1_combout\ : std_logic;
 SIGNAL \modulador_h|flag_byte~0_combout\ : std_logic;
 SIGNAL \modulador_h|flag_byte~1_combout\ : std_logic;
 SIGNAL \modulador_h|flag_byte~regout\ : std_logic;
 SIGNAL \modulador_h|Mux0~1_combout\ : std_logic;
-SIGNAL \AMBA_H|data2[7]~2_combout\ : std_logic;
+SIGNAL \Comunica_h|data2[7]~2_combout\ : std_logic;
 SIGNAL \BSG_DATA[4]~0_combout\ : std_logic;
 SIGNAL \modulador_h|Mux0~2_combout\ : std_logic;
 SIGNAL \modulador_h|Mux0~3_combout\ : std_logic;
@@ -217,39 +217,39 @@ SIGNAL \modulador_h|saida~64_combout\ : std_logic;
 SIGNAL \modulador_h|saida~65_combout\ : std_logic;
 SIGNAL \modulador_h|saida~66_combout\ : std_logic;
 SIGNAL \modulador_h|saida~68_combout\ : std_logic;
-SIGNAL \AMBA_H|controle[1]~2_combout\ : std_logic;
-SIGNAL \AMBA_H|aux~0_combout\ : std_logic;
-SIGNAL \AMBA_H|aux~regout\ : std_logic;
-SIGNAL \AMBA_H|aux1~regout\ : std_logic;
-SIGNAL \AMBA_H|controle~3_combout\ : std_logic;
-SIGNAL \AMBA_H|controle~4_combout\ : std_logic;
-SIGNAL \AMBA_H|controle[1]~feeder_combout\ : std_logic;
+SIGNAL \Comunica_h|controle[1]~2_combout\ : std_logic;
+SIGNAL \Comunica_h|aux~0_combout\ : std_logic;
+SIGNAL \Comunica_h|aux~regout\ : std_logic;
+SIGNAL \Comunica_h|aux1~regout\ : std_logic;
+SIGNAL \Comunica_h|controle~3_combout\ : std_logic;
+SIGNAL \Comunica_h|controle~4_combout\ : std_logic;
+SIGNAL \Comunica_h|controle[1]~feeder_combout\ : std_logic;
 SIGNAL \BSG_INT~0_combout\ : std_logic;
 SIGNAL \SYS_CLK~combout\ : std_logic;
 SIGNAL \SYS_CLK~clkctrl_outclk\ : std_logic;
-SIGNAL \AMBA_H|data_out[0]~0_combout\ : std_logic;
-SIGNAL \AMBA_H|data_out[0]~4_combout\ : std_logic;
-SIGNAL \AMBA_H|data_out[0]~5_combout\ : std_logic;
-SIGNAL \AMBA_H|data_out[1]~1_combout\ : std_logic;
-SIGNAL \AMBA_H|data_out[2]~2_combout\ : std_logic;
+SIGNAL \Comunica_h|data_out[0]~0_combout\ : std_logic;
+SIGNAL \Comunica_h|data_out[0]~4_combout\ : std_logic;
+SIGNAL \Comunica_h|data_out[0]~5_combout\ : std_logic;
+SIGNAL \Comunica_h|data_out[1]~1_combout\ : std_logic;
+SIGNAL \Comunica_h|data_out[2]~2_combout\ : std_logic;
 SIGNAL \modulador_h|status~0_combout\ : std_logic;
 SIGNAL \modulador_h|status~regout\ : std_logic;
-SIGNAL \AMBA_H|data_out[3]~3_combout\ : std_logic;
-SIGNAL \AMBA_H|Selector3~0_combout\ : std_logic;
-SIGNAL \AMBA_H|Selector2~0_combout\ : std_logic;
-SIGNAL \AMBA_H|Selector1~0_combout\ : std_logic;
-SIGNAL \AMBA_H|Selector0~0_combout\ : std_logic;
+SIGNAL \Comunica_h|data_out[3]~3_combout\ : std_logic;
+SIGNAL \Comunica_h|Selector3~0_combout\ : std_logic;
+SIGNAL \Comunica_h|Selector2~0_combout\ : std_logic;
+SIGNAL \Comunica_h|Selector1~0_combout\ : std_logic;
+SIGNAL \Comunica_h|Selector0~0_combout\ : std_logic;
 SIGNAL \Data_in~combout\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \addr~combout\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \modulador_h|saida\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \AMBA_H|controle\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \AMBA_H|data1\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \AMBA_H|data2\ : std_logic_vector(7 DOWNTO 0);
-SIGNAL \AMBA_H|data_out\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \Comunica_h|controle\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \Comunica_h|data1\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \Comunica_h|data2\ : std_logic_vector(7 DOWNTO 0);
+SIGNAL \Comunica_h|data_out\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \encoder_h|gray\ : std_logic_vector(7 DOWNTO 0);
 SIGNAL \modulador_h|aux\ : std_logic_vector(2 DOWNTO 0);
 SIGNAL \modulador_h|entrada\ : std_logic_vector(4 DOWNTO 0);
-SIGNAL \AMBA_H|ALT_INV_controle\ : std_logic_vector(0 DOWNTO 0);
+SIGNAL \Comunica_h|ALT_INV_controle\ : std_logic_vector(0 DOWNTO 0);
 SIGNAL \modulador_h|ALT_INV_saida\ : std_logic_vector(7 DOWNTO 7);
 SIGNAL \modulador_h|ALT_INV_status~regout\ : std_logic;
 
@@ -270,25 +270,25 @@ ww_devpor <= devpor;
 \SYS_CLK~clkctrl_INCLK_bus\ <= (gnd & gnd & gnd & \SYS_CLK~combout\);
 
 \CLK_TX~clkctrl_INCLK_bus\ <= (gnd & gnd & gnd & \CLK_TX~combout\);
-\AMBA_H|ALT_INV_controle\(0) <= NOT \AMBA_H|controle\(0);
+\Comunica_h|ALT_INV_controle\(0) <= NOT \Comunica_h|controle\(0);
 \modulador_h|ALT_INV_saida\(7) <= NOT \modulador_h|saida\(7);
 \modulador_h|ALT_INV_status~regout\ <= NOT \modulador_h|status~regout\;
 
 -- Location: LCFF_X44_Y22_N11
-\AMBA_H|data2[5]\ : cycloneii_lcell_ff
+\Comunica_h|data2[5]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
 	sdata => \Data_in~combout\(5),
 	sload => VCC,
-	ena => \AMBA_H|data2[7]~2_combout\,
+	ena => \Comunica_h|data2[7]~2_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data2\(5));
+	regout => \Comunica_h|data2\(5));
 
 -- Location: LCCOMB_X44_Y22_N10
 \modulador_h|Mux0~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \modulador_h|Mux0~0_combout\ = (\modulador_h|flag_byte~regout\ & ((!\AMBA_H|data2\(5)))) # (!\modulador_h|flag_byte~regout\ & (!\AMBA_H|data1\(5)))
+-- \modulador_h|Mux0~0_combout\ = (\modulador_h|flag_byte~regout\ & ((!\Comunica_h|data2\(5)))) # (!\modulador_h|flag_byte~regout\ & (!\Comunica_h|data1\(5)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -296,8 +296,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \AMBA_H|data1\(5),
-	datac => \AMBA_H|data2\(5),
+	dataa => \Comunica_h|data1\(5),
+	datac => \Comunica_h|data2\(5),
 	datad => \modulador_h|flag_byte~regout\,
 	combout => \modulador_h|Mux0~0_combout\);
 
@@ -717,9 +717,9 @@ PORT MAP (
 	combout => \addr~combout\(3));
 
 -- Location: LCCOMB_X49_Y25_N20
-\AMBA_H|data2[7]~0\ : cycloneii_lcell_comb
+\Comunica_h|data2[7]~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|data2[7]~0_combout\ = (!\addr~combout\(4) & (!\addr~combout\(5) & (!\addr~combout\(6) & \addr~combout\(3))))
+-- \Comunica_h|data2[7]~0_combout\ = (!\addr~combout\(4) & (!\addr~combout\(5) & (!\addr~combout\(6) & \addr~combout\(3))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -731,12 +731,12 @@ PORT MAP (
 	datab => \addr~combout\(5),
 	datac => \addr~combout\(6),
 	datad => \addr~combout\(3),
-	combout => \AMBA_H|data2[7]~0_combout\);
+	combout => \Comunica_h|data2[7]~0_combout\);
 
 -- Location: LCCOMB_X43_Y22_N22
-\AMBA_H|data2[7]~1\ : cycloneii_lcell_comb
+\Comunica_h|data2[7]~1\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|data2[7]~1_combout\ = (!\addr~combout\(0) & (!\we~combout\ & (!\addr~combout\(7) & \AMBA_H|data2[7]~0_combout\)))
+-- \Comunica_h|data2[7]~1_combout\ = (!\addr~combout\(0) & (!\we~combout\ & (!\addr~combout\(7) & \Comunica_h|data2[7]~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -747,8 +747,8 @@ PORT MAP (
 	dataa => \addr~combout\(0),
 	datab => \we~combout\,
 	datac => \addr~combout\(7),
-	datad => \AMBA_H|data2[7]~0_combout\,
-	combout => \AMBA_H|data2[7]~1_combout\);
+	datad => \Comunica_h|data2[7]~0_combout\,
+	combout => \Comunica_h|data2[7]~1_combout\);
 
 -- Location: PIN_J14,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \addr[1]~I\ : cycloneii_io
@@ -803,9 +803,9 @@ PORT MAP (
 	combout => \addr~combout\(2));
 
 -- Location: LCCOMB_X43_Y22_N18
-\AMBA_H|controle[1]~5\ : cycloneii_lcell_comb
+\Comunica_h|controle[1]~5\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|controle[1]~5_combout\ = (\AMBA_H|data2[7]~1_combout\ & (\addr~combout\(1) & !\addr~combout\(2)))
+-- \Comunica_h|controle[1]~5_combout\ = (\Comunica_h|data2[7]~1_combout\ & (\addr~combout\(1) & !\addr~combout\(2)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -813,26 +813,26 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \AMBA_H|data2[7]~1_combout\,
+	datab => \Comunica_h|data2[7]~1_combout\,
 	datac => \addr~combout\(1),
 	datad => \addr~combout\(2),
-	combout => \AMBA_H|controle[1]~5_combout\);
+	combout => \Comunica_h|controle[1]~5_combout\);
 
 -- Location: LCFF_X42_Y23_N19
-\AMBA_H|controle[0]\ : cycloneii_lcell_ff
+\Comunica_h|controle[0]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~combout\,
 	sdata => \Data_in~combout\(0),
 	sload => VCC,
-	ena => \AMBA_H|controle[1]~5_combout\,
+	ena => \Comunica_h|controle[1]~5_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|controle\(0));
+	regout => \Comunica_h|controle\(0));
 
 -- Location: LCCOMB_X42_Y23_N8
 CLK_TX : cycloneii_lcell_comb
 -- Equation(s):
--- \CLK_TX~combout\ = LCELL((\G_CLK_TX~combout\ & \AMBA_H|controle\(0)))
+-- \CLK_TX~combout\ = LCELL((\G_CLK_TX~combout\ & \Comunica_h|controle\(0)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -841,7 +841,7 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datac => \G_CLK_TX~combout\,
-	datad => \AMBA_H|controle\(0),
+	datad => \Comunica_h|controle\(0),
 	combout => \CLK_TX~combout\);
 
 -- Location: CLKCTRL_G10
@@ -876,7 +876,7 @@ PORT MAP (
 PORT MAP (
 	clk => \CLK_TX~clkctrl_outclk\,
 	datain => \modulador_h|entrada[0]~0_combout\,
-	aclr => \AMBA_H|ALT_INV_controle\(0),
+	aclr => \Comunica_h|ALT_INV_controle\(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \modulador_h|entrada\(0));
@@ -901,7 +901,7 @@ PORT MAP (
 PORT MAP (
 	clk => \CLK_TX~clkctrl_outclk\,
 	datain => \modulador_h|Add0~2_combout\,
-	aclr => \AMBA_H|ALT_INV_controle\(0),
+	aclr => \Comunica_h|ALT_INV_controle\(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \modulador_h|entrada\(1));
@@ -927,7 +927,7 @@ PORT MAP (
 PORT MAP (
 	clk => \CLK_TX~clkctrl_outclk\,
 	datain => \modulador_h|Add0~3_combout\,
-	aclr => \AMBA_H|ALT_INV_controle\(0),
+	aclr => \Comunica_h|ALT_INV_controle\(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \modulador_h|entrada\(2));
@@ -954,7 +954,7 @@ PORT MAP (
 PORT MAP (
 	clk => \CLK_TX~clkctrl_outclk\,
 	datain => \modulador_h|Add0~4_combout\,
-	aclr => \AMBA_H|ALT_INV_controle\(0),
+	aclr => \Comunica_h|ALT_INV_controle\(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \modulador_h|entrada\(3));
@@ -996,7 +996,7 @@ PORT MAP (
 PORT MAP (
 	clk => \CLK_TX~clkctrl_outclk\,
 	datain => \modulador_h|Add0~1_combout\,
-	aclr => \AMBA_H|ALT_INV_controle\(0),
+	aclr => \Comunica_h|ALT_INV_controle\(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \modulador_h|entrada\(4));
@@ -1053,7 +1053,7 @@ PORT MAP (
 PORT MAP (
 	clk => \CLK_TX~clkctrl_outclk\,
 	datain => \modulador_h|aux[0]~0_combout\,
-	aclr => \AMBA_H|ALT_INV_controle\(0),
+	aclr => \Comunica_h|ALT_INV_controle\(0),
 	ena => \modulador_h|Equal0~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -1080,7 +1080,7 @@ PORT MAP (
 PORT MAP (
 	clk => \CLK_TX~clkctrl_outclk\,
 	datain => \modulador_h|Add1~1_combout\,
-	aclr => \AMBA_H|ALT_INV_controle\(0),
+	aclr => \Comunica_h|ALT_INV_controle\(0),
 	ena => \modulador_h|Equal0~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -1106,7 +1106,7 @@ PORT MAP (
 PORT MAP (
 	clk => \CLK_TX~clkctrl_outclk\,
 	datain => \modulador_h|Add1~0_combout\,
-	aclr => \AMBA_H|ALT_INV_controle\(0),
+	aclr => \Comunica_h|ALT_INV_controle\(0),
 	ena => \modulador_h|Equal0~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
@@ -1165,9 +1165,9 @@ PORT MAP (
 	combout => \addr~combout\(0));
 
 -- Location: LCCOMB_X43_Y22_N10
-\AMBA_H|data1[7]~0\ : cycloneii_lcell_comb
+\Comunica_h|data1[7]~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|data1[7]~0_combout\ = (!\addr~combout\(2) & (\addr~combout\(1) & \addr~combout\(0)))
+-- \Comunica_h|data1[7]~0_combout\ = (!\addr~combout\(2) & (\addr~combout\(1) & \addr~combout\(0)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1178,12 +1178,12 @@ PORT MAP (
 	datab => \addr~combout\(2),
 	datac => \addr~combout\(1),
 	datad => \addr~combout\(0),
-	combout => \AMBA_H|data1[7]~0_combout\);
+	combout => \Comunica_h|data1[7]~0_combout\);
 
 -- Location: LCCOMB_X43_Y22_N28
-\AMBA_H|data1[7]~1\ : cycloneii_lcell_comb
+\Comunica_h|data1[7]~1\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|data1[7]~1_combout\ = (!\addr~combout\(7) & (!\we~combout\ & (\AMBA_H|data1[7]~0_combout\ & \AMBA_H|data2[7]~0_combout\)))
+-- \Comunica_h|data1[7]~1_combout\ = (!\addr~combout\(7) & (!\we~combout\ & (\Comunica_h|data1[7]~0_combout\ & \Comunica_h|data2[7]~0_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1193,20 +1193,20 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \addr~combout\(7),
 	datab => \we~combout\,
-	datac => \AMBA_H|data1[7]~0_combout\,
-	datad => \AMBA_H|data2[7]~0_combout\,
-	combout => \AMBA_H|data1[7]~1_combout\);
+	datac => \Comunica_h|data1[7]~0_combout\,
+	datad => \Comunica_h|data2[7]~0_combout\,
+	combout => \Comunica_h|data1[7]~1_combout\);
 
 -- Location: LCFF_X44_Y22_N15
-\AMBA_H|data1[7]\ : cycloneii_lcell_ff
+\Comunica_h|data1[7]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
 	sdata => \Data_in~combout\(7),
 	sload => VCC,
-	ena => \AMBA_H|data1[7]~1_combout\,
+	ena => \Comunica_h|data1[7]~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data1\(7));
+	regout => \Comunica_h|data1\(7));
 
 -- Location: LCCOMB_X44_Y22_N8
 \modulador_h|flag_byte~0\ : cycloneii_lcell_comb
@@ -1245,7 +1245,7 @@ PORT MAP (
 PORT MAP (
 	clk => \CLK_TX~clkctrl_outclk\,
 	datain => \modulador_h|flag_byte~1_combout\,
-	aclr => \AMBA_H|ALT_INV_controle\(0),
+	aclr => \Comunica_h|ALT_INV_controle\(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \modulador_h|flag_byte~regout\);
@@ -1253,7 +1253,7 @@ PORT MAP (
 -- Location: LCCOMB_X44_Y22_N14
 \modulador_h|Mux0~1\ : cycloneii_lcell_comb
 -- Equation(s):
--- \modulador_h|Mux0~1_combout\ = (\modulador_h|flag_byte~regout\ & (\AMBA_H|data2\(7))) # (!\modulador_h|flag_byte~regout\ & ((\AMBA_H|data1\(7))))
+-- \modulador_h|Mux0~1_combout\ = (\modulador_h|flag_byte~regout\ & (\Comunica_h|data2\(7))) # (!\modulador_h|flag_byte~regout\ & ((\Comunica_h|data1\(7))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1261,8 +1261,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \AMBA_H|data2\(7),
-	datac => \AMBA_H|data1\(7),
+	dataa => \Comunica_h|data2\(7),
+	datac => \Comunica_h|data1\(7),
 	datad => \modulador_h|flag_byte~regout\,
 	combout => \modulador_h|Mux0~1_combout\);
 
@@ -1293,9 +1293,9 @@ PORT MAP (
 	combout => \Data_in~combout\(4));
 
 -- Location: LCCOMB_X43_Y22_N16
-\AMBA_H|data2[7]~2\ : cycloneii_lcell_comb
+\Comunica_h|data2[7]~2\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|data2[7]~2_combout\ = (\AMBA_H|data2[7]~1_combout\ & (!\addr~combout\(1) & \addr~combout\(2)))
+-- \Comunica_h|data2[7]~2_combout\ = (\Comunica_h|data2[7]~1_combout\ & (!\addr~combout\(1) & \addr~combout\(2)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1303,37 +1303,37 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \AMBA_H|data2[7]~1_combout\,
+	datab => \Comunica_h|data2[7]~1_combout\,
 	datac => \addr~combout\(1),
 	datad => \addr~combout\(2),
-	combout => \AMBA_H|data2[7]~2_combout\);
+	combout => \Comunica_h|data2[7]~2_combout\);
 
 -- Location: LCFF_X44_Y22_N29
-\AMBA_H|data2[4]\ : cycloneii_lcell_ff
+\Comunica_h|data2[4]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
 	sdata => \Data_in~combout\(4),
 	sload => VCC,
-	ena => \AMBA_H|data2[7]~2_combout\,
+	ena => \Comunica_h|data2[7]~2_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data2\(4));
+	regout => \Comunica_h|data2\(4));
 
 -- Location: LCFF_X44_Y22_N3
-\AMBA_H|data1[4]\ : cycloneii_lcell_ff
+\Comunica_h|data1[4]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
 	sdata => \Data_in~combout\(4),
 	sload => VCC,
-	ena => \AMBA_H|data1[7]~1_combout\,
+	ena => \Comunica_h|data1[7]~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data1\(4));
+	regout => \Comunica_h|data1\(4));
 
 -- Location: LCCOMB_X44_Y22_N4
 \BSG_DATA[4]~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \BSG_DATA[4]~0_combout\ = (\modulador_h|flag_byte~regout\ & (\AMBA_H|data2\(4))) # (!\modulador_h|flag_byte~regout\ & ((\AMBA_H|data1\(4))))
+-- \BSG_DATA[4]~0_combout\ = (\modulador_h|flag_byte~regout\ & (\Comunica_h|data2\(4))) # (!\modulador_h|flag_byte~regout\ & ((\Comunica_h|data1\(4))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1342,8 +1342,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \modulador_h|flag_byte~regout\,
-	datab => \AMBA_H|data2\(4),
-	datad => \AMBA_H|data1\(4),
+	datab => \Comunica_h|data2\(4),
+	datad => \Comunica_h|data1\(4),
 	combout => \BSG_DATA[4]~0_combout\);
 
 -- Location: PIN_C22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
@@ -1373,31 +1373,31 @@ PORT MAP (
 	combout => \Data_in~combout\(6));
 
 -- Location: LCFF_X44_Y22_N19
-\AMBA_H|data2[6]\ : cycloneii_lcell_ff
+\Comunica_h|data2[6]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
 	sdata => \Data_in~combout\(6),
 	sload => VCC,
-	ena => \AMBA_H|data2[7]~2_combout\,
+	ena => \Comunica_h|data2[7]~2_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data2\(6));
+	regout => \Comunica_h|data2\(6));
 
 -- Location: LCFF_X44_Y22_N17
-\AMBA_H|data1[6]\ : cycloneii_lcell_ff
+\Comunica_h|data1[6]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
 	sdata => \Data_in~combout\(6),
 	sload => VCC,
-	ena => \AMBA_H|data1[7]~1_combout\,
+	ena => \Comunica_h|data1[7]~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data1\(6));
+	regout => \Comunica_h|data1\(6));
 
 -- Location: LCCOMB_X44_Y22_N16
 \modulador_h|Mux0~2\ : cycloneii_lcell_comb
 -- Equation(s):
--- \modulador_h|Mux0~2_combout\ = (\modulador_h|flag_byte~regout\ & (!\AMBA_H|data2\(6))) # (!\modulador_h|flag_byte~regout\ & ((!\AMBA_H|data1\(6))))
+-- \modulador_h|Mux0~2_combout\ = (\modulador_h|flag_byte~regout\ & (!\Comunica_h|data2\(6))) # (!\modulador_h|flag_byte~regout\ & ((!\Comunica_h|data1\(6))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1405,8 +1405,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \AMBA_H|data2\(6),
-	datac => \AMBA_H|data1\(6),
+	datab => \Comunica_h|data2\(6),
+	datac => \Comunica_h|data1\(6),
 	datad => \modulador_h|flag_byte~regout\,
 	combout => \modulador_h|Mux0~2_combout\);
 
@@ -1472,31 +1472,31 @@ PORT MAP (
 	combout => \Data_in~combout\(3));
 
 -- Location: LCFF_X44_Y22_N1
-\AMBA_H|data1[3]\ : cycloneii_lcell_ff
+\Comunica_h|data1[3]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
 	sdata => \Data_in~combout\(3),
 	sload => VCC,
-	ena => \AMBA_H|data1[7]~1_combout\,
+	ena => \Comunica_h|data1[7]~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data1\(3));
+	regout => \Comunica_h|data1\(3));
 
 -- Location: LCFF_X43_Y23_N15
-\AMBA_H|data2[3]\ : cycloneii_lcell_ff
+\Comunica_h|data2[3]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
 	sdata => \Data_in~combout\(3),
 	sload => VCC,
-	ena => \AMBA_H|data2[7]~2_combout\,
+	ena => \Comunica_h|data2[7]~2_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data2\(3));
+	regout => \Comunica_h|data2\(3));
 
 -- Location: LCCOMB_X43_Y23_N14
 \encoder_h|gray[3]~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \encoder_h|gray[3]~0_combout\ = \BSG_DATA[4]~0_combout\ $ (((\modulador_h|flag_byte~regout\ & ((\AMBA_H|data2\(3)))) # (!\modulador_h|flag_byte~regout\ & (\AMBA_H|data1\(3)))))
+-- \encoder_h|gray[3]~0_combout\ = \BSG_DATA[4]~0_combout\ $ (((\modulador_h|flag_byte~regout\ & ((\Comunica_h|data2\(3)))) # (!\modulador_h|flag_byte~regout\ & (\Comunica_h|data1\(3)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1505,8 +1505,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \modulador_h|flag_byte~regout\,
-	datab => \AMBA_H|data1\(3),
-	datac => \AMBA_H|data2\(3),
+	datab => \Comunica_h|data1\(3),
+	datac => \Comunica_h|data2\(3),
 	datad => \BSG_DATA[4]~0_combout\,
 	combout => \encoder_h|gray[3]~0_combout\);
 
@@ -1537,20 +1537,20 @@ PORT MAP (
 	combout => \Data_in~combout\(2));
 
 -- Location: LCFF_X44_Y22_N23
-\AMBA_H|data1[2]\ : cycloneii_lcell_ff
+\Comunica_h|data1[2]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
 	sdata => \Data_in~combout\(2),
 	sload => VCC,
-	ena => \AMBA_H|data1[7]~1_combout\,
+	ena => \Comunica_h|data1[7]~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data1\(2));
+	regout => \Comunica_h|data1\(2));
 
 -- Location: LCCOMB_X44_Y22_N0
 \BSG_DATA[3]~1\ : cycloneii_lcell_comb
 -- Equation(s):
--- \BSG_DATA[3]~1_combout\ = (\modulador_h|flag_byte~regout\ & ((\AMBA_H|data2\(3)))) # (!\modulador_h|flag_byte~regout\ & (\AMBA_H|data1\(3)))
+-- \BSG_DATA[3]~1_combout\ = (\modulador_h|flag_byte~regout\ & ((\Comunica_h|data2\(3)))) # (!\modulador_h|flag_byte~regout\ & (\Comunica_h|data1\(3)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1559,14 +1559,14 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \modulador_h|flag_byte~regout\,
-	datac => \AMBA_H|data1\(3),
-	datad => \AMBA_H|data2\(3),
+	datac => \Comunica_h|data1\(3),
+	datad => \Comunica_h|data2\(3),
 	combout => \BSG_DATA[3]~1_combout\);
 
 -- Location: LCCOMB_X44_Y22_N22
 \encoder_h|gray[2]\ : cycloneii_lcell_comb
 -- Equation(s):
--- \encoder_h|gray\(2) = \BSG_DATA[3]~1_combout\ $ (((\modulador_h|flag_byte~regout\ & (\AMBA_H|data2\(2))) # (!\modulador_h|flag_byte~regout\ & ((\AMBA_H|data1\(2))))))
+-- \encoder_h|gray\(2) = \BSG_DATA[3]~1_combout\ $ (((\modulador_h|flag_byte~regout\ & (\Comunica_h|data2\(2))) # (!\modulador_h|flag_byte~regout\ & ((\Comunica_h|data1\(2))))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1574,22 +1574,22 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \AMBA_H|data2\(2),
+	dataa => \Comunica_h|data2\(2),
 	datab => \modulador_h|flag_byte~regout\,
-	datac => \AMBA_H|data1\(2),
+	datac => \Comunica_h|data1\(2),
 	datad => \BSG_DATA[3]~1_combout\,
 	combout => \encoder_h|gray\(2));
 
 -- Location: LCFF_X43_Y23_N25
-\AMBA_H|data2[0]\ : cycloneii_lcell_ff
+\Comunica_h|data2[0]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
 	sdata => \Data_in~combout\(0),
 	sload => VCC,
-	ena => \AMBA_H|data2[7]~2_combout\,
+	ena => \Comunica_h|data2[7]~2_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data2\(0));
+	regout => \Comunica_h|data2\(0));
 
 -- Location: PIN_D22,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \Data_in[1]~I\ : cycloneii_io
@@ -1618,31 +1618,31 @@ PORT MAP (
 	combout => \Data_in~combout\(1));
 
 -- Location: LCFF_X44_Y22_N31
-\AMBA_H|data2[1]\ : cycloneii_lcell_ff
+\Comunica_h|data2[1]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
 	sdata => \Data_in~combout\(1),
 	sload => VCC,
-	ena => \AMBA_H|data2[7]~2_combout\,
+	ena => \Comunica_h|data2[7]~2_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data2\(1));
+	regout => \Comunica_h|data2\(1));
 
 -- Location: LCFF_X44_Y22_N9
-\AMBA_H|data1[1]\ : cycloneii_lcell_ff
+\Comunica_h|data1[1]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
 	sdata => \Data_in~combout\(1),
 	sload => VCC,
-	ena => \AMBA_H|data1[7]~1_combout\,
+	ena => \Comunica_h|data1[7]~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data1\(1));
+	regout => \Comunica_h|data1\(1));
 
 -- Location: LCCOMB_X44_Y22_N6
 \BSG_DATA[1]~2\ : cycloneii_lcell_comb
 -- Equation(s):
--- \BSG_DATA[1]~2_combout\ = (\modulador_h|flag_byte~regout\ & (\AMBA_H|data2\(1))) # (!\modulador_h|flag_byte~regout\ & ((\AMBA_H|data1\(1))))
+-- \BSG_DATA[1]~2_combout\ = (\modulador_h|flag_byte~regout\ & (\Comunica_h|data2\(1))) # (!\modulador_h|flag_byte~regout\ & ((\Comunica_h|data1\(1))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1650,15 +1650,15 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \AMBA_H|data2\(1),
-	datac => \AMBA_H|data1\(1),
+	datab => \Comunica_h|data2\(1),
+	datac => \Comunica_h|data1\(1),
 	datad => \modulador_h|flag_byte~regout\,
 	combout => \BSG_DATA[1]~2_combout\);
 
 -- Location: LCCOMB_X43_Y23_N24
 \encoder_h|gray[0]\ : cycloneii_lcell_comb
 -- Equation(s):
--- \encoder_h|gray\(0) = \BSG_DATA[1]~2_combout\ $ (((\modulador_h|flag_byte~regout\ & ((\AMBA_H|data2\(0)))) # (!\modulador_h|flag_byte~regout\ & (\AMBA_H|data1\(0)))))
+-- \encoder_h|gray\(0) = \BSG_DATA[1]~2_combout\ $ (((\modulador_h|flag_byte~regout\ & ((\Comunica_h|data2\(0)))) # (!\modulador_h|flag_byte~regout\ & (\Comunica_h|data1\(0)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1666,27 +1666,27 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \AMBA_H|data1\(0),
+	dataa => \Comunica_h|data1\(0),
 	datab => \modulador_h|flag_byte~regout\,
-	datac => \AMBA_H|data2\(0),
+	datac => \Comunica_h|data2\(0),
 	datad => \BSG_DATA[1]~2_combout\,
 	combout => \encoder_h|gray\(0));
 
 -- Location: LCFF_X43_Y23_N29
-\AMBA_H|data2[2]\ : cycloneii_lcell_ff
+\Comunica_h|data2[2]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
 	sdata => \Data_in~combout\(2),
 	sload => VCC,
-	ena => \AMBA_H|data2[7]~2_combout\,
+	ena => \Comunica_h|data2[7]~2_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data2\(2));
+	regout => \Comunica_h|data2\(2));
 
 -- Location: LCCOMB_X43_Y23_N28
 \encoder_h|gray[1]\ : cycloneii_lcell_comb
 -- Equation(s):
--- \encoder_h|gray\(1) = \BSG_DATA[1]~2_combout\ $ (((\modulador_h|flag_byte~regout\ & ((\AMBA_H|data2\(2)))) # (!\modulador_h|flag_byte~regout\ & (\AMBA_H|data1\(2)))))
+-- \encoder_h|gray\(1) = \BSG_DATA[1]~2_combout\ $ (((\modulador_h|flag_byte~regout\ & ((\Comunica_h|data2\(2)))) # (!\modulador_h|flag_byte~regout\ & (\Comunica_h|data1\(2)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -1695,8 +1695,8 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \modulador_h|flag_byte~regout\,
-	datab => \AMBA_H|data1\(2),
-	datac => \AMBA_H|data2\(2),
+	datab => \Comunica_h|data1\(2),
+	datac => \Comunica_h|data2\(2),
 	datad => \BSG_DATA[1]~2_combout\,
 	combout => \encoder_h|gray\(1));
 
@@ -1772,7 +1772,7 @@ PORT MAP (
 PORT MAP (
 	clk => \CLK_TX~clkctrl_outclk\,
 	datain => \modulador_h|flag~0_combout\,
-	aclr => \AMBA_H|ALT_INV_controle\(0),
+	aclr => \Comunica_h|ALT_INV_controle\(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \modulador_h|flag~regout\);
@@ -1953,7 +1953,7 @@ PORT MAP (
 PORT MAP (
 	clk => \CLK_TX~clkctrl_outclk\,
 	datain => \modulador_h|saida~82_combout\,
-	aclr => \AMBA_H|ALT_INV_controle\(0),
+	aclr => \Comunica_h|ALT_INV_controle\(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \modulador_h|saida\(0));
@@ -2136,7 +2136,7 @@ PORT MAP (
 PORT MAP (
 	clk => \CLK_TX~clkctrl_outclk\,
 	datain => \modulador_h|saida~26_combout\,
-	aclr => \AMBA_H|ALT_INV_controle\(0),
+	aclr => \Comunica_h|ALT_INV_controle\(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \modulador_h|saida\(1));
@@ -2315,7 +2315,7 @@ PORT MAP (
 PORT MAP (
 	clk => \CLK_TX~clkctrl_outclk\,
 	datain => \modulador_h|saida~33_combout\,
-	aclr => \AMBA_H|ALT_INV_controle\(0),
+	aclr => \Comunica_h|ALT_INV_controle\(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \modulador_h|saida\(2));
@@ -2448,7 +2448,7 @@ PORT MAP (
 PORT MAP (
 	clk => \CLK_TX~clkctrl_outclk\,
 	datain => \modulador_h|saida~41_combout\,
-	aclr => \AMBA_H|ALT_INV_controle\(0),
+	aclr => \Comunica_h|ALT_INV_controle\(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \modulador_h|saida\(3));
@@ -2664,7 +2664,7 @@ PORT MAP (
 PORT MAP (
 	clk => \CLK_TX~clkctrl_outclk\,
 	datain => \modulador_h|saida~51_combout\,
-	aclr => \AMBA_H|ALT_INV_controle\(0),
+	aclr => \Comunica_h|ALT_INV_controle\(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \modulador_h|saida\(4));
@@ -2815,7 +2815,7 @@ PORT MAP (
 PORT MAP (
 	clk => \CLK_TX~clkctrl_outclk\,
 	datain => \modulador_h|saida~59_combout\,
-	aclr => \AMBA_H|ALT_INV_controle\(0),
+	aclr => \Comunica_h|ALT_INV_controle\(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \modulador_h|saida\(5));
@@ -2928,7 +2928,7 @@ PORT MAP (
 PORT MAP (
 	clk => \CLK_TX~clkctrl_outclk\,
 	datain => \modulador_h|saida~66_combout\,
-	aclr => \AMBA_H|ALT_INV_controle\(0),
+	aclr => \Comunica_h|ALT_INV_controle\(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \modulador_h|saida\(6));
@@ -2956,15 +2956,15 @@ PORT MAP (
 PORT MAP (
 	clk => \CLK_TX~clkctrl_outclk\,
 	datain => \modulador_h|saida~68_combout\,
-	aclr => \AMBA_H|ALT_INV_controle\(0),
+	aclr => \Comunica_h|ALT_INV_controle\(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \modulador_h|saida\(7));
 
 -- Location: LCCOMB_X42_Y22_N26
-\AMBA_H|controle[1]~2\ : cycloneii_lcell_comb
+\Comunica_h|controle[1]~2\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|controle[1]~2_combout\ = (\addr~combout\(1) & !\addr~combout\(2))
+-- \Comunica_h|controle[1]~2_combout\ = (\addr~combout\(1) & !\addr~combout\(2))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2974,12 +2974,12 @@ GENERIC MAP (
 PORT MAP (
 	datab => \addr~combout\(1),
 	datad => \addr~combout\(2),
-	combout => \AMBA_H|controle[1]~2_combout\);
+	combout => \Comunica_h|controle[1]~2_combout\);
 
 -- Location: LCCOMB_X42_Y22_N28
-\AMBA_H|aux~0\ : cycloneii_lcell_comb
+\Comunica_h|aux~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|aux~0_combout\ = !\AMBA_H|aux~regout\
+-- \Comunica_h|aux~0_combout\ = !\Comunica_h|aux~regout\
 
 -- pragma translate_off
 GENERIC MAP (
@@ -2987,32 +2987,32 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \AMBA_H|aux~regout\,
-	combout => \AMBA_H|aux~0_combout\);
+	datac => \Comunica_h|aux~regout\,
+	combout => \Comunica_h|aux~0_combout\);
 
 -- Location: LCFF_X42_Y22_N29
-\AMBA_H|aux\ : cycloneii_lcell_ff
+\Comunica_h|aux\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \modulador_h|ALT_INV_status~regout\,
-	datain => \AMBA_H|aux~0_combout\,
+	datain => \Comunica_h|aux~0_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|aux~regout\);
+	regout => \Comunica_h|aux~regout\);
 
 -- Location: LCFF_X42_Y22_N15
-\AMBA_H|aux1\ : cycloneii_lcell_ff
+\Comunica_h|aux1\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
-	sdata => \AMBA_H|aux~regout\,
+	sdata => \Comunica_h|aux~regout\,
 	sload => VCC,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|aux1~regout\);
+	regout => \Comunica_h|aux1~regout\);
 
 -- Location: LCCOMB_X42_Y22_N14
-\AMBA_H|controle~3\ : cycloneii_lcell_comb
+\Comunica_h|controle~3\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|controle~3_combout\ = (\AMBA_H|controle\(2)) # (\AMBA_H|aux~regout\ $ (\AMBA_H|aux1~regout\))
+-- \Comunica_h|controle~3_combout\ = (\Comunica_h|controle\(2)) # (\Comunica_h|aux~regout\ $ (\Comunica_h|aux1~regout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3020,16 +3020,16 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datab => \AMBA_H|aux~regout\,
-	datac => \AMBA_H|aux1~regout\,
-	datad => \AMBA_H|controle\(2),
-	combout => \AMBA_H|controle~3_combout\);
+	datab => \Comunica_h|aux~regout\,
+	datac => \Comunica_h|aux1~regout\,
+	datad => \Comunica_h|controle\(2),
+	combout => \Comunica_h|controle~3_combout\);
 
 -- Location: LCCOMB_X42_Y22_N12
-\AMBA_H|controle~4\ : cycloneii_lcell_comb
+\Comunica_h|controle~4\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|controle~4_combout\ = (\AMBA_H|data2[7]~1_combout\ & ((\AMBA_H|controle[1]~2_combout\ & ((\Data_in~combout\(2)))) # (!\AMBA_H|controle[1]~2_combout\ & (\AMBA_H|controle~3_combout\)))) # (!\AMBA_H|data2[7]~1_combout\ & 
--- (((\AMBA_H|controle~3_combout\))))
+-- \Comunica_h|controle~4_combout\ = (\Comunica_h|data2[7]~1_combout\ & ((\Comunica_h|controle[1]~2_combout\ & ((\Data_in~combout\(2)))) # (!\Comunica_h|controle[1]~2_combout\ & (\Comunica_h|controle~3_combout\)))) # (!\Comunica_h|data2[7]~1_combout\ & 
+-- (((\Comunica_h|controle~3_combout\))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3037,25 +3037,25 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \AMBA_H|data2[7]~1_combout\,
-	datab => \AMBA_H|controle[1]~2_combout\,
-	datac => \AMBA_H|controle~3_combout\,
+	dataa => \Comunica_h|data2[7]~1_combout\,
+	datab => \Comunica_h|controle[1]~2_combout\,
+	datac => \Comunica_h|controle~3_combout\,
 	datad => \Data_in~combout\(2),
-	combout => \AMBA_H|controle~4_combout\);
+	combout => \Comunica_h|controle~4_combout\);
 
 -- Location: LCFF_X42_Y22_N13
-\AMBA_H|controle[2]\ : cycloneii_lcell_ff
+\Comunica_h|controle[2]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
-	datain => \AMBA_H|controle~4_combout\,
+	datain => \Comunica_h|controle~4_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|controle\(2));
+	regout => \Comunica_h|controle\(2));
 
 -- Location: LCCOMB_X45_Y22_N14
-\AMBA_H|controle[1]~feeder\ : cycloneii_lcell_comb
+\Comunica_h|controle[1]~feeder\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|controle[1]~feeder_combout\ = \Data_in~combout\(1)
+-- \Comunica_h|controle[1]~feeder_combout\ = \Data_in~combout\(1)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3064,22 +3064,22 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	datac => \Data_in~combout\(1),
-	combout => \AMBA_H|controle[1]~feeder_combout\);
+	combout => \Comunica_h|controle[1]~feeder_combout\);
 
 -- Location: LCFF_X45_Y22_N15
-\AMBA_H|controle[1]\ : cycloneii_lcell_ff
+\Comunica_h|controle[1]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
-	datain => \AMBA_H|controle[1]~feeder_combout\,
-	ena => \AMBA_H|controle[1]~5_combout\,
+	datain => \Comunica_h|controle[1]~feeder_combout\,
+	ena => \Comunica_h|controle[1]~5_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|controle\(1));
+	regout => \Comunica_h|controle\(1));
 
 -- Location: LCCOMB_X46_Y22_N16
 \BSG_INT~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \BSG_INT~0_combout\ = (\AMBA_H|controle\(2) & \AMBA_H|controle\(1))
+-- \BSG_INT~0_combout\ = (\Comunica_h|controle\(2) & \Comunica_h|controle\(1))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3087,8 +3087,8 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	datac => \AMBA_H|controle\(2),
-	datad => \AMBA_H|controle\(1),
+	datac => \Comunica_h|controle\(2),
+	datad => \Comunica_h|controle\(1),
 	combout => \BSG_INT~0_combout\);
 
 -- Location: PIN_M1,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
@@ -3131,20 +3131,20 @@ PORT MAP (
 	outclk => \SYS_CLK~clkctrl_outclk\);
 
 -- Location: LCFF_X44_Y23_N27
-\AMBA_H|data1[0]\ : cycloneii_lcell_ff
+\Comunica_h|data1[0]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
 	sdata => \Data_in~combout\(0),
 	sload => VCC,
-	ena => \AMBA_H|data1[7]~1_combout\,
+	ena => \Comunica_h|data1[7]~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data1\(0));
+	regout => \Comunica_h|data1\(0));
 
 -- Location: LCCOMB_X43_Y22_N24
-\AMBA_H|data_out[0]~0\ : cycloneii_lcell_comb
+\Comunica_h|data_out[0]~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|data_out[0]~0_combout\ = (\addr~combout\(0) & (\AMBA_H|data1\(0))) # (!\addr~combout\(0) & ((\AMBA_H|controle\(0))))
+-- \Comunica_h|data_out[0]~0_combout\ = (\addr~combout\(0) & (\Comunica_h|data1\(0))) # (!\addr~combout\(0) & ((\Comunica_h|controle\(0))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3153,14 +3153,14 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \addr~combout\(0),
-	datab => \AMBA_H|data1\(0),
-	datad => \AMBA_H|controle\(0),
-	combout => \AMBA_H|data_out[0]~0_combout\);
+	datab => \Comunica_h|data1\(0),
+	datad => \Comunica_h|controle\(0),
+	combout => \Comunica_h|data_out[0]~0_combout\);
 
 -- Location: LCCOMB_X43_Y22_N26
-\AMBA_H|data_out[0]~4\ : cycloneii_lcell_comb
+\Comunica_h|data_out[0]~4\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|data_out[0]~4_combout\ = ((\addr~combout\(1) & ((\addr~combout\(2)))) # (!\addr~combout\(1) & ((\addr~combout\(0)) # (!\addr~combout\(2))))) # (!\we~combout\)
+-- \Comunica_h|data_out[0]~4_combout\ = ((\addr~combout\(1) & ((\addr~combout\(2)))) # (!\addr~combout\(1) & ((\addr~combout\(0)) # (!\addr~combout\(2))))) # (!\we~combout\)
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3172,12 +3172,12 @@ PORT MAP (
 	datab => \we~combout\,
 	datac => \addr~combout\(1),
 	datad => \addr~combout\(2),
-	combout => \AMBA_H|data_out[0]~4_combout\);
+	combout => \Comunica_h|data_out[0]~4_combout\);
 
 -- Location: LCCOMB_X43_Y22_N20
-\AMBA_H|data_out[0]~5\ : cycloneii_lcell_comb
+\Comunica_h|data_out[0]~5\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|data_out[0]~5_combout\ = (!\addr~combout\(7) & (!\AMBA_H|data_out[0]~4_combout\ & \AMBA_H|data2[7]~0_combout\))
+-- \Comunica_h|data_out[0]~5_combout\ = (!\addr~combout\(7) & (!\Comunica_h|data_out[0]~4_combout\ & \Comunica_h|data2[7]~0_combout\))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3186,26 +3186,26 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \addr~combout\(7),
-	datab => \AMBA_H|data_out[0]~4_combout\,
-	datad => \AMBA_H|data2[7]~0_combout\,
-	combout => \AMBA_H|data_out[0]~5_combout\);
+	datab => \Comunica_h|data_out[0]~4_combout\,
+	datad => \Comunica_h|data2[7]~0_combout\,
+	combout => \Comunica_h|data_out[0]~5_combout\);
 
 -- Location: LCFF_X43_Y22_N25
-\AMBA_H|data_out[0]\ : cycloneii_lcell_ff
+\Comunica_h|data_out[0]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
-	datain => \AMBA_H|data_out[0]~0_combout\,
-	sdata => \AMBA_H|data2\(0),
+	datain => \Comunica_h|data_out[0]~0_combout\,
+	sdata => \Comunica_h|data2\(0),
 	sload => \addr~combout\(2),
-	ena => \AMBA_H|data_out[0]~5_combout\,
+	ena => \Comunica_h|data_out[0]~5_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data_out\(0));
+	regout => \Comunica_h|data_out\(0));
 
 -- Location: LCCOMB_X45_Y22_N20
-\AMBA_H|data_out[1]~1\ : cycloneii_lcell_comb
+\Comunica_h|data_out[1]~1\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|data_out[1]~1_combout\ = (\addr~combout\(0) & ((\AMBA_H|data1\(1)))) # (!\addr~combout\(0) & (\AMBA_H|controle\(1)))
+-- \Comunica_h|data_out[1]~1_combout\ = (\addr~combout\(0) & ((\Comunica_h|data1\(1)))) # (!\addr~combout\(0) & (\Comunica_h|controle\(1)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3213,27 +3213,27 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \AMBA_H|controle\(1),
+	dataa => \Comunica_h|controle\(1),
 	datab => \addr~combout\(0),
-	datad => \AMBA_H|data1\(1),
-	combout => \AMBA_H|data_out[1]~1_combout\);
+	datad => \Comunica_h|data1\(1),
+	combout => \Comunica_h|data_out[1]~1_combout\);
 
 -- Location: LCFF_X45_Y22_N21
-\AMBA_H|data_out[1]\ : cycloneii_lcell_ff
+\Comunica_h|data_out[1]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
-	datain => \AMBA_H|data_out[1]~1_combout\,
-	sdata => \AMBA_H|data2\(1),
+	datain => \Comunica_h|data_out[1]~1_combout\,
+	sdata => \Comunica_h|data2\(1),
 	sload => \addr~combout\(2),
-	ena => \AMBA_H|data_out[0]~5_combout\,
+	ena => \Comunica_h|data_out[0]~5_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data_out\(1));
+	regout => \Comunica_h|data_out\(1));
 
 -- Location: LCCOMB_X43_Y22_N4
-\AMBA_H|data_out[2]~2\ : cycloneii_lcell_comb
+\Comunica_h|data_out[2]~2\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|data_out[2]~2_combout\ = (\addr~combout\(0) & (\AMBA_H|data1\(2))) # (!\addr~combout\(0) & ((\AMBA_H|controle~3_combout\)))
+-- \Comunica_h|data_out[2]~2_combout\ = (\addr~combout\(0) & (\Comunica_h|data1\(2))) # (!\addr~combout\(0) & ((\Comunica_h|controle~3_combout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3242,21 +3242,21 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \addr~combout\(0),
-	datab => \AMBA_H|data1\(2),
-	datad => \AMBA_H|controle~3_combout\,
-	combout => \AMBA_H|data_out[2]~2_combout\);
+	datab => \Comunica_h|data1\(2),
+	datad => \Comunica_h|controle~3_combout\,
+	combout => \Comunica_h|data_out[2]~2_combout\);
 
 -- Location: LCFF_X43_Y22_N5
-\AMBA_H|data_out[2]\ : cycloneii_lcell_ff
+\Comunica_h|data_out[2]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
-	datain => \AMBA_H|data_out[2]~2_combout\,
-	sdata => \AMBA_H|data2\(2),
+	datain => \Comunica_h|data_out[2]~2_combout\,
+	sdata => \Comunica_h|data2\(2),
 	sload => \addr~combout\(2),
-	ena => \AMBA_H|data_out[0]~5_combout\,
+	ena => \Comunica_h|data_out[0]~5_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data_out\(2));
+	regout => \Comunica_h|data_out\(2));
 
 -- Location: LCCOMB_X43_Y22_N30
 \modulador_h|status~0\ : cycloneii_lcell_comb
@@ -3280,15 +3280,15 @@ PORT MAP (
 PORT MAP (
 	clk => \CLK_TX~clkctrl_outclk\,
 	datain => \modulador_h|status~0_combout\,
-	aclr => \AMBA_H|ALT_INV_controle\(0),
+	aclr => \Comunica_h|ALT_INV_controle\(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	regout => \modulador_h|status~regout\);
 
 -- Location: LCCOMB_X43_Y22_N8
-\AMBA_H|data_out[3]~3\ : cycloneii_lcell_comb
+\Comunica_h|data_out[3]~3\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|data_out[3]~3_combout\ = (\addr~combout\(0) & (\AMBA_H|data1\(3))) # (!\addr~combout\(0) & ((\modulador_h|status~regout\)))
+-- \Comunica_h|data_out[3]~3_combout\ = (\addr~combout\(0) & (\Comunica_h|data1\(3))) # (!\addr~combout\(0) & ((\modulador_h|status~regout\)))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3297,26 +3297,26 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \addr~combout\(0),
-	datab => \AMBA_H|data1\(3),
+	datab => \Comunica_h|data1\(3),
 	datad => \modulador_h|status~regout\,
-	combout => \AMBA_H|data_out[3]~3_combout\);
+	combout => \Comunica_h|data_out[3]~3_combout\);
 
 -- Location: LCFF_X43_Y22_N9
-\AMBA_H|data_out[3]\ : cycloneii_lcell_ff
+\Comunica_h|data_out[3]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
-	datain => \AMBA_H|data_out[3]~3_combout\,
-	sdata => \AMBA_H|data2\(3),
+	datain => \Comunica_h|data_out[3]~3_combout\,
+	sdata => \Comunica_h|data2\(3),
 	sload => \addr~combout\(2),
-	ena => \AMBA_H|data_out[0]~5_combout\,
+	ena => \Comunica_h|data_out[0]~5_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data_out\(3));
+	regout => \Comunica_h|data_out\(3));
 
 -- Location: LCCOMB_X45_Y22_N16
-\AMBA_H|Selector3~0\ : cycloneii_lcell_comb
+\Comunica_h|Selector3~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|Selector3~0_combout\ = (\addr~combout\(2) & (((\AMBA_H|data2\(4))))) # (!\addr~combout\(2) & (\addr~combout\(0) & (\AMBA_H|data1\(4))))
+-- \Comunica_h|Selector3~0_combout\ = (\addr~combout\(2) & (((\Comunica_h|data2\(4))))) # (!\addr~combout\(2) & (\addr~combout\(0) & (\Comunica_h|data1\(4))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3326,19 +3326,19 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \addr~combout\(2),
 	datab => \addr~combout\(0),
-	datac => \AMBA_H|data1\(4),
-	datad => \AMBA_H|data2\(4),
-	combout => \AMBA_H|Selector3~0_combout\);
+	datac => \Comunica_h|data1\(4),
+	datad => \Comunica_h|data2\(4),
+	combout => \Comunica_h|Selector3~0_combout\);
 
 -- Location: LCFF_X45_Y22_N17
-\AMBA_H|data_out[4]\ : cycloneii_lcell_ff
+\Comunica_h|data_out[4]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
-	datain => \AMBA_H|Selector3~0_combout\,
-	ena => \AMBA_H|data_out[0]~5_combout\,
+	datain => \Comunica_h|Selector3~0_combout\,
+	ena => \Comunica_h|data_out[0]~5_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data_out\(4));
+	regout => \Comunica_h|data_out\(4));
 
 -- Location: PIN_G16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: Default
 \Data_in[5]~I\ : cycloneii_io
@@ -3367,20 +3367,20 @@ PORT MAP (
 	combout => \Data_in~combout\(5));
 
 -- Location: LCFF_X44_Y22_N13
-\AMBA_H|data1[5]\ : cycloneii_lcell_ff
+\Comunica_h|data1[5]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
 	sdata => \Data_in~combout\(5),
 	sload => VCC,
-	ena => \AMBA_H|data1[7]~1_combout\,
+	ena => \Comunica_h|data1[7]~1_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data1\(5));
+	regout => \Comunica_h|data1\(5));
 
 -- Location: LCCOMB_X45_Y22_N22
-\AMBA_H|Selector2~0\ : cycloneii_lcell_comb
+\Comunica_h|Selector2~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|Selector2~0_combout\ = (\addr~combout\(2) & (\AMBA_H|data2\(5))) # (!\addr~combout\(2) & (((\addr~combout\(0) & \AMBA_H|data1\(5)))))
+-- \Comunica_h|Selector2~0_combout\ = (\addr~combout\(2) & (\Comunica_h|data2\(5))) # (!\addr~combout\(2) & (((\addr~combout\(0) & \Comunica_h|data1\(5)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3388,26 +3388,26 @@ GENERIC MAP (
 	sum_lutc_input => "datac")
 -- pragma translate_on
 PORT MAP (
-	dataa => \AMBA_H|data2\(5),
+	dataa => \Comunica_h|data2\(5),
 	datab => \addr~combout\(2),
 	datac => \addr~combout\(0),
-	datad => \AMBA_H|data1\(5),
-	combout => \AMBA_H|Selector2~0_combout\);
+	datad => \Comunica_h|data1\(5),
+	combout => \Comunica_h|Selector2~0_combout\);
 
 -- Location: LCFF_X45_Y22_N23
-\AMBA_H|data_out[5]\ : cycloneii_lcell_ff
+\Comunica_h|data_out[5]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
-	datain => \AMBA_H|Selector2~0_combout\,
-	ena => \AMBA_H|data_out[0]~5_combout\,
+	datain => \Comunica_h|Selector2~0_combout\,
+	ena => \Comunica_h|data_out[0]~5_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data_out\(5));
+	regout => \Comunica_h|data_out\(5));
 
 -- Location: LCCOMB_X45_Y22_N24
-\AMBA_H|Selector1~0\ : cycloneii_lcell_comb
+\Comunica_h|Selector1~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|Selector1~0_combout\ = (\addr~combout\(2) & (\AMBA_H|data2\(6))) # (!\addr~combout\(2) & (((\addr~combout\(0) & \AMBA_H|data1\(6)))))
+-- \Comunica_h|Selector1~0_combout\ = (\addr~combout\(2) & (\Comunica_h|data2\(6))) # (!\addr~combout\(2) & (((\addr~combout\(0) & \Comunica_h|data1\(6)))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3416,36 +3416,36 @@ GENERIC MAP (
 -- pragma translate_on
 PORT MAP (
 	dataa => \addr~combout\(2),
-	datab => \AMBA_H|data2\(6),
+	datab => \Comunica_h|data2\(6),
 	datac => \addr~combout\(0),
-	datad => \AMBA_H|data1\(6),
-	combout => \AMBA_H|Selector1~0_combout\);
+	datad => \Comunica_h|data1\(6),
+	combout => \Comunica_h|Selector1~0_combout\);
 
 -- Location: LCFF_X45_Y22_N25
-\AMBA_H|data_out[6]\ : cycloneii_lcell_ff
+\Comunica_h|data_out[6]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
-	datain => \AMBA_H|Selector1~0_combout\,
-	ena => \AMBA_H|data_out[0]~5_combout\,
+	datain => \Comunica_h|Selector1~0_combout\,
+	ena => \Comunica_h|data_out[0]~5_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data_out\(6));
+	regout => \Comunica_h|data_out\(6));
 
 -- Location: LCFF_X44_Y22_N21
-\AMBA_H|data2[7]\ : cycloneii_lcell_ff
+\Comunica_h|data2[7]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
 	sdata => \Data_in~combout\(7),
 	sload => VCC,
-	ena => \AMBA_H|data2[7]~2_combout\,
+	ena => \Comunica_h|data2[7]~2_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data2\(7));
+	regout => \Comunica_h|data2\(7));
 
 -- Location: LCCOMB_X43_Y22_N12
-\AMBA_H|Selector0~0\ : cycloneii_lcell_comb
+\Comunica_h|Selector0~0\ : cycloneii_lcell_comb
 -- Equation(s):
--- \AMBA_H|Selector0~0_combout\ = (\addr~combout\(2) & (((\AMBA_H|data2\(7))))) # (!\addr~combout\(2) & (\addr~combout\(0) & (\AMBA_H|data1\(7))))
+-- \Comunica_h|Selector0~0_combout\ = (\addr~combout\(2) & (((\Comunica_h|data2\(7))))) # (!\addr~combout\(2) & (\addr~combout\(0) & (\Comunica_h|data1\(7))))
 
 -- pragma translate_off
 GENERIC MAP (
@@ -3455,19 +3455,19 @@ GENERIC MAP (
 PORT MAP (
 	dataa => \addr~combout\(0),
 	datab => \addr~combout\(2),
-	datac => \AMBA_H|data1\(7),
-	datad => \AMBA_H|data2\(7),
-	combout => \AMBA_H|Selector0~0_combout\);
+	datac => \Comunica_h|data1\(7),
+	datad => \Comunica_h|data2\(7),
+	combout => \Comunica_h|Selector0~0_combout\);
 
 -- Location: LCFF_X43_Y22_N13
-\AMBA_H|data_out[7]\ : cycloneii_lcell_ff
+\Comunica_h|data_out[7]\ : cycloneii_lcell_ff
 PORT MAP (
 	clk => \SYS_CLK~clkctrl_outclk\,
-	datain => \AMBA_H|Selector0~0_combout\,
-	ena => \AMBA_H|data_out[0]~5_combout\,
+	datain => \Comunica_h|Selector0~0_combout\,
+	ena => \Comunica_h|data_out[0]~5_combout\,
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
-	regout => \AMBA_H|data_out\(7));
+	regout => \Comunica_h|data_out\(7));
 
 -- Location: PIN_C16,	 I/O Standard: 3.3-V LVTTL,	 Current Strength: 24mA
 \OUT[0]~I\ : cycloneii_io
@@ -3722,7 +3722,7 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => \AMBA_H|data_out\(0),
+	datain => \Comunica_h|data_out\(0),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
@@ -3748,7 +3748,7 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => \AMBA_H|data_out\(1),
+	datain => \Comunica_h|data_out\(1),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
@@ -3774,7 +3774,7 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => \AMBA_H|data_out\(2),
+	datain => \Comunica_h|data_out\(2),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
@@ -3800,7 +3800,7 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => \AMBA_H|data_out\(3),
+	datain => \Comunica_h|data_out\(3),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
@@ -3826,7 +3826,7 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => \AMBA_H|data_out\(4),
+	datain => \Comunica_h|data_out\(4),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
@@ -3852,7 +3852,7 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => \AMBA_H|data_out\(5),
+	datain => \Comunica_h|data_out\(5),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
@@ -3878,7 +3878,7 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => \AMBA_H|data_out\(6),
+	datain => \Comunica_h|data_out\(6),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,
@@ -3904,7 +3904,7 @@ GENERIC MAP (
 	output_sync_reset => "none")
 -- pragma translate_on
 PORT MAP (
-	datain => \AMBA_H|data_out\(7),
+	datain => \Comunica_h|data_out\(7),
 	devclrn => ww_devclrn,
 	devpor => ww_devpor,
 	devoe => ww_devoe,

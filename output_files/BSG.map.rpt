@@ -1,5 +1,5 @@
 Analysis & Synthesis report for BSG
-Tue Mar 28 20:41:33 2017
+Fri Mar 31 12:08:08 2017
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
 
 
@@ -44,7 +44,7 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 28 20:41:33 2017              ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 31 12:08:08 2017              ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1.78 SJ Web Edition ;
 ; Revision Name                      ; BSG                                                ;
 ; Top-level Entity Name              ; BSG                                                ;
@@ -163,9 +163,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path          ; Library ;
 +----------------------------------+-----------------+------------------------------+---------------------------------------+---------+
 ; BSG.sv                           ; yes             ; User SystemVerilog HDL File  ; /home/lucasf/Desktop/BSG/BSG.sv       ;         ;
-; AMBA.sv                          ; yes             ; User SystemVerilog HDL File  ; /home/lucasf/Desktop/BSG/AMBA.sv      ;         ;
 ; encoder.sv                       ; yes             ; User SystemVerilog HDL File  ; /home/lucasf/Desktop/BSG/encoder.sv   ;         ;
 ; modulador.sv                     ; yes             ; User SystemVerilog HDL File  ; /home/lucasf/Desktop/BSG/modulador.sv ;         ;
+; Comunica.sv                      ; yes             ; User SystemVerilog HDL File  ; /home/lucasf/Desktop/BSG/Comunica.sv  ;         ;
 +----------------------------------+-----------------+------------------------------+---------------------------------------+---------+
 
 
@@ -205,7 +205,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name        ; Library Name ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
 ; |BSG                       ; 128 (5)           ; 48 (0)       ; 0           ; 0            ; 0       ; 0         ; 36   ; 0            ; |BSG                       ; work         ;
-;    |AMBA:AMBA_H|           ; 20 (20)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BSG|AMBA:AMBA_H           ; work         ;
+;    |Comunica:Comunica_h|   ; 20 (20)           ; 29 (29)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BSG|Comunica:Comunica_h   ; work         ;
 ;    |encoder:encoder_h|     ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BSG|encoder:encoder_h     ; work         ;
 ;    |modulador:modulador_h| ; 99 (99)           ; 19 (19)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |BSG|modulador:modulador_h ; work         ;
 +----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+----------------------------+--------------+
@@ -237,15 +237,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------+---------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
-; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |BSG|modulador:modulador_h|saida[0] ;
-; 259:1              ; 4 bits    ; 688 LEs       ; 8 LEs                ; 680 LEs                ; Yes        ; |BSG|AMBA:AMBA_H|data_out[4]        ;
-; 259:1              ; 4 bits    ; 688 LEs       ; 8 LEs                ; 680 LEs                ; Yes        ; |BSG|AMBA:AMBA_H|data_out[0]        ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
+; 4:1                ; 7 bits    ; 14 LEs        ; 14 LEs               ; 0 LEs                  ; Yes        ; |BSG|modulador:modulador_h|saida[0]  ;
+; 259:1              ; 4 bits    ; 688 LEs       ; 8 LEs                ; 680 LEs                ; Yes        ; |BSG|Comunica:Comunica_h|data_out[4] ;
+; 259:1              ; 4 bits    ; 688 LEs       ; 8 LEs                ; 680 LEs                ; Yes        ; |BSG|Comunica:Comunica_h|data_out[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------+
 
 
 +-------------------------------+
@@ -253,7 +253,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -263,20 +263,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1.78 SJ Web Edition
-    Info: Processing started: Tue Mar 28 20:41:31 2017
+    Info: Processing started: Fri Mar 31 12:08:07 2017
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off BSG -c BSG
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file BSG.sv
     Info (12023): Found entity 1: BSG
-Info (12021): Found 1 design units, including 1 entities, in source file AMBA.sv
-    Info (12023): Found entity 1: AMBA
+Warning (12019): Can't analyze file -- file AMBA.sv is missing
 Info (12021): Found 1 design units, including 1 entities, in source file encoder.sv
     Info (12023): Found entity 1: encoder
 Info (12021): Found 1 design units, including 1 entities, in source file modulador.sv
     Info (12023): Found entity 1: modulador
+Info (12021): Found 1 design units, including 1 entities, in source file Comunica.sv
+    Info (12023): Found entity 1: Comunica
 Info (12127): Elaborating entity "BSG" for the top level hierarchy
-Info (12128): Elaborating entity "AMBA" for hierarchy "AMBA:AMBA_H"
-Warning (10855): Verilog HDL warning at AMBA.sv(20): initial value for variable controle should be constant
+Info (12128): Elaborating entity "Comunica" for hierarchy "Comunica:Comunica_h"
+Warning (10855): Verilog HDL warning at Comunica.sv(18): initial value for variable controle should be constant
 Info (12128): Elaborating entity "encoder" for hierarchy "encoder:encoder_h"
 Info (12128): Elaborating entity "modulador" for hierarchy "modulador:modulador_h"
 Info (276014): Found 4 instances of uninferred RAM logic
@@ -293,10 +294,10 @@ Info (21057): Implemented 183 device resources after synthesis - the final resou
     Info (21058): Implemented 19 input pins
     Info (21059): Implemented 17 output pins
     Info (21061): Implemented 147 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 696 megabytes
-    Info: Processing ended: Tue Mar 28 20:41:33 2017
-    Info: Elapsed time: 00:00:02
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 701 megabytes
+    Info: Processing ended: Fri Mar 31 12:08:08 2017
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
 

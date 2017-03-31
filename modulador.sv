@@ -3,20 +3,13 @@ module modulador(
 	output logic [7:0]saida,
 	input logic [7:0]DADO,
 	output logic flag_byte, status, // fim da transmissão do byte
-	input logic rst
+	input logic rst		//toda vez que o TXENABLE for 0, o modulador tem seus dados resetados, para evitar bugs onde a transmissao seja interrompida sem o termino do envio dos dados.
 );
 logic [4:0]entrada;
 logic flag; 
 logic dado;
 logic [2:0]aux;	//contador para passar os 8 bits.
 
-initial	begin
-	flag=0;		//indentifica o sentido do sinal
-	flag_byte=0;
-	aux=0;
-	entrada=0;
-	status=0;
-end
 
 always_comb	
 	dado=DADO[aux];
@@ -35,9 +28,9 @@ always_ff @(posedge clk or negedge rst)	begin
 		entrada = entrada + 5'b1;
 		if (entrada== 5'd31)	begin	//terminou de enviar um bit
 			aux=aux+3'b1;
-			if (aux==3'd7)	begin		//enviou o ultimo bit de dado(8bits)
+			if (aux==3'd0)	begin		//terminou de enviou o ultimo byte de dado(8bits)
 				flag_byte = !flag_byte;	//muda o registrador que os dados estao sendo lidos
-				if (flag_byte==1'b1)
+				if (flag_byte==1'b0)
 					status=1'b0;		//terminou a transmiss~ao
 			end
 		end	
@@ -50,8 +43,8 @@ end
 always_ff @(posedge clk or negedge rst) begin
 	
 	if (!rst)	begin
-		saida=128;
-		flag=0;
+		saida=128;	//quando n~ao tiver dado sendo transmitido o sinal enviado ´e 128 que representa o 0 na onda senoidal;
+		flag=0;		//indentifica o sentido do sinal
 	end
 	
 	else	begin

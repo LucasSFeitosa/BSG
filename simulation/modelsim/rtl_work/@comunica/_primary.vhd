@@ -1,6 +1,6 @@
 library verilog;
 use verilog.vl_types.all;
-entity AMBA is
+entity Comunica is
     port(
         clk             : in     vl_logic;
         controle1       : out    vl_logic_vector(2 downto 0);
@@ -12,4 +12,4 @@ entity AMBA is
         data_out        : out    vl_logic_vector(7 downto 0);
         ready           : in     vl_logic
     );
-end AMBA;
+end Comunica;
